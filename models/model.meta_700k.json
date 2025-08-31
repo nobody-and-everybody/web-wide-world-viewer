@@ -1,0 +1,49 @@
+{
+  "rendererScale": 0.75,
+  "debugger": false,
+  "gaussianSplats3DOption": {
+    "sharedMemoryForWorkers":false,
+    "sphericalHarmonicsDegree": 0,
+    "ignoreDevicePixelRatio": true,
+    "enableSIMDInSort": true,
+    "integerBasedSort": true,
+    "splatSortDistanceMapPrecision": 16,
+    "halfPrecisionCovariancesOnGPU": true,
+    "dynamicScene": false,
+    "renderMode": 0,
+    "antialiased": false
+  },
+  "meterScale": 1,
+  "splashInfo": {
+    "position": [0, 0, 0],
+    "rotation": [0, 0, 0, 0],
+    "scale": [1, 1, 1],
+    "meshName": "Area3.glb",
+    "customMesh": [
+      {
+        "name": "floor",
+        "type": "plane",
+        "size": [1000, 1000],
+        "position": [0, -10, 0], 
+        "rotation": [-90, 0, 0],
+        "color": "#808080", 
+        "opacity": 0.8,
+        "isCollision": false
+      }
+    ]
+  },
+  "cameraInfo": {
+    "position": [
+      0, -1.8, 0
+    ],
+    "lookUp": [
+      0,-1,0
+    ],
+    "lookAt": [
+      0, -2, -1
+    ]
+  },
+  "url": [
+      {"path":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/Gothic_castle/Area3/700k_999radius.ksplat"}
+  ]
+}
