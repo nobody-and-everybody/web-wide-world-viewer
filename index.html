@@ -21,5 +21,46 @@
       type="text/javascript"
       src="./jweixin.js"
     ></script>
+    <script>
+      // 监听 hash 中 modelUrl 的变化并刷新页面
+      (function() {
+        let currentModelUrl = null;
+
+        // 从 hash 中提取 modelUrl 参数
+        function getModelUrlFromHash() {
+          const hash = window.location.hash;
+          const urlParams = new URLSearchParams(hash.split('?')[1] || '');
+          return urlParams.get('modelUrl');
+        }
+
+        // 初始化当前 modelUrl
+        currentModelUrl = getModelUrlFromHash();
+
+        // 监听 hashchange 事件
+        window.addEventListener('hashchange', function() {
+          const newModelUrl = getModelUrlFromHash();
+          
+          // 如果 modelUrl 发生了变化，刷新页面
+          if (currentModelUrl !== newModelUrl && newModelUrl !== null) {
+            console.log('ModelUrl changed from', currentModelUrl, 'to', newModelUrl, '- reloading page');
+            window.location.reload();
+          }
+          
+          currentModelUrl = newModelUrl;
+        });
+
+        // 也监听 popstate 事件以确保向后/向前导航也能被捕获
+        window.addEventListener('popstate', function() {
+          const newModelUrl = getModelUrlFromHash();
+          
+          if (currentModelUrl !== newModelUrl && newModelUrl !== null) {
+            console.log('ModelUrl changed via popstate from', currentModelUrl, 'to', newModelUrl, '- reloading page');
+            window.location.reload();
+          }
+          
+          currentModelUrl = newModelUrl;
+        });
+      })();
+    </script>
   </body>
 </html>
