@@ -1,0 +1,1 @@
+用于展现 web-wide-world 中的 site 的 viewer，在后续当 site 与 site 可以进行整合的时候，这个 viewer 也将成为以指定 site 为起点而浏览整个虚拟世界的窗口；
