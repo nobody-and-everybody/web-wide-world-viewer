@@ -1,0 +1,24 @@
+{
+  "name": "web-wide-world-viewer",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Viewer for the web-wide-world",
+  "main": "server/index.ts",
+  "scripts": {
+    "start": "ts-node server/index.ts",
+    "dev": "ts-node server/index.ts",
+    "prepare": "mkdir -p server/certificates && openssl req -x509 -newkey rsa:2048 -keyout server/certificates/key.pem -out server/certificates/cert.pem -days 365 -nodes -subj '/C=CN/ST=Guangdong/L=Shenzhen/O=nobody-and-everybody/OU=web-wide-world/CN=localhost'",
+    "postinstall": "npm run prepare"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "send": "^0.18.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.9.0",
+    "@types/send": "^0.17.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
