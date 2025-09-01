@@ -1,0 +1,25 @@
+{
+  "meterScale": 1,
+  "splashInfo": {
+    "position": [0, -5, 0],
+    "rotation": [0, 0, -1, 0]
+  },
+  "cameraInfo": {
+    "position": [
+      6.22011,
+      -2.28029,
+      4.02668
+    ],
+    "lookUp": [
+      0.00000,
+      -1.00000,
+      0.00000
+    ],
+    "lookAt": [
+      2.07146,
+      -1.17586,
+      -8.38061
+    ]
+  },
+  "url": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/tokyo/ball_tokyo_4dir_1080P_1200pic_3000splat_100step.splat"
+}

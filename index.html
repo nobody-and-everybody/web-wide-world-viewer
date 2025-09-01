@@ -8,19 +8,19 @@
       content="width=device-width,user-scalable=no,initial-scale=1,viewport-fit=cover"
     />
     <title></title>
-    <script type="module" crossorigin src="./assets/index-CoMYzAyu.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/vue-vendor-BKZ4oePA.js">
-    <link rel="modulepreload" crossorigin href="./assets/three-vendor-CtB5jM_7.js">
-    <link rel="modulepreload" crossorigin href="./assets/@mkkellogg/gaussian-splats-3d-vendor-Cx4K4QQy.js">
-    <link rel="modulepreload" crossorigin href="./assets/@sparkjsdev/spark-vendor-0hJZ5bxl.js">
-    <link rel="stylesheet" crossorigin href="./assets/index-Bo81soXn.css">
+    <script type="module" crossorigin src="./assets/index-BYsxjsOU.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/vue-vendor-NS_2C0XN.js">
+    <link rel="modulepreload" crossorigin href="./assets/three-vendor-KrZCfKzS.js">
+    <link rel="modulepreload" crossorigin href="./assets/@mkkellogg/gaussian-splats-3d-vendor-CyRDQ3LD.js">
+    <link rel="modulepreload" crossorigin href="./assets/@sparkjsdev/spark-vendor-D_YURDPx.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-XEcxq8Gy.css">
   </head>
   <body>
     <div id="app"></div>
     <script
       type="text/javascript"
       src="./jweixin.js"
-    ></script>
+    ></script>
     <script>
       // 监听 hash 中 modelUrl 的变化并刷新页面
       (function() {
@@ -39,20 +39,23 @@
         // 监听 hashchange 事件
         window.addEventListener('hashchange', function() {
           const newModelUrl = getModelUrlFromHash();
-          
+          console.log('hashchange newModelUrl', newModelUrl);
           // 如果 modelUrl 发生了变化，刷新页面
+          console.log('hashchange currentModelUrl', currentModelUrl);
           if (currentModelUrl !== newModelUrl && newModelUrl !== null) {
             console.log('ModelUrl changed from', currentModelUrl, 'to', newModelUrl, '- reloading page');
             window.location.reload();
           }
-          
+          if (newModelUrl === null && currentModelUrl === null) {
+            window.location.reload();
+          }
           currentModelUrl = newModelUrl;
         });
 
         // 也监听 popstate 事件以确保向后/向前导航也能被捕获
         window.addEventListener('popstate', function() {
           const newModelUrl = getModelUrlFromHash();
-          
+          console.log('popstate newModelUrl', newModelUrl);
           if (currentModelUrl !== newModelUrl && newModelUrl !== null) {
             console.log('ModelUrl changed via popstate from', currentModelUrl, 'to', newModelUrl, '- reloading page');
             window.location.reload();

@@ -1,0 +1,96 @@
+{
+  "name": "Castle",
+  "type": "metaverse",
+  "areas": [
+    {
+      "name": "area1",
+      "type": "landing",
+      "gs": {
+        "rendererScale": 0.75,
+        "url": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/Gothic_castle/Area1/800k_999radius.ksplat",
+        "gaussianSplats3DOption": {
+          "sphericalHarmonicsDegree": 0,
+          "ignoreDevicePixelRatio": true,
+          "enableSIMDInSort": true,
+          "integerBasedSort": true,
+          "splatSortDistanceMapPrecision": 16,
+          "halfPrecisionCovariancesOnGPU": true,
+          "dynamicScene": false,
+          "renderMode": 0,
+          "antialiased": false
+        },
+        "meterScale": 1,
+        "splashInfo": {
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0, 0],
+          "scale": [1, 1, 1],
+          "meshName": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/Gothic_castle/Area1/800k_999radius.glb"
+        }
+      }
+    },
+    {
+      "name": "area2",
+      "type": "trigger",
+      "trigger": {
+        "size": [1000, 1000],
+        "position": [0, -10, 0],
+        "rotation": [-90, 0, 0],
+        "isDebug": true
+      },
+      "gs": {
+        "rendererScale": 0.75,
+        "url": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/Gothic_castle/Area2/600k_999radius.ksplat",
+        "gaussianSplats3DOption": {
+          "sphericalHarmonicsDegree": 0,
+          "ignoreDevicePixelRatio": true,
+          "enableSIMDInSort": true,
+          "integerBasedSort": true,
+          "splatSortDistanceMapPrecision": 16,
+          "halfPrecisionCovariancesOnGPU": true,
+          "dynamicScene": false,
+          "renderMode": 0,
+          "antialiased": false
+        },
+        "meterScale": 1,
+        "splashInfo": {
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0, 0],
+          "scale": [1, 1, 1],
+          "meshName": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/Gothic_castle/Area2/600k_999radius.glb"
+        }
+      }
+    },
+    {
+      "name": "area3",
+      "type": "trigger",
+      "trigger": {
+        "size": [1000, 1000],
+        "position": [0, -10, 0],
+        "rotation": [-90, 0, 0],
+        "isDebug": true
+      },
+      "gs": {
+        "rendererScale": 0.75,
+        "url": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/Gothic_castle/Area3/700k_999radius.ksplat",
+        "gaussianSplats3DOption": {
+          "sphericalHarmonicsDegree": 0,
+          "ignoreDevicePixelRatio": true,
+          "enableSIMDInSort": true,
+          "integerBasedSort": true,
+          "splatSortDistanceMapPrecision": 16,
+          "halfPrecisionCovariancesOnGPU": true,
+          "dynamicScene": false,
+          "renderMode": 0,
+          "antialiased": false
+        },
+        "meterScale": 1,
+        "splashInfo": {
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0, 0],
+          "scale": [1, 1, 1],
+          "meshName": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/Gothic_castle/Area3/700k_999radius.glb"
+        }
+      }
+    }
+  ]
+}

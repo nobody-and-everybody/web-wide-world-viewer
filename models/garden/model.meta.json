@@ -1,0 +1,10 @@
+{
+  "meterScale": 1,
+  "splashInfo": {
+    "position": [0, 3, 0],
+    "rotation": [0, 0, -1, 0]
+  },
+  "cameraInfo": {
+  },
+  "url": [{"path":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/garden/garden.ksplat", "rotation": [180, 0, 0]}]
+}
