@@ -1,0 +1,2 @@
+var i=(c,o,t)=>new Promise((r,s)=>{var l=e=>{try{n(t.next(e))}catch(a){s(a)}},d=e=>{try{n(t.throw(e))}catch(a){s(a)}},n=e=>e.done?r(e.value):Promise.resolve(e.value).then(l,d);n((t=t.apply(c,o)).next())});const u=c=>i(null,null,function*(){const o=yield fetch(c,{mode:"cors",credentials:"omit",cache:"reload"});if(o.status===200){const t=yield o.json();return console.log("content",t),t}});export{u as g};
+//# sourceMappingURL=util-DtlU1PU3.js.map
