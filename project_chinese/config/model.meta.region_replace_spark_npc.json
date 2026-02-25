@@ -1,0 +1,128 @@
+{
+  "name": "ChineseGarden",
+  "rendererScale": 1,
+  "debugger": false,
+  "meterScale": 1,
+  "gaussianSplatting": {
+    "gaussianComponentType": "spark",
+    "regionReplaceConfigPath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/region_replace/region-replace-config.json",
+    "gaussianSplats3DOption": {
+      "sharedMemoryForWorkers": false,
+      "sphericalHarmonicsDegree": 0,
+      "ignoreDevicePixelRatio": true,
+      "enableSIMDInSort": true,
+      "integerBasedSort": true,
+      "splatSortDistanceMapPrecision": 32,
+      "halfPrecisionCovariancesOnGPU": true,
+      "dynamicScene": false,
+      "renderMode": 0,
+      "antialiased": false
+    },
+    "transform": {
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 180],
+      "scale": [1, 1, 1]
+    }
+  },
+  "collision": {
+    "url": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/collisions/chinese.glb",
+    "transform": {
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [1, 1, 1]
+    }
+  },
+  "initial": {
+    "player": {
+      "position": {
+        "x": 0,
+        "y": 1,
+        "z": 8
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "model": {
+        "url": "./models/character/model/Kachujin G Rosales.fbx",
+        "targetHeight": 1.68,
+        "transform": {
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        "anim": {
+          "animations": {
+            "Idle": "./models/character/anim/Idle.fbx",
+            "Walking": "./models/character/anim/Walking.fbx",
+            "Running": "./models/character/anim/Running.fbx",
+            "Falling": "./models/character/anim/Falling.fbx",
+            "Jumping": "./models/character/anim/Jumping.fbx"
+          }
+        }
+      }
+    }
+  },
+  "camera": {
+    "fov": 80,
+    "near": 0.1,
+    "far": 1000,
+    "maxPolarAngle": 90,
+    "minPolarAngle": 10,
+    "springArmMaxDistance": 3.0,
+    "springArmMinDistance": 0.5,
+    "springArmCollisionEnabled": true
+  },
+  "lighting": {
+    "ambient": {
+      "color": "#123456",
+      "intensity": 0.8
+    },
+    "directional": [
+      {
+        "name": "主光源",
+        "color": "#123456",
+        "intensity": 1.2,
+        "direction": { "x": -1, "y": 1.75, "z": 1 },
+        "distance": 30,
+        "shadow": {
+          "enabled": true,
+          "mapSize": 2048,
+          "camera": {
+            "left": -30,
+            "right": 30,
+            "top": 30,
+            "bottom": -30,
+            "far": 100
+          }
+        }
+      },
+      {
+        "name": "补充光",
+        "color": "#123456",
+        "intensity": 0.6,
+        "direction": { "x": 1, "y": 1, "z": -1 },
+        "distance": 20
+      },
+      {
+        "name": "背光",
+        "color": "#123456",
+        "intensity": 0.4,
+        "direction": { "x": 0, "y": 2, "z": -1 },
+        "distance": 15
+      }
+    ]
+  },
+  "npcs": {
+    "enabled": true,
+    "configFile": "./project_chinese/config/chinese-garden-newyear-npcs.json"
+  }
+}
