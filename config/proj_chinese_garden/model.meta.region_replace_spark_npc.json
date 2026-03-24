@@ -68,6 +68,8 @@
         "maxPolarAngle": 120,
         "minPolarAngle": 10,
         "lookAtOffsetX": -1.5,
+        "lookAtOffsetY": 0.8,
+        "lookAtOffsetZ": 0.5,
         "springArmMaxDistance": 6,
         "springArmMinDistance": 0.5,
         "springArmCollisionEnabled": true
