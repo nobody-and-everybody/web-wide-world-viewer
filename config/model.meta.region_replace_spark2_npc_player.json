@@ -1,0 +1,182 @@
+{
+  "name": "Slums",
+  "rendererScale": 1,
+  "debugger": false,
+  "meterScale": 1,
+  "gaussianSplatting": {
+    "gaussianComponentType": "spark2.0",
+    "regionReplaceConfigPath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_rome/region_replace/region-replace-config.json",
+    "sparkOption": {
+      "compatibilityMode": "legacy-fallback"
+    },
+    "gaussianSplats3DOption": {
+      "sharedMemoryForWorkers": false,
+      "sphericalHarmonicsDegree": 0,
+      "ignoreDevicePixelRatio": true,
+      "enableSIMDInSort": true,
+      "integerBasedSort": true,
+      "splatSortDistanceMapPrecision": 32,
+      "halfPrecisionCovariancesOnGPU": true,
+      "dynamicScene": false,
+      "renderMode": 0,
+      "antialiased": false
+    },
+    "transform": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        180
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "collision": {
+    "url": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_rome/collision/rome_navmesh.glb",
+    "transform": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "terrain1": {
+    "url": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_Slums/v3_collision/heightmaps/heightmap.r16",
+    "transform": {
+      "locationCM": [
+        -11615.0,
+        -12670.0,
+        100
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        30,
+        30,
+        100
+      ]
+    },
+    "resolution": {
+      "totalVertices": [
+        714,
+        807
+      ],
+      "componentVertices": [
+        32,
+        32
+      ],
+      "componentSections": [
+        1,
+        1
+      ]
+    }
+  },
+  "lighting": {
+    "ambient": {
+      "color": "#ffffff",
+      "intensity": 0.8
+    },
+    "directional": [
+      {
+        "name": "主光源",
+        "color": "#ffffff",
+        "intensity": 1.2,
+        "direction": { "x": -1, "y": 1.75, "z": 1 },
+        "distance": 30,
+        "shadow": {
+          "enabled": true,
+          "mapSize": 2048,
+          "camera": {
+            "left": -30,
+            "right": 30,
+            "top": 30,
+            "bottom": -30,
+            "far": 100
+          }
+        }
+      },
+      {
+        "name": "补充光",
+        "color": "#ffffff",
+        "intensity": 0.6,
+        "direction": { "x": 1, "y": 1, "z": -1 },
+        "distance": 20
+      },
+      {
+        "name": "背光",
+        "color": "#ffffff",
+        "intensity": 0.4,
+        "direction": { "x": 0, "y": 2, "z": -1 },
+        "distance": 15
+      }
+    ]
+  },
+  "initial": {
+    "player": {
+      "position": {
+        "x": 15,
+        "y": 0,
+        "z": -40
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "model": {
+        "url": "/models/character/model/Human_Ani_Model.glb",
+        "targetHeight": 1.65,
+        "transform": {
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        "anim": {
+          "animations": {
+            "Idle": "Idle",
+            "Walking": "Walk",
+            "Running": "Runing",
+            "Falling": "Idle",
+            "Jumping": "Idle"
+          }
+        }
+      }
+    },
+    "camera": {
+      "distance": 5
+    }
+  },
+  "npcs": {
+    "enabled": true,
+    "configFile": "./config/rome-npcs-newyear.json"
+  }
+}
