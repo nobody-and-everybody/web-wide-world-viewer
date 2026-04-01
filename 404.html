@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./vite.svg" />
@@ -8,15 +8,105 @@
       content="width=device-width,user-scalable=no,initial-scale=1,viewport-fit=cover"
     />
     <meta name="theme-color" content="transparent" />
-    <title></title>
-    <script type="module" crossorigin src="./assets/index-CYkdPxbD.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/vue-vendor-BEJwBKj-.js">
-    <link rel="modulepreload" crossorigin href="./assets/three-vendor-CGYxI5_E.js">
-    <link rel="modulepreload" crossorigin href="./assets/rapier-vendor-BkL4ebhG.js">
-    <link rel="modulepreload" crossorigin href="./assets/vendor-BywXDwGX.js">
-    <link rel="stylesheet" crossorigin href="./assets/index-w6cfWhlm.css">
+    
+    <!-- SEO Meta Tags -->
+    <title>Web Wide World - 3D高斯泼溅场景查看器 | 平凡人共创普惠世界</title>
+    <meta name="description" content="Web Wide World 是一个基于 3D Gaussian Splatting (3DGS) 技术的在线场景查看器。支持查看和探索高质量3D重建场景，提供沉浸式的虚拟世界体验。By Nobody, For Everyone - 平凡人共创普惠世界。" />
+    <meta name="keywords" content="3D Gaussian Splatting, 3DGS, 高斯泼溅, 3D场景, 虚拟世界, 元宇宙, Three.js, WebGL, 3D查看器, 场景重建, NeRF, 点云渲染" />
+    <meta name="author" content="Web Wide World Team" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://web-wide-world.space/" />
+    <meta property="og:title" content="Web Wide World - 3D高斯泼溅场景查看器" />
+    <meta property="og:description" content="基于 3D Gaussian Splatting 技术的在线场景查看器。探索高质量3D重建场景，体验沉浸式虚拟世界。" />
+    <meta property="og:image" content="https://web-wide-world.space/og-image.png" />
+    <meta property="og:locale" content="zh_CN" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://web-wide-world.space/" />
+    <meta name="twitter:title" content="Web Wide World - 3D高斯泼溅场景查看器" />
+    <meta name="twitter:description" content="基于 3D Gaussian Splatting 技术的在线场景查看器。探索高质量3D重建场景。" />
+    <meta name="twitter:image" content="https://web-wide-world.space/og-image.png" />
+    
+    <!-- JSON-LD 结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Web Wide World",
+      "description": "基于 3D Gaussian Splatting (3DGS) 技术的在线场景查看器，支持查看和探索高质量3D重建场景。",
+      "url": "https://web-wide-world.space/",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "CNY"
+      },
+      "featureList": [
+        "3D Gaussian Splatting 场景渲染",
+        "实时3D场景浏览",
+        "虚拟角色控制",
+        "多场景切换",
+        "移动端支持"
+      ],
+      "screenshot": "https://web-wide-world.space/og-image.png",
+      "softwareVersion": "2.0",
+      "author": {
+        "@type": "Organization",
+        "name": "Web Wide World Team",
+        "slogan": "By Nobody, For Everyone - 平凡人共创普惠世界"
+      }
+    }
+    </script>
+    <script type="module" crossorigin src="./assets/vue-vendor-CIk49iBZ.js"></script>
+    <script type="module" crossorigin src="./assets/three-vendor-CGYxI5_E.js"></script>
+    <script type="module" crossorigin src="./assets/rapier-vendor-BkL4ebhG.js"></script>
+    <script type="module" crossorigin src="./assets/vendor-EQnR52Jg.js"></script>
+    <script type="module" crossorigin src="./assets/main-ChGAcfBi.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/main-w6cfWhlm.css">
   </head>
   <body>
+    <!-- 爬虫可读的静态内容（对用户隐藏，但爬虫可见） -->
+    <noscript>
+      <div style="padding: 20px; max-width: 800px; margin: 0 auto;">
+        <h1>Web Wide World - 3D高斯泼溅场景查看器</h1>
+        <p><strong>By Nobody, For Everyone：平凡人共创普惠世界</strong></p>
+        
+        <h2>关于本站</h2>
+        <p>Web Wide World 是一个基于 3D Gaussian Splatting (3DGS) 技术的在线场景查看器。我们提供高质量的3D重建场景浏览体验。</p>
+        
+        <h2>主要功能</h2>
+        <ul>
+          <li><strong>3D场景浏览</strong> - 使用先进的高斯泼溅技术渲染逼真的3D场景</li>
+          <li><strong>虚拟角色</strong> - 控制虚拟角色在场景中自由行走探索</li>
+          <li><strong>多场景支持</strong> - 提供多个精美的3D重建场景供选择</li>
+          <li><strong>自定义场景</strong> - 支持输入自定义场景URL进行查看</li>
+        </ul>
+        
+        <h2>技术特点</h2>
+        <ul>
+          <li>基于 Three.js 的 WebGL 渲染</li>
+          <li>支持 3D Gaussian Splatting (3DGS) 格式</li>
+          <li>实时物理引擎 (Rapier)</li>
+          <li>响应式设计，支持移动端</li>
+        </ul>
+        
+        <h2>页面导航</h2>
+        <ul>
+          <li><a href="/">首页 - 场景列表</a></li>
+          <li><a href="/v2">V2版本 - 新版场景列表</a></li>
+          <li><a href="/viewer">元宇宙查看器</a></li>
+          <li><a href="/viewer2">场景查看器</a></li>
+        </ul>
+        
+        <p>请启用 JavaScript 以获得完整的3D浏览体验。</p>
+      </div>
+    </noscript>
+    
     <div id="app"></div>
   </body>
 </html>
