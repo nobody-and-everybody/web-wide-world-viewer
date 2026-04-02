@@ -2,10 +2,26 @@
   "rewrites": [
     {
       "source": "/v2",
-      "destination": "/v2.html"
+      "destination": "/v2/index.html"
     },
     {
-      "source": "/((?!assets|models|sounds|images|favicon|vite\\.svg|robots\\.txt|sitemap\\.xml|og-image\\.png|.*\\.html).*)",
+      "source": "/viewer2",
+      "destination": "/viewer2/index.html"
+    },
+    {
+      "source": "/viewer",
+      "destination": "/viewer/index.html"
+    },
+    {
+      "source": "/spark",
+      "destination": "/spark/index.html"
+    },
+    {
+      "source": "/server/(.*)",
+      "destination": "/404"
+    },
+    {
+      "source": "/((?!assets|models|sounds|images|favicon|vite\\.svg|robots\\.txt|sitemap\\.xml|og-image\\.png|v2/|viewer2/|viewer/|spark/).*)",
       "destination": "/index.html"
     }
   ],
