@@ -1,35 +1,34 @@
 <!doctype html>
 <html lang="zh-CN">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
-    <meta
-      name="viewport"
+    <meta charset="UTF-8" >
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" >
+    <meta       name="viewport"
       content="width=device-width,user-scalable=no,initial-scale=1,viewport-fit=cover"
-    />
-    <meta name="theme-color" content="transparent" />
+    >
+    <meta name="theme-color" content="transparent" >
     
     <!-- SEO Meta Tags -->
     <title>Web Wide World - 3D高斯泼溅场景查看器 | 平凡人共创普惠世界</title>
-    <meta name="description" content="Web Wide World 是一个基于 3D Gaussian Splatting (3DGS) 技术的在线场景查看器。支持查看和探索高质量3D重建场景，提供沉浸式的虚拟世界体验。By Nobody, For Everyone - 平凡人共创普惠世界。" />
-    <meta name="keywords" content="3D Gaussian Splatting, 3DGS, 高斯泼溅, 3D场景, 虚拟世界, 元宇宙, Three.js, WebGL, 3D查看器, 场景重建, NeRF, 点云渲染" />
-    <meta name="author" content="Web Wide World Team" />
-    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Web Wide World 是一个基于 3D Gaussian Splatting (3DGS) 技术的在线场景查看器。支持查看和探索高质量3D重建场景，提供沉浸式的虚拟世界体验。By Nobody, For Everyone - 平凡人共创普惠世界。" >
+    <meta name="keywords" content="3D Gaussian Splatting, 3DGS, 高斯泼溅, 3D场景, 虚拟世界, 元宇宙, Three.js, WebGL, 3D查看器, 场景重建, NeRF, 点云渲染" >
+    <meta name="author" content="Web Wide World Team" >
+    <meta name="robots" content="index, follow" >
     
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://web-wide-world.space/" />
-    <meta property="og:title" content="Web Wide World - 3D高斯泼溅场景查看器" />
-    <meta property="og:description" content="基于 3D Gaussian Splatting 技术的在线场景查看器。探索高质量3D重建场景，体验沉浸式虚拟世界。" />
-    <meta property="og:image" content="https://web-wide-world.space/og-image.png" />
-    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:type" content="website" >
+    <meta property="og:url" content="https://web-wide-world.space/" >
+    <meta property="og:title" content="Web Wide World - 3D高斯泼溅场景查看器" >
+    <meta property="og:description" content="基于 3D Gaussian Splatting 技术的在线场景查看器。探索高质量3D重建场景，体验沉浸式虚拟世界。" >
+    <meta property="og:image" content="https://web-wide-world.space/og-image.png" >
+    <meta property="og:locale" content="zh_CN" >
     
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://web-wide-world.space/" />
-    <meta name="twitter:title" content="Web Wide World - 3D高斯泼溅场景查看器" />
-    <meta name="twitter:description" content="基于 3D Gaussian Splatting 技术的在线场景查看器。探索高质量3D重建场景。" />
-    <meta name="twitter:image" content="https://web-wide-world.space/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" >
+    <meta name="twitter:url" content="https://web-wide-world.space/" >
+    <meta name="twitter:title" content="Web Wide World - 3D高斯泼溅场景查看器" >
+    <meta name="twitter:description" content="基于 3D Gaussian Splatting 技术的在线场景查看器。探索高质量3D重建场景。" >
+    <meta name="twitter:image" content="https://web-wide-world.space/og-image.png" >
     
     <!-- JSON-LD 结构化数据 -->
     <script type="application/ld+json">
@@ -62,51 +61,105 @@
       }
     }
     </script>
-    <script type="module" crossorigin src="./assets/vue-vendor-BEJwBKj-.js"></script>
-    <script type="module" crossorigin src="./assets/three-vendor-CGYxI5_E.js"></script>
-    <script type="module" crossorigin src="./assets/rapier-vendor-BkL4ebhG.js"></script>
-    <script type="module" crossorigin src="./assets/vendor-DukNsGyR.js"></script>
-    <script type="module" crossorigin src="./assets/main-BEKSuMuI.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/main-w6cfWhlm.css">
-  </head>
-  <body>
-    <!-- 爬虫可读的静态内容（对用户隐藏，但爬虫可见） -->
-    <noscript>
-      <div style="padding: 20px; max-width: 800px; margin: 0 auto;">
-        <h1>Web Wide World - 3D高斯泼溅场景查看器</h1>
-        <p><strong>By Nobody, For Everyone：平凡人共创普惠世界</strong></p>
-        
-        <h2>关于本站</h2>
-        <p>Web Wide World 是一个基于 3D Gaussian Splatting (3DGS) 技术的在线场景查看器。我们提供高质量的3D重建场景浏览体验。</p>
-        
-        <h2>主要功能</h2>
-        <ul>
-          <li><strong>3D场景浏览</strong> - 使用先进的高斯泼溅技术渲染逼真的3D场景</li>
-          <li><strong>虚拟角色</strong> - 控制虚拟角色在场景中自由行走探索</li>
-          <li><strong>多场景支持</strong> - 提供多个精美的3D重建场景供选择</li>
-          <li><strong>自定义场景</strong> - 支持输入自定义场景URL进行查看</li>
-        </ul>
-        
-        <h2>技术特点</h2>
-        <ul>
-          <li>基于 Three.js 的 WebGL 渲染</li>
-          <li>支持 3D Gaussian Splatting (3DGS) 格式</li>
-          <li>实时物理引擎 (Rapier)</li>
-          <li>响应式设计，支持移动端</li>
-        </ul>
-        
-        <h2>页面导航</h2>
-        <ul>
-          <li><a href="/">首页 - 场景列表</a></li>
-          <li><a href="/v2">V2版本 - 新版场景列表</a></li>
-          <li><a href="/viewer">元宇宙查看器</a></li>
-          <li><a href="/viewer2">场景查看器</a></li>
-        </ul>
-        
-        <p>请启用 JavaScript 以获得完整的3D浏览体验。</p>
-      </div>
-    </noscript>
-    
+    <script type="module" crossorigin src="./assets/index-DtF_0j7d.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/vue-vendor-BEJwBKj-.js">
+    <link rel="modulepreload" crossorigin href="./assets/three-vendor-CGYxI5_E.js">
+    <link rel="modulepreload" crossorigin href="./assets/rapier-vendor-BkL4ebhG.js">
+    <link rel="modulepreload" crossorigin href="./assets/vendor-X15RUVfl.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-w6cfWhlm.css">
+  <meta name="description" content="Web Wide World 是一个基于 3D Gaussian Splatting (3DGS) 技术的在线场景查看器。支持查看和探索高质量3D重建场景，提供沉浸式的虚拟世界体验。"></head>
+  <body>   
     <div id="app"></div>
+    <div id="prerender" style="display: none;">
+<div class="model-list">
+  <header class="header">
+    <h1>Web Wide World</h1>
+    <p>By Nobdy, For Everyone：平凡人共创普惠世界</p>
+  </header>
+  <div class="baidu-search-box">
+    <input type="text" class="baidu-input" placeholder="请填入场景 URL" >
+    <button class="baidu-btn">
+      Go
+      <svg class="btn-icon" width="18" height="18" viewBox="0 0 20 20">
+        <polyline points="7 5 13 10 7 15" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ></polyline>
+      </svg>
+    </button>
+  </div>
+  <div class="models-grid">
+    
+    <div class="model-card">
+      <div class="model-preview">
+        <div class="model-icon">🎯</div>
+        <h3>二次元街区</h3>
+      </div>
+      <div class="model-info">
+        <button class="view-button">查看详情</button>
+      </div>
+    </div>
+    <div class="model-card">
+      <div class="model-preview">
+        <div class="model-icon">🎯</div>
+        <h3>哥特城堡</h3>
+      </div>
+      <div class="model-info">
+        <button class="view-button">查看详情</button>
+      </div>
+    </div>
+    <div class="model-card">
+      <div class="model-preview">
+        <div class="model-icon">🎯</div>
+        <h3>奥利奥</h3>
+      </div>
+      <div class="model-info">
+        <button class="view-button">查看详情</button>
+      </div>
+    </div>
+    <div class="model-card">
+      <div class="model-preview">
+        <div class="model-icon">🎯</div>
+        <h3>乡村土路</h3>
+      </div>
+      <div class="model-info">
+        <button class="view-button">查看详情</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEO 内容（爬虫可读） -->
+  <div class="seo-content" style="position:absolute;left:-86.2rem;top:-86.2rem;">
+    <h1>Web Wide World - 3D高斯泼溅场景查看器</h1>
+    <p>基于 3D Gaussian Splatting 技术的在线场景查看器。</p>
+    <h2>主要功能</h2>
+    <ul>
+      <li>3D场景浏览 - 使用先进的高斯泼溅技术渲染逼真的3D场景</li>
+      <li>虚拟角色 - 控制虚拟角色在场景中自由行走探索</li>
+      <li>多场景支持 - 提供多个精美的3D重建场景供选择</li>
+      <li>自定义场景 - 支持输入自定义场景URL进行查看</li>
+    </ul>
+    <h2>页面导航</h2>
+    <ul>
+      <li><a href="/">首页 - 场景列表</a></li>
+      <li><a href="/v2">V2版本 - 新版场景列表</a></li>
+    </ul>
+  </div>
+</div>
+<style>
+  .model-list{overflow-y:scroll;height:100vh;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);padding:2rem}
+  .header{text-align:center;color:#fff;margin-bottom:3rem}
+  .header h1{font-size:2.5rem;margin-bottom:0.5rem;font-weight:300}
+  .header p{font-size:1.1rem;opacity:.9}
+  .baidu-search-box{display:flex;justify-content:center;align-items:center;border-radius:14px;overflow:hidden;box-shadow:0 2px 12px rgba(75,144,214,.08);border:1.5px solid #e0e3ea;background:#fff;max-width:800px;margin:0 auto 1.5rem}
+  .baidu-input{flex:1;padding:0 18px;height:46px;border:none;outline:none;font-size:1.07em;background:transparent;color:#222f3a}
+  .baidu-btn{display:flex;align-items:center;gap:0.25em;height:46px;padding:0 21px 0 16px;background:#3385ff;color:#fff;border:none;cursor:pointer;font-size:1.08em;font-weight:600;border-radius:0 14px 14px 0}
+  .models-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;max-width:800px;margin:0 auto;padding-bottom:10rem}
+  .model-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.1);opacity:.75}
+  .model-card.skeleton{animation:pulse 1.5s infinite}
+  @keyframes pulse{0%,100%{opacity:.75}50%{opacity:.5}}
+  .model-preview{padding:2rem;text-align:center;background:linear-gradient(135deg,#f5f7fa 0%,#c3cfe2 100%)}
+  .model-icon{font-size:3rem;margin-bottom:1rem}
+  .model-preview h3{margin:0;font-size:1.5rem;color:#333;font-weight:500}
+  .model-info{padding:1.5rem}
+  .view-button{width:100%;padding:0.75rem;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;border:none;border-radius:6px;font-size:1rem;cursor:pointer}
+</style><script type="application/json" id="prerender-data">{"modelList":[{"id":"tokyolitev3","name":"二次元街区","geometry":"5|2|5","geometryPos":"-5|0|15.5","modelPos":"0|1|0","modelUrl":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/acg_street/700k/acg.json","sceneUrl":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/acg_street/700k/acg.json","sceneUrlV2":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/acg_street/700k/acg_v2.json","interaction":{"interaction":true,"geometry":"5|2|5","geometryPos":"-5|0|15.5","modelPos":"0|1|0"}},{"id":"castle","name":"哥特城堡","modelUrl":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/Gothic_castle/Area3/model.meta_700k.json","sceneUrl":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/Gothic_castle/Area3/model.meta_700k.json","sceneUrlV2":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/Gothic_castle/Area3/model.meta_700k_v2.json"},{"id":"oreo","name":"奥利奥","modelUrl":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/projectG_Oreo/oreo.json","sceneUrl":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/projectG_Oreo/oreo.json","sceneUrlV2":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/projectG_Oreo/oreo_v2.json"},{"id":"slums","name":"乡村土路","modelUrl":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_Slums/ksplat_v2/model.meta_700k_tile.json","sceneUrl":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_Slums/ksplat_v2/model.meta_700k_tile.json","sceneUrlV2":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_Slums/ksplat_v2/model.meta_700k_tile_v2.json"}]}</script></div>
   </body>
 </html>
