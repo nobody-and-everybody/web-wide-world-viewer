@@ -1,0 +1,46 @@
+{
+  "models": [
+    {
+      "id": "gracia_fashion",
+      "name": "4DGS Singer",
+      "describe": "使用 Gracia 4DGS 技术的动态人物 - Singer",
+      "type": "gracia-4dgs",
+      "gracia4dgs": {
+        "source": {
+          "id": "singer",
+          "label": "Singer",
+          "url": "https://vincentzsun-any1.devcloud.woa.com/api/streaming/content/784c5fd3-810f-43bd-8495-5d2ce08998e2/",
+          "token": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NzMyMjg4OTcsImV4cCI6MTg5NDM2MTY0MH0.U9kEeoph8JFV9zZ9ht7F7NAFpaLRIKRuMyFAYR9xqsw",
+          "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_chinese_garden/test/audio.mp3",
+          "initialTransform": {
+            "rotation": { "x": -0.5920059, "y": -0.40529537, "z": 0.35717022, "w": 0.59807533 },
+            "scale": { "x": 1.5540001, "y": 1.5540001, "z": 1.5540001 },
+            "translation": { "x": -0.08567872, "y": 1.3075172, "z": -0.59475327 }
+          }
+        },
+        "splatScale": 1.0,
+        "enableMesh": true,
+        "autoPlay": true,
+        "loop": true,
+        "envLighting": {
+          "sh": [1.87031,1.918464,2.000223,0.962367,1.050086,1.184771,1.543599,1.419717,1.262293,2.100156,1.935595,1.729669,1.584412,1.473231,1.336372,1.148921,1.068716,0.966966,-0.07552,-0.038685,-0.013138,2.609779,2.423938,2.198205,1.474358,1.355914,1.198138],
+          "lightDir": { "x": 0.3, "y": 1, "z": 0.2 },
+          "scale": 1.0,
+          "ambientBoost": 0.5
+        }
+      },
+      "targetHeight": 1.8,
+      "imagePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/images/4dgs-preview.jpg"
+    }
+  ],
+  "list": [
+    {
+      "id": "npc_4dgs_fashion",
+      "modelId": "gracia_fashion",
+      "position2": { "x": 0, "y": 1.14, "z": 10 },
+      "position": { "x": -8.5, "y": 1.2, "z": 0.7 },
+      "rotation": { "x": 0, "y": 90, "z": 0 },
+      "scale": 1.1
+    }
+  ]
+}

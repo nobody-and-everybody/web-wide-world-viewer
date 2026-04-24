@@ -1,0 +1,115 @@
+{
+  "name": "ChineseGarden",
+  "rendererScale": 1,
+  "debugger": false,
+  "meterScale": 1,
+  "gaussianSplatting": {
+    "gaussianComponentType": "playcanvas",
+    "regionReplaceConfigPath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_chinese_garden/region_replace/region-replace-config_no_sky_ue_relight.json",
+    "depthWrite": true,
+    "gaussianSplats3DOption": {
+      "sharedMemoryForWorkers": false,
+      "sphericalHarmonicsDegree": 0,
+      "ignoreDevicePixelRatio": true,
+      "enableSIMDInSort": true,
+      "integerBasedSort": true,
+      "splatSortDistanceMapPrecision": 32,
+      "halfPrecisionCovariancesOnGPU": true,
+      "dynamicScene": true,
+      "renderMode": 0,
+      "antialiased": false
+    },
+    "transform": {
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 180],
+      "scale": [1, 1, 1]
+    }
+  },
+  "collision": {
+    "url": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/collisions/chinese.glb",
+    "transform": {
+      "position": [0, 0, 0],
+      "rotation": [0, 90, 0],
+      "scale": [1, 1, 1]
+    }
+  },
+  "initial": {
+    "player": {
+      "position": {"x":-8.06, "y": 1.14, "z": 0},
+      "rotation": {"x": 0, "y": 20, "z": 0},
+      "characterId": "kachujin"
+    }
+  },
+  "lighting": {
+    "sky": {
+      "turbidity": 2,
+      "rayleigh": 1,
+      "mieCoefficient": 0.005,
+      "mieDirectionalG": 0.8,
+      "elevation": 80,
+      "azimuth": 180
+    },
+    "cloud": {
+      "enabled": true,
+      "count": 150,
+      "height": 300,
+      "heightVariation": 80,
+      "spread": 2000,
+      "opacity": 0.7,
+      "scale": 1.2,
+      "color": "#e8eeee",
+      "speed": 2,
+      "animate": true
+    },
+    "ambient": {
+      "color": "#FFE495",
+      "intensity": 2
+    },
+    "directional": [
+      {
+        "name": "主光源",
+        "color": "#6527F5",
+        "intensity": 1.2,
+        "direction": {
+          "x": -1,
+          "y": 1.75,
+          "z": 1
+        },
+        "distance": 30,
+        "shadow": {
+          "enabled": true,
+          "mapSize": 2048,
+          "camera": {
+            "left": -30,
+            "right": 30,
+            "top": 30,
+            "bottom": -30,
+            "far": 100
+          }
+        }
+      },
+      {
+        "name": "补充光",
+        "color": "#F5CC27",
+        "intensity": 0.6,
+        "direction": {
+          "x": 1,
+          "y": 1,
+          "z": -1
+        },
+        "distance": 20
+      },
+      {
+        "name": "背光",
+        "color": "#27F5CC",
+        "intensity": 0.4,
+        "direction": {
+          "x": 0,
+          "y": 2,
+          "z": -1
+        },
+        "distance": 15
+      }
+    ]
+  }
+}

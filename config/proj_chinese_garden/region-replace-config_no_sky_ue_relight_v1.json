@@ -1,0 +1,26 @@
+{
+  "baseUrl": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_chinese_garden/test/model/",
+  "morton": false,
+  "fileType": "ply",
+  "modules": [
+    {
+      "name": "-1_0_0_morton",
+      "transform": {
+        "position": [0.0, 10.0, 9.0],
+        "rotation": [1, 0, 0, 0],
+        "scale": [1, 1, 1]
+      },
+      "bounds": {
+        "x": 24.0,
+        "y": 20.0,
+        "z": 22.0
+      },
+      "collision_name": ["chunk_0_0_0.glb"],
+      "ply_name": ["-1_0_0_morton"]
+    }
+  ],
+  "switchConfig": {
+    "unloadDistance": 50,
+    "switchDelay": 500
+  }
+}
