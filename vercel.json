@@ -11,25 +11,14 @@
     {
       "source": "/spark",
       "destination": "/spark/index.html"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/viewer2/:path*",
-      "destination": "/viewer2/:path*"
     },
     {
-      "source": "/viewer/:path*",
-      "destination": "/viewer/:path*"
+      "source": "/server/(.*)",
+      "destination": "/404"
     },
     {
-      "source": "/spark/:path*",
-      "destination": "/spark/:path*"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/",
-      "permanent": true
+      "source": "/((?!assets|models|sounds|images|favicon|vite\\.svg|robots\\.txt|sitemap\\.xml|og-image\\.png|v2/|viewer2/|viewer/|spark/).*)",
+      "destination": "/index.html"
     }
   ],
   "headers": [
