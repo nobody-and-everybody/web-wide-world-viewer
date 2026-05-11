@@ -8,60 +8,63 @@
     >
     <meta name="theme-color" content="transparent" >
     
-    <!-- SEO Meta Tags -->
+    <!-- SEO Meta Tags for /v2 -->
     <title>元宇宙查看器 - Web Wide World</title>
-    <meta name="description" content="Web Wide World 是一个基于 3D Gaussian Splatting (3DGS) 技术的在线场景查看器。支持查看和探索高质量3D重建场景，提供沉浸式的虚拟世界体验。By Nobody, For Everyone - 平凡人共创普惠世界。" >
-    <meta name="keywords" content="3D Gaussian Splatting, 3DGS, 高斯泼溅, 3D场景, 虚拟世界, 元宇宙, Three.js, WebGL, 3D查看器, 场景重建, NeRF, 点云渲染" >
+    <meta name="description" content="Web Wide World 版本场景列表。提供多种高质量 3D Gaussian Splatting 重建场景，支持虚拟角色在场景中自由探索。By Nobody, For Everyone - 平凡人共创普惠世界。" >
+    <meta name="keywords" content="3D Gaussian Splatting, 3DGS, 高斯泼溅, 3D场景列表, 虚拟角色, 场景探索, 元宇宙, Three.js, WebGL" >
     <meta name="author" content="Web Wide World Team" >
     <meta name="robots" content="index, follow" >
+    <link rel="canonical" href="https://web-wide-world.space/" >
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" >
     <meta property="og:url" content="https://web-wide-world.space/" >
-    <meta property="og:title" content="Web Wide World - 3D高斯泼溅场景查看器" >
-    <meta property="og:description" content="基于 3D Gaussian Splatting 技术的在线场景查看器。探索高质量3D重建场景，体验沉浸式虚拟世界。" >
+    <meta property="og:title" content="Web Wide World - 3D场景列表" >
+    <meta property="og:description" content="探索多种高质量 3D Gaussian Splatting 重建场景，控制虚拟角色自由探索虚拟世界。" >
     <meta property="og:image" content="https://web-wide-world.space/og-image.png" >
     <meta property="og:locale" content="zh_CN" >
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" >
     <meta name="twitter:url" content="https://web-wide-world.space/" >
-    <meta name="twitter:title" content="Web Wide World - 3D高斯泼溅场景查看器" >
-    <meta name="twitter:description" content="基于 3D Gaussian Splatting 技术的在线场景查看器。探索高质量3D重建场景。" >
+    <meta name="twitter:title" content="Web Wide World - 3D场景列表" >
+    <meta name="twitter:description" content="探索多种高质量 3D Gaussian Splatting 重建场景。" >
     <meta name="twitter:image" content="https://web-wide-world.space/og-image.png" >
     
     <!-- JSON-LD 结构化数据 -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Web Wide World",
-      "description": "基于 3D Gaussian Splatting (3DGS) 技术的在线场景查看器，支持查看和探索高质量3D重建场景。",
+      "@type": "CollectionPage",
+      "name": "Web Wide World - 3D场景列表",
+      "description": "Web Wide World 版本的3D场景集合，提供多种高质量 3D Gaussian Splatting 重建场景供探索。",
       "url": "https://web-wide-world.space/",
-      "applicationCategory": "MultimediaApplication",
-      "operatingSystem": "Web Browser",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "CNY"
+      "isPartOf": {
+        "@type": "WebApplication",
+        "name": "Web Wide World",
+        "url": "https://web-wide-world.space/"
       },
-      "featureList": [
-        "3D Gaussian Splatting 场景渲染",
-        "实时3D场景浏览",
-        "虚拟角色控制",
-        "多场景切换",
-        "移动端支持"
-      ],
-      "screenshot": "https://web-wide-world.space/og-image.png",
-      "softwareVersion": "2.0",
-      "author": {
-        "@type": "Organization",
-        "name": "Web Wide World Team",
-        "slogan": "By Nobody, For Everyone - 平凡人共创普惠世界"
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "3D场景列表",
+        "description": "可探索的3D Gaussian Splatting场景",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "3D重建场景",
+            "description": "使用高斯泼溅技术重建的高质量3D场景"
+          }
+        ]
+      },
+      "potentialAction": {
+        "@type": "ViewAction",
+        "name": "浏览3D场景",
+        "target": "https://web-wide-world.space/viewer2"
       }
     }
     </script>
-    <script type="module" crossorigin src="./assets/index-DABeAN1l.js"></script>
+    <script type="module" crossorigin src="./assets/index-Djek-H4h.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/vue-vendor-DkMqquht.js">
     <link rel="modulepreload" crossorigin href="./assets/three-vendor-Es75PwWf.js">
     <link rel="modulepreload" crossorigin href="./assets/rapier-vendor-CKC5f6tm.js">
