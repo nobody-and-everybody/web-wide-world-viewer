@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/v2",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/viewer2",
