@@ -166,7 +166,6 @@
       "azimuth": 180
     },
     "cloud": {
-      "enabled": true,
       "count": 150,
       "height": 300,
       "heightVariation": 80,
