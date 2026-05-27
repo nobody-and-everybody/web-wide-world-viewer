@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <defs>
+    <!-- 主品牌蓝 -->
+    <radialGradient id="blue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c8e3ff" stop-opacity="1"/>
+      <stop offset="50%" stop-color="#6da8ea" stop-opacity="0.94"/>
+      <stop offset="100%" stop-color="#4184d2" stop-opacity="0"/>
+    </radialGradient>
+    <!-- 偏蓝紫主色 -->
+    <radialGradient id="violet" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e4deff" stop-opacity="0.98"/>
+      <stop offset="50%" stop-color="#8f8cf6" stop-opacity="0.86"/>
+      <stop offset="100%" stop-color="#7a74ee" stop-opacity="0"/>
+    </radialGradient>
+    <!-- 中心高光 -->
+    <radialGradient id="highlight" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="38%" stop-color="#f4f8ff" stop-opacity="0.58"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 更偏蓝、分离更明显、尽量铺满的双主色 splat -->
+  <circle cx="11.5" cy="18" r="11.5" fill="url(#blue)"/>
+  <circle cx="22" cy="11" r="10" fill="url(#violet)"/>
+  <circle cx="16.5" cy="15.8" r="4.4" fill="url(#highlight)"/>
+</svg>
