@@ -110,5 +110,46 @@
         "distance": 15
       }
     ]
+  },
+  "audio": {
+    "listener": {
+      "masterVolume": 1,
+      "bgmMasterVolume": 0.6,
+      "sfxMasterVolume": 0.8,
+      "muted": false
+    },
+    "bgm": [
+      {
+        "id": "garden_bgm",
+        "url": "/config/proj_chinese_garden/audio.mp3",
+        "kind": "2d",
+        "loop": true,
+        "volume": 1,
+        "autoPlay": true,
+        "trigger": { "type": "always" }
+      }
+    ],
+    "sfx": [
+      {
+        "id": "pool_water",
+        "url": "/project_chinese/assets/NPC-1/0-N.wav",
+        "kind": "3d",
+        "loop": true,
+        "volume": 0.9,
+        "refDistance": 3,
+        "rolloffFactor": 1,
+        "maxDistance": 25,
+        "distanceModel": "inverse",
+        "trigger": { "type": "audioZone", "zoneId": "zone_garden_pool" }
+      }
+    ],
+    "audioZones": [
+      {
+        "id": "zone_garden_pool",
+        "shape": "sphere",
+        "center": { "x": -2, "y": 0.5, "z": 4 },
+        "radius": 6
+      }
+    ]
   }
 }
