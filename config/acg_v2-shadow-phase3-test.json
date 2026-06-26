@@ -119,5 +119,15 @@
         }
       }
     }
+  },
+  "renderer": {
+    "postProcessing": {
+      "enabled": true,
+      "multisampling": 0,
+      "antialiasing": { "enabled": true, "preset": "high" },
+      "bloom": { "enabled": true, "intensity": 1.0, "luminanceThreshold": 0.9, "luminanceSmoothing": 0.025, "radius": 0.85, "mipmapBlur": true },
+      "ssao": { "enabled": true, "samples": 9, "rings": 7, "radius": 0.1825, "intensity": 1.0, "bias": 0.025, "fade": 0.01, "resolutionScale": 1.0 },
+      "pmndrsToneMapping": { "enabled": true, "mode": "ACESFilmic" }
+    }
   }
 }
