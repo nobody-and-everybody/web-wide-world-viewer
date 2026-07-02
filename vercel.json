@@ -20,11 +20,27 @@
       "destination": "/spark/index.html"
     },
     {
+      "source": "/museum-v1_0_68",
+      "destination": "/museum-v1_0_68/index.html"
+    },
+    {
+      "source": "/museum-v1_0_68/viewer2",
+      "destination": "/museum-v1_0_68/viewer2/index.html"
+    },
+    {
+      "source": "/museum-v1_0_68/viewer",
+      "destination": "/museum-v1_0_68/viewer/index.html"
+    },
+    {
+      "source": "/museum-v1_0_68/spark",
+      "destination": "/museum-v1_0_68/spark/index.html"
+    },
+    {
       "source": "/server/(.*)",
       "destination": "/404"
     },
     {
-      "source": "/((?!assets|models|sounds|images|favicon|vite\\.svg|robots\\.txt|sitemap\\.xml|og-image\\.png|v2/|viewer2/|viewer/|spark/).*)",
+      "source": "/((?!assets|models|sounds|images|favicon|vite\\.svg|robots\\.txt|sitemap\\.xml|og-image\\.png|v2/|viewer2/|viewer/|spark/|museum-v1_0_68/).*)",
       "destination": "/index.html"
     }
   ],
