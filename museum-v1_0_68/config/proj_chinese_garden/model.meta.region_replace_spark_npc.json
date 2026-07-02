@@ -1,0 +1,235 @@
+{
+  "name": "ChineseGarden",
+  "rendererScale": 1,
+  "debugger": false,
+  "meterScale": 1,
+  "gaussianSplatting": {
+    "gaussianComponentType": "spark",
+    "regionReplaceConfigPath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_chinese_garden/region_replace/region-replace-config_no_sky_ue_relight.json",
+    "gaussianSplats3DOption": {
+      "sharedMemoryForWorkers": false,
+      "sphericalHarmonicsDegree": 0,
+      "ignoreDevicePixelRatio": true,
+      "enableSIMDInSort": true,
+      "integerBasedSort": true,
+      "splatSortDistanceMapPrecision": 32,
+      "halfPrecisionCovariancesOnGPU": true,
+      "dynamicScene": true,
+      "renderMode": 0,
+      "antialiased": false
+    },
+    "transform": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        180
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "collision": {
+    "url": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/collisions/chinese.glb",
+    "transform": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        90,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "camera": [
+    {
+      "id": "default",
+      "name": "默认视角",
+      "landscape": {
+        "fov": 70,
+        "near": 0.1,
+        "far": 1000,
+        "cameraDistance": 3,
+        "maxPolarAngle": 120,
+        "minPolarAngle": 10,
+        "lookAtOffsetX": -1.5,
+        "lookAtOffsetY": 0.8,
+        "lookAtOffsetZ": 0.5,
+        "springArmMaxDistance": 6,
+        "springArmMinDistance": 0.5,
+        "springArmCollisionEnabled": true
+      },
+      "portrait": {
+        "fov": 45,
+        "near": 0.1,
+        "far": 1000,
+        "cameraDistance": 4,
+        "maxPolarAngle": 100,
+        "minPolarAngle": 10,
+        "lookAtOffsetX": -1.5,
+        "springArmMaxDistance": 4,
+        "springArmMinDistance": 0.5,
+        "springArmCollisionEnabled": true
+      }
+    },
+    {
+      "id": "cinematic",
+      "name": "电影视角",
+      "landscape": {
+        "fov": 30,
+        "near": 0.1,
+        "far": 1000,
+        "cameraDistance": 10,
+        "maxPolarAngle": 110,
+        "minPolarAngle": 20,
+        "springArmMaxDistance": 10,
+        "springArmMinDistance": 2,
+        "springArmCollisionEnabled": true
+      },
+      "portrait": {
+        "fov": 40,
+        "near": 0.1,
+        "far": 1000,
+        "cameraDistance": 8,
+        "maxPolarAngle": 100,
+        "minPolarAngle": 20,
+        "springArmMaxDistance": 8,
+        "springArmMinDistance": 2,
+        "springArmCollisionEnabled": true
+      }
+    },
+    {
+      "id": "closeup",
+      "name": "近景视角",
+      "landscape": {
+        "fov": 50,
+        "near": 0.1,
+        "far": 500,
+        "cameraDistance": 2.5,
+        "maxPolarAngle": 130,
+        "minPolarAngle": 5,
+        "springArmMaxDistance": 2.5,
+        "springArmMinDistance": 0.3,
+        "springArmCollisionEnabled": true
+      },
+      "portrait": {
+        "fov": 60,
+        "near": 0.1,
+        "far": 500,
+        "cameraDistance": 2,
+        "maxPolarAngle": 110,
+        "minPolarAngle": 5,
+        "springArmMaxDistance": 2,
+        "springArmMinDistance": 0.3,
+        "springArmCollisionEnabled": true
+      }
+    }
+  ],
+  "initial": {
+    "player": {
+      "position": {
+        "x": -8.06,
+        "y": 1.14,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 20,
+        "z": 0
+      },
+      "characterId": "kachujin"
+    },
+    "camera": "default"
+  },
+  "lighting": {
+    "sky": {
+      "turbidity": 2,
+      "rayleigh": 1,
+      "mieCoefficient": 0.005,
+      "mieDirectionalG": 0.8,
+      "elevation": 80,
+      "azimuth": 180
+    },
+    "cloud": {
+      "enabled": true,
+      "count": 150,
+      "height": 300,
+      "heightVariation": 80,
+      "spread": 2000,
+      "opacity": 0.7,
+      "scale": 1.2,
+      "color": "#e8eeee",
+      "speed": 2,
+      "animate": true
+    },
+    "ambient": {
+      "color": "#FFE495",
+      "intensity": 2
+    },
+    "directional": [
+      {
+        "name": "主光源",
+        "color": "#6527F5",
+        "intensity": 1.2,
+        "direction": {
+          "x": -1,
+          "y": 1.75,
+          "z": 1
+        },
+        "distance": 30,
+        "shadow": {
+          "enabled": true,
+          "mapSize": 2048,
+          "camera": {
+            "left": -30,
+            "right": 30,
+            "top": 30,
+            "bottom": -30,
+            "far": 100
+          }
+        }
+      },
+      {
+        "name": "补充光",
+        "color": "#F5CC27",
+        "intensity": 0.6,
+        "direction": {
+          "x": 1,
+          "y": 1,
+          "z": -1
+        },
+        "distance": 20
+      },
+      {
+        "name": "背光",
+        "color": "#27F5CC",
+        "intensity": 0.4,
+        "direction": {
+          "x": 0,
+          "y": 2,
+          "z": -1
+        },
+        "distance": 15
+      }
+    ]
+  },
+  "npcs": {
+    "enabled": true,
+    "configFile": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/chinese-garden-newyear-npcs.json"
+  }
+}

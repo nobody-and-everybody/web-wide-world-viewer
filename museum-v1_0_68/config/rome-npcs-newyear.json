@@ -1,0 +1,1509 @@
+{
+  "models": [
+    {
+      "id": "soldier",
+      "name": "百夫长马库斯",
+      "describe": "罗马军团的百夫长，守护广场的秩序",
+      "modelFilePath": "./models/character/model/Soldier.glb",
+      "imagePath": "./models/character/img/soldier.png",
+      "targetHeight": 1.85,
+      "transform": {
+        "position": { "x": 0, "y": 0, "z": 0 },
+        "rotation": { "x": 0, "y": 180, "z": 0 },
+        "scale": 1
+      },
+      "anim": {
+        "isBuiltIn": true,
+        "speedScale": 0.7,
+        "animations": {
+          "Idle": "Idle",
+          "Walking": "Walk",
+          "Running": "Run",
+          "Falling": "Fall",
+          "Jumping": "Jump"
+        }
+      }
+    },
+    {
+      "id": "nightshade",
+      "name": "女祭司朱莉娅",
+      "describe": "维斯塔神殿的女祭司，守护圣火",
+      "modelFilePath": "./models/character/model/Nightshade J Friedrich.fbx",
+      "imagePath": "./models/character/img/character_03.png",
+      "targetHeight": 1.65,
+      "anim": {
+        "isBuiltIn": false,
+        "animations": {
+          "Idle": "./models/character/anim/Idle.fbx",
+          "Walking": "./models/character/anim/Walking.fbx",
+          "Running": "./models/character/anim/Running.fbx",
+          "Falling": "./models/character/anim/Falling.fbx",
+          "Jumping": "./models/character/anim/Jumping.fbx"
+        }
+      }
+    },
+    {
+      "id": "erika_archer",
+      "name": "弓箭手戴安娜",
+      "describe": "来自高卢的女弓箭手，现为罗马效力",
+      "modelFilePath": "./models/character/model/Erika Archer.fbx",
+      "targetHeight": 1.7,
+      "anim": {
+        "isBuiltIn": false,
+        "speedScale": 0.7,
+        "animations": {
+          "Idle": "./models/character/anim/Idle.fbx",
+          "Walking": "./models/character/anim/Walking.fbx",
+          "Running": "./models/character/anim/Running.fbx",
+          "Falling": "./models/character/anim/Falling.fbx",
+          "Jumping": "./models/character/anim/Jumping.fbx"
+        }
+      }
+    },
+    {
+      "id": "sparta",
+      "name": "角斗士斯巴达克斯",
+      "describe": "传奇角斗士，曾在斗兽场赢得自由",
+      "modelFilePath": "./models/castle_guard_01.fbx",
+      "targetHeight": 1.8,
+      "anim": {
+        "isBuiltIn": false,
+        "animations": {
+          "Idle": "./models/character/anim/Idle.fbx",
+          "Walking": "./models/character/anim/Walking.fbx",
+          "Running": "./models/character/anim/Running.fbx",
+          "Falling": "./models/character/anim/Falling.fbx",
+          "Jumping": "./models/character/anim/Jumping.fbx"
+        }
+      }
+    },
+    {
+      "id": "kachujin",
+      "name": "东方侠客赤霞",
+      "describe": "来自东方的游侠，行侠仗义，剑术超群",
+      "modelFilePath": "./models/character/model/Kachujin G Rosales.fbx",
+      "targetHeight": 1.68,
+      "anim": {
+        "isBuiltIn": false,
+        "animations": {
+          "Idle": "./models/character/anim/Idle.fbx",
+          "Walking": "./models/character/anim/Walking.fbx",
+          "Running": "./models/character/anim/Running.fbx",
+          "Falling": "./models/character/anim/Falling.fbx",
+          "Jumping": "./models/character/anim/Jumping.fbx"
+        }
+      }
+    },
+    {
+      "id": "arissa",
+      "name": "密探卢克蕾西亚",
+      "describe": "元老院的密探，掌握罗马的秘密",
+      "modelFilePath": "./models/character/model/Arissa.fbx",
+      "targetHeight": 1.68,
+      "anim": {
+        "isBuiltIn": false,
+        "animations": {
+          "Idle": "./models/character/anim/Idle.fbx",
+          "Walking": "./models/character/anim/Walking.fbx",
+          "Running": "./models/character/anim/Running.fbx",
+          "Falling": "./models/character/anim/Falling.fbx",
+          "Jumping": "./models/character/anim/Jumping.fbx"
+        }
+      }
+    },
+    {
+      "id": "peasant_girl",
+      "name": "平民少女奥莉维亚",
+      "describe": "在市场卖花的少女，熟悉罗马的大街小巷",
+      "modelFilePath": "./models/character/model/Peasant Girl.fbx",
+      "targetHeight": 1.6,
+      "anim": {
+        "isBuiltIn": false,
+        "animations": {
+          "Idle": "./models/character/anim/Idle.fbx",
+          "Walking": "./models/character/anim/Walking.fbx",
+          "Running": "./models/character/anim/Running.fbx",
+          "Falling": "./models/character/anim/Falling.fbx",
+          "Jumping": "./models/character/anim/Jumping.fbx"
+        }
+      }
+    }
+  ],
+  "list": [
+    {
+      "id": "npc_centurion_marcus",
+      "modelId": "soldier",
+      "position": { "x": 3, "y": 0, "z": -29 },
+      "movementPattern": "patrol",
+      "patrolPoints": [
+        { "x": 15, "y": 0, "z": -40 },
+        { "x": 20, "y": 0, "z": -40 },
+        { "x": 20, "y": 0, "z": -45 },
+        { "x": 15, "y": 0, "z": -45 }
+      ],
+      "wanderSpeed": 0.5,
+      "interaction": {
+        "type": "guard",
+        "distance": 2.5,
+        "autoTrigger": true,
+        "hintText": "🎉 新年快乐",
+        "dialogues": [
+          {
+            "id": "greeting",
+            "text": "新年好，公民！我是百夫长马库斯。农神节快乐！今天即使是我这样的军人，也可以放松一下了。",
+            "responses": [
+              {
+                "id": "ask_saturnalia",
+                "text": "农神节是什么节日？"
+              },
+              {
+                "id": "ask_celebration",
+                "text": "罗马人怎么庆祝新年？"
+              },
+              {
+                "id": "ask_wish",
+                "text": "您的新年愿望是什么？"
+              },
+              {
+                "id": "goodbye",
+                "text": "新年快乐，马库斯！"
+              }
+            ]
+          },
+          {
+            "id": "ask_saturnalia",
+            "text": "农神节是罗马最盛大的节日！为了纪念农神萨图恩，我们要庆祝整整七天。在这几天里，主人会为奴隶服务，所有人都平等。这是一年中最欢乐的时刻！",
+            "responses": [
+              {
+                "id": "ask_celebration",
+                "text": "具体有什么庆祝活动？"
+              },
+              {
+                "id": "ask_gift",
+                "text": "会互送礼物吗？"
+              },
+              {
+                "id": "goodbye",
+                "text": "真是美好的节日！"
+              }
+            ]
+          },
+          {
+            "id": "ask_celebration",
+            "text": "庆祝方式可多了！首先要点燃蜡烛驱散黑暗，象征光明战胜黑暗。然后是盛大的宴会，街上到处都是歌舞。今晚广场上还有篝火晚会，斗兽场也有特别表演！",
+            "responses": [
+              {
+                "id": "ask_gift",
+                "text": "需要准备什么礼物吗？"
+              },
+              {
+                "id": "ask_wish",
+                "text": "您有什么新年愿望？"
+              },
+              {
+                "id": "goodbye",
+                "text": "我一定要去看看！"
+              }
+            ]
+          },
+          {
+            "id": "ask_gift",
+            "text": "当然！农神节最重要的传统就是互赠礼物。蜡烛代表光明，小陶偶代表祝福，还有糖果和蜂蜜蛋糕。我已经给战友们准备了酒和橄榄枝，祝他们新年平安。",
+            "responses": [
+              {
+                "id": "receive_gift",
+                "text": "我也想送您一份祝福"
+              },
+              {
+                "id": "goodbye",
+                "text": "真温馨，新年快乐！"
+              }
+            ]
+          },
+          {
+            "id": "receive_gift",
+            "text": "（爽朗地笑）哈哈！这份心意我收下了！作为回礼，送你这枚护身符——它是马尔斯神庙的祭司开过光的，保佑你新的一年平安顺遂！愿诸神庇佑你！",
+            "responses": [
+              {
+                "id": "greeting",
+                "text": "太感谢了！还有其他问题"
+              },
+              {
+                "id": "goodbye",
+                "text": "愿诸神也庇佑您！"
+              }
+            ]
+          },
+          {
+            "id": "ask_wish",
+            "text": "我的新年愿望？（眼神变得柔和）希望帝国边疆安宁，不再有战争。我已经二十年没回家乡了...新的一年，希望能见到我的老母亲。也希望罗马永远繁荣昌盛！",
+            "responses": [
+              {
+                "id": "bless_marcus",
+                "text": "愿您的愿望成真！"
+              },
+              {
+                "id": "goodbye",
+                "text": "一定会实现的！"
+              }
+            ]
+          },
+          {
+            "id": "bless_marcus",
+            "text": "（感动地）谢谢你，年轻人。新的一年，也愿朱庇特保佑你心想事成！现在去享受节日吧，女祭司朱莉娅在神殿举办新年祈福仪式，很值得去看看。",
+            "responses": [
+              {
+                "id": "greeting",
+                "text": "好的，还有别的想聊吗？"
+              },
+              {
+                "id": "goodbye",
+                "text": "这就去！新年快乐！"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_priestess_julia",
+      "modelId": "nightshade",
+      "position": { "x": 10, "y": 0, "z": -38 },
+      "movementPattern": "idle",
+      "interaction": {
+        "type": "priest",
+        "distance": 2,
+        "autoTrigger": true,
+        "hintText": "🔥 新年祈福",
+        "dialogues": [
+          {
+            "id": "greeting",
+            "text": "新年好，旅行者。愿维斯塔的圣火在新的一年继续照亮你的道路。今天是特别的日子，来参加新年祈福仪式吗？",
+            "responses": [
+              {
+                "id": "ask_blessing",
+                "text": "请为我举行新年祈福"
+              },
+              {
+                "id": "ask_ceremony",
+                "text": "新年仪式是怎样的？"
+              },
+              {
+                "id": "ask_fire_newyear",
+                "text": "圣火在新年有什么特别意义？"
+              },
+              {
+                "id": "goodbye",
+                "text": "新年快乐，女祭司"
+              }
+            ]
+          },
+          {
+            "id": "ask_blessing",
+            "text": "（庄严地）闭上眼睛...愿维斯塔的圣火净化你过去一年的烦恼，愿雅努斯为你打开新年的幸运之门，愿福尔图娜女神眷顾你的每一个选择。新年吉祥，愿你万事如意！",
+            "responses": [
+              {
+                "id": "ask_janus",
+                "text": "雅努斯是谁？"
+              },
+              {
+                "id": "offer_thanks",
+                "text": "我想向神灵献上感谢"
+              },
+              {
+                "id": "goodbye",
+                "text": "感谢您的祝福！"
+              }
+            ]
+          },
+          {
+            "id": "ask_janus",
+            "text": "雅努斯是双面神，掌管开始与结束、过去与未来。他的一张脸望着过去，另一张脸看向未来。一月——Januarius，就是以他的名字命名的。新年时，我们要向他祈祷，请他开启幸运之门。",
+            "responses": [
+              {
+                "id": "ask_blessing",
+                "text": "请为我向雅努斯祈祷"
+              },
+              {
+                "id": "goodbye",
+                "text": "原来如此，感谢您"
+              }
+            ]
+          },
+          {
+            "id": "ask_ceremony",
+            "text": "新年仪式很神圣。首先，我们要用圣水洒扫神殿，象征洗去旧年的尘埃。然后点燃新的圣火，代表新年的希望。最后，每个参与者都会得到一枝月桂，象征胜利与祝福。",
+            "responses": [
+              {
+                "id": "join_ceremony",
+                "text": "我想参加仪式"
+              },
+              {
+                "id": "ask_fire_newyear",
+                "text": "圣火在新年有什么特别？"
+              },
+              {
+                "id": "goodbye",
+                "text": "听起来很神圣"
+              }
+            ]
+          },
+          {
+            "id": "join_ceremony",
+            "text": "（微笑）很好。请跪下，双手合十...（轻声祈祷）维斯塔女神在上，请接纳这位旅行者的虔诚。赐予他/她新年的庇护...（站起身，递过一枝月桂）收好它，这是新年的祝福。",
+            "responses": [
+              {
+                "id": "thank_priestess",
+                "text": "我会珍藏这份祝福"
+              },
+              {
+                "id": "goodbye",
+                "text": "感谢您，女祭司"
+              }
+            ]
+          },
+          {
+            "id": "thank_priestess",
+            "text": "愿你在新的一年里，像这枝月桂一样常青不败。记住，无论遇到什么困难，只要心中有光明，就没有过不去的黑暗。新年快乐，旅行者。",
+            "responses": [
+              {
+                "id": "greeting",
+                "text": "还有其他问题"
+              },
+              {
+                "id": "goodbye",
+                "text": "愿圣火永远燃烧！"
+              }
+            ]
+          },
+          {
+            "id": "ask_fire_newyear",
+            "text": "新年的圣火有特别的意义。在旧年的最后一刻，我们会熄灭旧火，然后在新年第一缕阳光中点燃新火。这象征着旧岁已去，新年重生。七百年来，这个仪式从未间断。",
+            "responses": [
+              {
+                "id": "ask_blessing",
+                "text": "请用圣火为我祈福"
+              },
+              {
+                "id": "goodbye",
+                "text": "真是神圣的传统"
+              }
+            ]
+          },
+          {
+            "id": "offer_thanks",
+            "text": "（欣慰地）感恩之心是最好的供品。把你的感谢写在这块木牌上，挂在神殿的许愿树上。维斯塔女神会看到你的心意。也请为来年许一个愿望吧。",
+            "responses": [
+              {
+                "id": "make_wish",
+                "text": "（写下愿望）希望新年一切顺利"
+              },
+              {
+                "id": "goodbye",
+                "text": "谢谢您，女祭司"
+              }
+            ]
+          },
+          {
+            "id": "make_wish",
+            "text": "（轻轻点头）你的愿望已经被神灵听到了。记住，愿望不只是祈求，更是承诺。新的一年，努力让愿望成真吧。愿诸神与你同在！",
+            "responses": [
+              {
+                "id": "greeting",
+                "text": "我会努力的"
+              },
+              {
+                "id": "goodbye",
+                "text": "愿诸神与您同在！"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_gladiator_spartacus",
+      "modelId": "sparta",
+      "position": { "x": 5, "y": 0, "z": -9 },
+      "movementPattern": "wander",
+      "wanderRadius": 4,
+      "wanderSpeed": 0.4,
+      "interaction": {
+        "type": "trainer",
+        "distance": 2.5,
+        "autoTrigger": true,
+        "hintText": "⚔️ 新年切磋",
+        "dialogues": [
+          {
+            "id": "greeting",
+            "text": "哈！新年快乐，朋友！今天是农神节，连角斗士也能放个假。难得有这样的好日子，来喝一杯庆祝？",
+            "responses": [
+              {
+                "id": "drink_together",
+                "text": "好啊，敬新年！"
+              },
+              {
+                "id": "ask_newyear_fight",
+                "text": "新年斗兽场有比赛吗？"
+              },
+              {
+                "id": "ask_resolution",
+                "text": "您有什么新年计划？"
+              },
+              {
+                "id": "goodbye",
+                "text": "新年快乐，斯巴达克斯！"
+              }
+            ]
+          },
+          {
+            "id": "drink_together",
+            "text": "（举起酒杯）敬新年！敬自由！敬所有活过这一年的人！（一饮而尽）哈哈，好酒！这是我用角斗赏金买的最好的葡萄酒。能在新年和朋友共饮，是最大的幸福！",
+            "responses": [
+              {
+                "id": "ask_freedom_newyear",
+                "text": "自由人的新年感觉如何？"
+              },
+              {
+                "id": "ask_resolution",
+                "text": "新的一年有什么打算？"
+              },
+              {
+                "id": "goodbye",
+                "text": "干杯！新年快乐！"
+              }
+            ]
+          },
+          {
+            "id": "ask_freedom_newyear",
+            "text": "（感慨地）这是我作为自由人度过的第三个新年了。还记得在斗兽场的日子，新年只意味着又一场生死搏斗。现在...我可以选择和谁一起庆祝，这就是自由的滋味。",
+            "responses": [
+              {
+                "id": "toast_freedom",
+                "text": "为自由干杯！"
+              },
+              {
+                "id": "ask_resolution",
+                "text": "那您新年有什么计划？"
+              },
+              {
+                "id": "goodbye",
+                "text": "愿自由永远属于您"
+              }
+            ]
+          },
+          {
+            "id": "toast_freedom",
+            "text": "（眼眶微红）为自由！为那些没能等到自由的兄弟们！新的一年，我要资助更多奴隶赎身。每个人都值得拥有自己的新年...自己的人生。",
+            "responses": [
+              {
+                "id": "offer_help_spartacus",
+                "text": "我想帮助您"
+              },
+              {
+                "id": "goodbye",
+                "text": "您是真正的英雄"
+              }
+            ]
+          },
+          {
+            "id": "offer_help_spartacus",
+            "text": "（握住你的手）谢谢，朋友。这世界需要更多像你这样的人。新的一年，愿我们都能让这个世界变得更好一点。来，再干一杯！为新年，为希望！",
+            "responses": [
+              {
+                "id": "greeting",
+                "text": "干杯！还想聊点什么"
+              },
+              {
+                "id": "goodbye",
+                "text": "为新年，为希望！"
+              }
+            ]
+          },
+          {
+            "id": "ask_newyear_fight",
+            "text": "新年有特别的表演赛！不是生死搏斗，而是技艺展示。我会和几个老朋友一起表演，展示最精彩的剑术。晚上还有烟火...哦，你一定要去看！",
+            "responses": [
+              {
+                "id": "ask_fireworks",
+                "text": "罗马也有烟火？"
+              },
+              {
+                "id": "watch_show",
+                "text": "我一定去看您的表演！"
+              },
+              {
+                "id": "goodbye",
+                "text": "期待您的表演！"
+              }
+            ]
+          },
+          {
+            "id": "ask_fireworks",
+            "text": "当然！从东方传来的火药，能在夜空中绽放出最美的光芒。新年的夜晚，整个罗马城都会被五彩的光照亮。这是我最喜欢的新年传统！",
+            "responses": [
+              {
+                "id": "watch_show",
+                "text": "太期待了！"
+              },
+              {
+                "id": "goodbye",
+                "text": "新年快乐，再见！"
+              }
+            ]
+          },
+          {
+            "id": "watch_show",
+            "text": "（拍着你的肩膀）好！今晚斗兽场见！表演结束后，我们一起看烟火。新年要和朋友一起度过才有意义。记住，人生最重要的不是活多久，而是和谁一起活。",
+            "responses": [
+              {
+                "id": "greeting",
+                "text": "说得真好！还有其他话题吗？"
+              },
+              {
+                "id": "goodbye",
+                "text": "今晚见！新年快乐！"
+              }
+            ]
+          },
+          {
+            "id": "ask_resolution",
+            "text": "新年计划？（若有所思）我想开一家角斗学校，不是教人杀戮，而是教人强身健体、保护自己。还想...找一个能共度余生的人。哈哈，是不是有点贪心？",
+            "responses": [
+              {
+                "id": "encourage_spartacus",
+                "text": "这些愿望一定会实现的！"
+              },
+              {
+                "id": "goodbye",
+                "text": "祝您心想事成！"
+              }
+            ]
+          },
+          {
+            "id": "encourage_spartacus",
+            "text": "（爽朗地笑）谢谢你，朋友！新年就是要有梦想。来，这是我自酿的蜂蜜酒，送你作为新年礼物。愿你的新年也充满惊喜！",
+            "responses": [
+              {
+                "id": "greeting",
+                "text": "谢谢！还想再聊聊"
+              },
+              {
+                "id": "goodbye",
+                "text": "珍贵的礼物，谢谢您！"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_spy_lucretia",
+      "modelId": "arissa",
+      "position": { "x": 27, "y": 0, "z": -9 },
+      "movementPattern": "wander",
+      "wanderRadius": 6,
+      "wanderSpeed": 0.6,
+      "interaction": {
+        "type": "quest",
+        "distance": 2,
+        "autoTrigger": true,
+        "hintText": "🌙 新年密语",
+        "dialogues": [
+          {
+            "id": "greeting",
+            "text": "（压低声音）新年快乐...虽然对我来说，每一天都是工作日。不过今天确实有些特别的消息...想听吗？",
+            "responses": [
+              {
+                "id": "ask_news",
+                "text": "什么消息？"
+              },
+              {
+                "id": "ask_celebrate",
+                "text": "您不庆祝新年吗？"
+              },
+              {
+                "id": "ask_wish_spy",
+                "text": "您有新年愿望吗？"
+              },
+              {
+                "id": "goodbye",
+                "text": "新年快乐，告辞"
+              }
+            ]
+          },
+          {
+            "id": "ask_news",
+            "text": "（环顾四周）新年是最好的情报收集时机。人们喝多了酒，嘴就不严了。今晚的宴会上，有个元老院的人会透露一些...有趣的事情。你想参与吗？",
+            "responses": [
+              {
+                "id": "join_mission",
+                "text": "我有兴趣"
+              },
+              {
+                "id": "refuse_mission_newyear",
+                "text": "新年就不工作了吧"
+              },
+              {
+                "id": "goodbye",
+                "text": "我什么都没听到"
+              }
+            ]
+          },
+          {
+            "id": "join_mission",
+            "text": "很好。今晚的宴会在元老院旁边的别墅。你只需要混在宾客中，注意听一个叫布鲁图斯的人说了什么。事成之后，这袋金币就是你的新年礼物。",
+            "responses": [
+              {
+                "id": "accept_mission_newyear",
+                "text": "成交"
+              },
+              {
+                "id": "ask_details",
+                "text": "能告诉我更多细节吗？"
+              },
+              {
+                "id": "goodbye",
+                "text": "让我考虑一下"
+              }
+            ]
+          },
+          {
+            "id": "accept_mission_newyear",
+            "text": "（微笑）新年快乐，新伙伴。记住，只看只听，不要行动。任务完成后在北门找我。愿福尔图娜眷顾你...也眷顾我们的合作。",
+            "responses": [
+              {
+                "id": "greeting",
+                "text": "还有什么要交代的？"
+              },
+              {
+                "id": "goodbye",
+                "text": "明白，今晚见"
+              }
+            ]
+          },
+          {
+            "id": "ask_details",
+            "text": "布鲁图斯是凯撒的心腹，但最近...他的忠诚似乎动摇了。有人说他在策划什么。新年宴会上，人们会放松警惕。这是我们最好的机会。",
+            "responses": [
+              {
+                "id": "accept_mission_newyear",
+                "text": "我明白了，我接受"
+              },
+              {
+                "id": "goodbye",
+                "text": "这太危险了，告辞"
+              }
+            ]
+          },
+          {
+            "id": "refuse_mission_newyear",
+            "text": "（轻笑）新年不工作？在我的行业里，新年是最忙的时候。不过...你说得对，偶尔放松一下也好。来，这是我从东方弄来的香料，算是新年礼物。",
+            "responses": [
+              {
+                "id": "thank_gift",
+                "text": "谢谢您的礼物"
+              },
+              {
+                "id": "goodbye",
+                "text": "新年快乐，保重"
+              }
+            ]
+          },
+          {
+            "id": "thank_gift",
+            "text": "别客气。虽然我做的事不光彩，但我也有自己的原则。新的一年...也许我该重新考虑一下自己的人生。哈，这话从我嘴里说出来真奇怪。",
+            "responses": [
+              {
+                "id": "encourage_spy",
+                "text": "永远不会太迟"
+              },
+              {
+                "id": "goodbye",
+                "text": "愿新年带给您改变"
+              }
+            ]
+          },
+          {
+            "id": "encourage_spy",
+            "text": "（沉默片刻）...谢谢你。新的一年，也许真的可以重新开始。好了，别让人看到我们说太久。新年快乐，陌生人...不，朋友。",
+            "responses": [
+              {
+                "id": "greeting",
+                "text": "我们还能聊聊吗？"
+              },
+              {
+                "id": "goodbye",
+                "text": "新年快乐，朋友"
+              }
+            ]
+          },
+          {
+            "id": "ask_celebrate",
+            "text": "庆祝？（苦笑）我已经很多年没有真正庆祝过新年了。在阴影中工作的人，没有资格享受阳光下的节日...不过今天，看到街上这么多笑脸，我也有点...羡慕。",
+            "responses": [
+              {
+                "id": "invite_celebrate",
+                "text": "和我一起庆祝吧！"
+              },
+              {
+                "id": "ask_wish_spy",
+                "text": "您也可以许个愿"
+              },
+              {
+                "id": "goodbye",
+                "text": "每个人都值得快乐"
+              }
+            ]
+          },
+          {
+            "id": "invite_celebrate",
+            "text": "（惊讶地）和你一起？...这是我收到的最奇怪的邀请。但是...（微笑）好吧，就这一次。新年快乐...第一次说这话感觉这么真心。",
+            "responses": [
+              {
+                "id": "greeting",
+                "text": "新年快乐！还想聊什么？"
+              },
+              {
+                "id": "goodbye",
+                "text": "新年快乐，好好享受！"
+              }
+            ]
+          },
+          {
+            "id": "ask_wish_spy",
+            "text": "（低头沉思）新年愿望？...如果可以的话，我希望有一天能走出阴影，做一个普通人。有自己的房子，自己的花园...也许还有一只猫。（自嘲地笑）太天真了，是吧？",
+            "responses": [
+              {
+                "id": "encourage_spy",
+                "text": "不天真，这是美好的愿望"
+              },
+              {
+                "id": "goodbye",
+                "text": "愿您的愿望成真"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_archer_diana",
+      "modelId": "erika_archer",
+      "position": { "x": 29, "y": 0, "z": -19 },
+      "movementPattern": "wander",
+      "wanderRadius": 4,
+      "wanderSpeed": 0.45,
+      "interaction": {
+        "type": "trainer",
+        "distance": 2,
+        "autoTrigger": true,
+        "hintText": "🏹 新年祝福",
+        "dialogues": [
+          {
+            "id": "greeting",
+            "text": "嘿！新年快乐！虽然在高卢我们有自己的新年传统，但罗马的农神节也很有意思。你来和我一起庆祝吗？",
+            "responses": [
+              {
+                "id": "ask_gaul_newyear",
+                "text": "高卢的新年是怎样的？"
+              },
+              {
+                "id": "ask_rome_newyear",
+                "text": "你喜欢罗马的新年吗？"
+              },
+              {
+                "id": "ask_wish_diana",
+                "text": "你有什么新年愿望？"
+              },
+              {
+                "id": "goodbye",
+                "text": "新年快乐，戴安娜！"
+              }
+            ]
+          },
+          {
+            "id": "ask_gaul_newyear",
+            "text": "（眼神明亮）高卢的新年在冬至——我们叫它'重生之夜'。那一天，德鲁伊祭司会在圣林中点燃篝火，我们围着火跳舞，唱歌，直到日出。然后...用槲寄生装饰一切！",
+            "responses": [
+              {
+                "id": "ask_mistletoe",
+                "text": "槲寄生有什么意义？"
+              },
+              {
+                "id": "ask_wish_diana",
+                "text": "今年你会怎么庆祝？"
+              },
+              {
+                "id": "goodbye",
+                "text": "听起来很美！"
+              }
+            ]
+          },
+          {
+            "id": "ask_mistletoe",
+            "text": "槲寄生是圣物！在高卢，它象征着和平与祝福。如果两个敌人在槲寄生下相遇，他们必须放下武器、拥抱和好。（眨眼）在槲寄生下还可以...亲吻想念的人。",
+            "responses": [
+              {
+                "id": "gift_mistletoe",
+                "text": "你有槲寄生吗？"
+              },
+              {
+                "id": "goodbye",
+                "text": "真浪漫的传统！"
+              }
+            ]
+          },
+          {
+            "id": "gift_mistletoe",
+            "text": "（从口袋里拿出一枝）当然有！我总是随身带着，让我想起家乡。送给你吧，作为新年礼物。愿它为你带来和平与爱！",
+            "responses": [
+              {
+                "id": "thank_diana",
+                "text": "谢谢你，戴安娜！"
+              },
+              {
+                "id": "goodbye",
+                "text": "我会珍惜的！"
+              }
+            ]
+          },
+          {
+            "id": "thank_diana",
+            "text": "（开心地笑）不客气！新年就是要互送祝福嘛。说起来，今晚广场上有射箭比赛，我要去展示一下高卢弓手的实力！你要来看吗？",
+            "responses": [
+              {
+                "id": "watch_competition",
+                "text": "当然要去！"
+              },
+              {
+                "id": "goodbye",
+                "text": "期待你的表演！"
+              }
+            ]
+          },
+          {
+            "id": "watch_competition",
+            "text": "太好了！晚上记得来广场东边的射箭场。我会让罗马人看看，高卢的弓箭手是世界上最棒的！（得意地笑）也许...我还会赢一个特别的奖品送给你！",
+            "responses": [
+              {
+                "id": "greeting",
+                "text": "期待！还想聊点别的"
+              },
+              {
+                "id": "goodbye",
+                "text": "今晚见！新年快乐！"
+              }
+            ]
+          },
+          {
+            "id": "ask_rome_newyear",
+            "text": "罗马的新年？（思考片刻）刚开始我觉得很奇怪，为什么要在一月庆祝新年？高卢是在最黑暗的夜晚庆祝，因为之后每一天都会更明亮...但罗马的新年也有它的魅力。",
+            "responses": [
+              {
+                "id": "ask_charm",
+                "text": "什么魅力？"
+              },
+              {
+                "id": "goodbye",
+                "text": "新年快乐！"
+              }
+            ]
+          },
+          {
+            "id": "ask_charm",
+            "text": "你看，整个城市都在庆祝！不分贵族和平民，不分罗马人和外邦人。农神节里，每个人都是平等的。这种感觉...让我想起高卢的篝火晚会，大家围坐在一起，不分彼此。",
+            "responses": [
+              {
+                "id": "ask_wish_diana",
+                "text": "你想念高卢吗？"
+              },
+              {
+                "id": "goodbye",
+                "text": "愿你找到归属感"
+              }
+            ]
+          },
+          {
+            "id": "ask_wish_diana",
+            "text": "（望向远方）我的新年愿望？...我想回家。看看高卢的森林，听听故乡的风声。但是在那之前...我希望能用我的弓箭，保护更多需要保护的人。这样，我的旅程就有了意义。",
+            "responses": [
+              {
+                "id": "bless_diana",
+                "text": "你一定能回家的！"
+              },
+              {
+                "id": "goodbye",
+                "text": "愿你心想事成"
+              }
+            ]
+          },
+          {
+            "id": "bless_diana",
+            "text": "（眼眶微红）谢谢你...这是我收到的最好的新年祝福。作为回报，我教你一首高卢的新年祝福歌吧！（哼唱起来）愿月光指引你，愿森林守护你，愿来年比今年更美好~",
+            "responses": [
+              {
+                "id": "greeting",
+                "text": "好美的歌！还想聊聊"
+              },
+              {
+                "id": "goodbye",
+                "text": "谢谢你，新年快乐！"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_flower_girl_olivia",
+      "modelId": "peasant_girl",
+      "position": { "x": 22, "y": 0, "z": -12 },
+      "movementPattern": "wander",
+      "wanderRadius": 5,
+      "wanderSpeed": 0.35,
+      "interaction": {
+        "type": "guide",
+        "distance": 2,
+        "autoTrigger": true,
+        "hintText": "🌹 新年鲜花",
+        "dialogues": [
+          {
+            "id": "greeting",
+            "text": "新年快乐~！今天的花特别新鲜！红玫瑰、白百合、还有新年特别款的冬青和常青藤！要不要买一束送给心爱的人？",
+            "responses": [
+              {
+                "id": "buy_newyear_flowers",
+                "text": "给我来一束新年花束"
+              },
+              {
+                "id": "ask_newyear_tradition",
+                "text": "新年有什么特别的花吗？"
+              },
+              {
+                "id": "ask_olivia_newyear",
+                "text": "你怎么过新年？"
+              },
+              {
+                "id": "goodbye",
+                "text": "新年快乐，下次再来"
+              }
+            ]
+          },
+          {
+            "id": "buy_newyear_flowers",
+            "text": "好嘞~！（精心挑选）给你配一束最美的！红玫瑰代表热情，白百合代表纯洁，冬青代表希望，常青藤代表长寿。这束花的意思是：愿你新年热情不减，心灵纯净，充满希望，长命百岁~！",
+            "responses": [
+              {
+                "id": "thank_olivia",
+                "text": "太美了，谢谢你！"
+              },
+              {
+                "id": "ask_price",
+                "text": "多少钱？"
+              },
+              {
+                "id": "goodbye",
+                "text": "送得真好，再见~"
+              }
+            ]
+          },
+          {
+            "id": "thank_olivia",
+            "text": "（开心地笑）客人喜欢就好~！对了，你是第一百个买花的客人！按照我的新年传统，第一百位客人可以免费~！算是我送你的新年礼物！",
+            "responses": [
+              {
+                "id": "insist_pay",
+                "text": "这怎么好意思，让我付钱吧"
+              },
+              {
+                "id": "thank_again",
+                "text": "真的吗？太谢谢了！"
+              },
+              {
+                "id": "goodbye",
+                "text": "你真好，新年快乐！"
+              }
+            ]
+          },
+          {
+            "id": "insist_pay",
+            "text": "（摆手）不用不用！新年就是要送祝福的！而且...（悄悄地说）今天生意特别好，我已经赚够过年的钱了~能让别人开心，我就更开心！",
+            "responses": [
+              {
+                "id": "bless_olivia",
+                "text": "那我祝你新年大吉大利！"
+              },
+              {
+                "id": "goodbye",
+                "text": "你是最棒的！"
+              }
+            ]
+          },
+          {
+            "id": "bless_olivia",
+            "text": "（眼睛亮晶晶）谢谢~！这是我收到的最好的新年祝福！我也祝你新年心想事成，遇到好人，有好运气！记得常来找我买花哦~",
+            "responses": [
+              {
+                "id": "greeting",
+                "text": "一定！还想聊聊"
+              },
+              {
+                "id": "goodbye",
+                "text": "一定常来！再见~"
+              }
+            ]
+          },
+          {
+            "id": "thank_again",
+            "text": "真的！新年是分享的日子嘛~！而且你看起来是个好人，好人应该有好运气！拿着这束花，今年一定会顺顺利利的~",
+            "responses": [
+              {
+                "id": "greeting",
+                "text": "你真暖心！还想聊聊"
+              },
+              {
+                "id": "goodbye",
+                "text": "谢谢你，新年快乐！"
+              }
+            ]
+          },
+          {
+            "id": "ask_price",
+            "text": "新年特价~只要五个铜币！平时要八个呢！因为是新年，我想让更多人能买到花~花能让人开心，新年就应该开开心心的！",
+            "responses": [
+              {
+                "id": "pay_extra",
+                "text": "给你十个，新年红包！"
+              },
+              {
+                "id": "goodbye",
+                "text": "给你五个，谢谢~"
+              }
+            ]
+          },
+          {
+            "id": "pay_extra",
+            "text": "（惊喜地）十个？！太多了太多了！...（接过钱，眼眶红了）谢谢你...这是我今年收到的最大的新年红包。我会存起来，以后开一家自己的花店！",
+            "responses": [
+              {
+                "id": "encourage_dream",
+                "text": "加油，你一定可以的！"
+              },
+              {
+                "id": "goodbye",
+                "text": "期待你的花店！"
+              }
+            ]
+          },
+          {
+            "id": "encourage_dream",
+            "text": "（用力点头）嗯！我会努力的！等我开了花店，你一定要来，我给你最大的折扣~！（开心地转圈）新年真好~遇到好人，听到好话，收到好运气~",
+            "responses": [
+              {
+                "id": "greeting",
+                "text": "那是当然！还想聊点什么"
+              },
+              {
+                "id": "goodbye",
+                "text": "那就这么说定了！"
+              }
+            ]
+          },
+          {
+            "id": "ask_newyear_tradition",
+            "text": "新年的花有讲究的~！冬青象征希望，因为它在寒冬也能保持绿色；常青藤象征忠诚和友谊；月桂象征胜利；还有红玫瑰，代表热烈的爱~送不同的花有不同的意思哦！",
+            "responses": [
+              {
+                "id": "ask_recommend",
+                "text": "你推荐送什么花？"
+              },
+              {
+                "id": "buy_newyear_flowers",
+                "text": "给我配一束新年花束吧"
+              },
+              {
+                "id": "goodbye",
+                "text": "学到了，谢谢~"
+              }
+            ]
+          },
+          {
+            "id": "ask_recommend",
+            "text": "要看送给谁~！送家人就配冬青和百合，代表家庭和睦长久；送朋友就配常青藤和黄玫瑰，代表友谊常青；送心上人嘛...（眨眼）当然是红玫瑰加满天星啦~",
+            "responses": [
+              {
+                "id": "buy_newyear_flowers",
+                "text": "那给我来一束..."
+              },
+              {
+                "id": "goodbye",
+                "text": "好专业！改天来买~"
+              }
+            ]
+          },
+          {
+            "id": "ask_olivia_newyear",
+            "text": "我呀？今天卖完花就去神殿祈福，然后...（兴奋地）晚上有篝火晚会！我攒了好久的钱买了一条新裙子，要美美地去~你也一起来吧！",
+            "responses": [
+              {
+                "id": "join_party",
+                "text": "好啊，一起去！"
+              },
+              {
+                "id": "ask_olivia_wish",
+                "text": "你有什么新年愿望？"
+              },
+              {
+                "id": "goodbye",
+                "text": "玩得开心~"
+              }
+            ]
+          },
+          {
+            "id": "join_party",
+            "text": "太好了~！晚上在广场中央的大篝火旁见！我会带上我编的花环，送你一个戴~据说戴着花环许愿会特别灵哦！",
+            "responses": [
+              {
+                "id": "ask_olivia_wish",
+                "text": "你会许什么愿？"
+              },
+              {
+                "id": "goodbye",
+                "text": "那就晚上见！"
+              }
+            ]
+          },
+          {
+            "id": "ask_olivia_wish",
+            "text": "（害羞地）我的愿望啊...希望能开一家自己的花店，不用再在街上风吹日晒~还希望...（脸红）能遇到一个对我好的人...新年总是让人想这些呢~",
+            "responses": [
+              {
+                "id": "bless_olivia",
+                "text": "你一定会实现的！"
+              },
+              {
+                "id": "goodbye",
+                "text": "愿你心想事成~"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_eastern_hero",
+      "modelId": "kachujin",
+      "position": { "x": 11.96, "y": 0, "z": -11 },
+      "movementPattern": "wander",
+      "wanderRadius": 3,
+      "wanderSpeed": 0.35,
+      "interaction": {
+        "type": "guide",
+        "distance": 2.5,
+        "autoTrigger": true,
+        "hintText": "⚔️ 东方侠客",
+        "dialogues": [
+          {
+            "id": "greeting",
+            "text": "（抱拳行礼）新年好，朋友。在下赤霞，来自东方的游侠。听闻罗马乃西方第一大城，特来一游。恰逢农神节，当真热闹非凡。",
+            "responses": [
+              {
+                "id": "ask_origin",
+                "text": "东方是什么样的地方？"
+              },
+              {
+                "id": "ask_journey",
+                "text": "丝绸之路上有何见闻？"
+              },
+              {
+                "id": "ask_martial",
+                "text": "能展示下东方武艺吗？"
+              },
+              {
+                "id": "goodbye",
+                "text": "新年快乐，赤霞侠士"
+              }
+            ]
+          },
+          {
+            "id": "ask_origin",
+            "text": "（目光悠远）东方...那是我的故土。有万里长城横亘山河，有武林门派遍布天下。我们也过新年，称作'春节'，届时家家张灯结彩，舞龙舞狮，好不热闹。",
+            "responses": [
+              {
+                "id": "ask_spring_festival",
+                "text": "春节是怎么庆祝的？"
+              },
+              {
+                "id": "ask_wulin",
+                "text": "武林门派是什么？"
+              },
+              {
+                "id": "goodbye",
+                "text": "真想去看看"
+              }
+            ]
+          },
+          {
+            "id": "ask_wulin",
+            "text": "（来了兴致）武林，乃习武之人的江湖。有少林、武当、峨眉等诸多门派，各有绝学。我们讲究'侠之大者，为国为民'，行走江湖，扶危济困，惩奸除恶。",
+            "responses": [
+              {
+                "id": "ask_martial",
+                "text": "能展示下武艺吗？"
+              },
+              {
+                "id": "ask_hero_code",
+                "text": "什么是侠义精神？"
+              },
+              {
+                "id": "goodbye",
+                "text": "真是令人敬佩"
+              }
+            ]
+          },
+          {
+            "id": "ask_hero_code",
+            "text": "（正色道）侠者，仁义为先。见不平则拔刀相助，见弱者则伸出援手。不求名利，但求无愧于心。我虽流浪异乡，这份侠义之心，从未改变。",
+            "responses": [
+              {
+                "id": "ask_rome_injustice",
+                "text": "在罗马遇到过不平事吗？"
+              },
+              {
+                "id": "ask_martial",
+                "text": "能展示下武艺吗？"
+              },
+              {
+                "id": "goodbye",
+                "text": "侠义精神真令人敬佩"
+              }
+            ]
+          },
+          {
+            "id": "ask_rome_injustice",
+            "text": "（叹气）前日在城东，见几个恶霸欺负一老者。我虽是外乡人，岂能袖手旁观？三招两式便将他们制服。老者千恩万谢，我却只道：'路见不平，理当如此。'",
+            "responses": [
+              {
+                "id": "praise_hero",
+                "text": "真是好侠义！"
+              },
+              {
+                "id": "ask_martial",
+                "text": "三招就制服了？想见识下"
+              },
+              {
+                "id": "goodbye",
+                "text": "佩服佩服！"
+              }
+            ]
+          },
+          {
+            "id": "praise_hero",
+            "text": "（摆手）不敢当。在我们那里有句话：'侠之小者，锄强扶弱；侠之大者，为国为民。'我不过是做了分内之事。新年之际，愿天下少些不平，多些安乐。",
+            "responses": [
+              {
+                "id": "ask_martial",
+                "text": "能展示下东方武艺吗？"
+              },
+              {
+                "id": "ask_journey",
+                "text": "你是怎么来到罗马的？"
+              },
+              {
+                "id": "goodbye",
+                "text": "新年快乐，大侠"
+              }
+            ]
+          },
+          {
+            "id": "ask_spring_festival",
+            "text": "春节时，家家户户贴红春联，放爆竹驱年兽。一家人围坐守岁，吃年夜饭，长辈给晚辈'红包'讨个吉利。（微笑）与这农神节倒有几分相似，都是辞旧迎新。",
+            "responses": [
+              {
+                "id": "ask_red_meaning",
+                "text": "为什么都用红色？"
+              },
+              {
+                "id": "ask_journey",
+                "text": "你是怎么来罗马的？"
+              },
+              {
+                "id": "goodbye",
+                "text": "文化真有趣"
+              }
+            ]
+          },
+          {
+            "id": "ask_red_meaning",
+            "text": "（理了理红衣）在东方，红色象征吉祥、勇武。传说年兽害怕红色与响声，故新年皆穿红衣、放爆竹。我这身劲装，也是为新年特意穿的。",
+            "responses": [
+              {
+                "id": "compliment_dress",
+                "text": "这身衣服很有气势！"
+              },
+              {
+                "id": "ask_martial",
+                "text": "能展示下武艺吗？"
+              },
+              {
+                "id": "goodbye",
+                "text": "原来如此"
+              }
+            ]
+          },
+          {
+            "id": "compliment_dress",
+            "text": "（抱拳）多谢。这是我们江湖人的劲装，方便施展拳脚。布料是东方丝绸所制，轻便透气。罗马人称那条商路为'丝绸之路'，便是因此物而来。",
+            "responses": [
+              {
+                "id": "ask_journey",
+                "text": "丝绸之路艰险吗？"
+              },
+              {
+                "id": "ask_martial",
+                "text": "能展示下武艺吗？"
+              },
+              {
+                "id": "goodbye",
+                "text": "真是好衣服！"
+              }
+            ]
+          },
+          {
+            "id": "ask_journey",
+            "text": "（若有所思）丝绸之路...走了三年。穿沙漠、越雪山、过险关。遇过马贼，斗过猛兽。（笑）不过对习武之人来说，这些磨练反而难得。一路行侠，一路精进，倒也不虚此行。",
+            "responses": [
+              {
+                "id": "ask_why_travel",
+                "text": "为何要远行？"
+              },
+              {
+                "id": "ask_martial",
+                "text": "能展示下武艺吗？"
+              },
+              {
+                "id": "goodbye",
+                "text": "真是不凡的经历"
+              }
+            ]
+          },
+          {
+            "id": "ask_why_travel",
+            "text": "（目光坚定）行万里路，胜读万卷书。武艺要精进，需见识天下高手。我想看看西方的勇士如何战斗，也想将东方武学带到更远的地方。新年过后，还要继续西行。",
+            "responses": [
+              {
+                "id": "bless_journey",
+                "text": "祝旅途平安！"
+              },
+              {
+                "id": "ask_martial",
+                "text": "临别前能展示武艺吗？"
+              },
+              {
+                "id": "goodbye",
+                "text": "愿大侠前路顺遂"
+              }
+            ]
+          },
+          {
+            "id": "bless_journey",
+            "text": "（抱拳）承你吉言。江湖路远，知己难逢。今日在异乡新年遇到你这样的朋友，实乃人生快事。他日若到东方，定要来找我，我请你喝最好的竹叶青！",
+            "responses": [
+              {
+                "id": "ask_martial",
+                "text": "临别前展示一下武艺可好？"
+              },
+              {
+                "id": "goodbye",
+                "text": "一言为定！新年快乐！"
+              }
+            ]
+          },
+          {
+            "id": "ask_martial",
+            "text": "（眼睛一亮）好！就让你见识下东方剑法！（拔剑起舞，剑光如虹，红衣翻飞）...（收剑抱拳）这是'落霞剑法'，取自'落霞与孤鹜齐飞'之意。献丑了！",
+            "responses": [
+              {
+                "id": "applaud",
+                "text": "好剑法！（鼓掌）"
+              },
+              {
+                "id": "give_gift",
+                "text": "送你一份新年礼物"
+              },
+              {
+                "id": "goodbye",
+                "text": "大开眼界！"
+              }
+            ]
+          },
+          {
+            "id": "applaud",
+            "text": "（收剑入鞘，抱拳）承蒙夸奖。东方有句话：'高山流水遇知音'。能遇到欣赏武艺之人，是习武者的幸事。新的一年，愿你也能找到属于自己的'道'！",
+            "responses": [
+              {
+                "id": "give_gift",
+                "text": "想送你份礼物"
+              },
+              {
+                "id": "greeting",
+                "text": "还想多聊聊"
+              },
+              {
+                "id": "goodbye",
+                "text": "也祝大侠新年快乐！"
+              }
+            ]
+          },
+          {
+            "id": "give_gift",
+            "text": "（接过礼物）这...太客气了。（从腰间解下一物）这是我的回礼——东方的'平安结'，用红绳编成，寓意平安吉祥。望它能护佑你新的一年顺遂平安！",
+            "responses": [
+              {
+                "id": "accept_gift",
+                "text": "多谢大侠！"
+              },
+              {
+                "id": "ask_knot",
+                "text": "这结有什么讲究？"
+              },
+              {
+                "id": "goodbye",
+                "text": "礼物太贵重了"
+              }
+            ]
+          },
+          {
+            "id": "ask_knot",
+            "text": "（解释道）此乃'中国结'，用红绳编织而成。结法繁复，寓意吉祥。这个是'平安结'，祈佑平安；还有'如意结'，寓意万事如意。是东方人过年常送的吉物。",
+            "responses": [
+              {
+                "id": "accept_gift",
+                "text": "那我一定好好珍藏！"
+              },
+              {
+                "id": "goodbye",
+                "text": "谢谢赤霞大侠！"
+              }
+            ]
+          },
+          {
+            "id": "accept_gift",
+            "text": "（抱拳）好！新的一年，愿东西方都太平安乐。咱们江湖儿女，四海为家，但心中的侠义永不改变。（爽朗一笑）后会有期，朋友！新年快乐！",
+            "responses": [
+              {
+                "id": "greeting",
+                "text": "再聊一会儿"
+              },
+              {
+                "id": "goodbye",
+                "text": "后会有期，赤霞大侠！"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
