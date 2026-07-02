@@ -1,0 +1,778 @@
+{
+  "baseUrl":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_rome/region_replace/morton-splats-4range/",
+  "morton": false,
+  "fileType": "splat",
+  "modules": [
+  {
+    "name": "rome_Nav1_500k",
+    "transform": {
+      "position": [5, 0, -40],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 20,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav2_500k",
+    "transform": {
+      "position": [20, 0, -40],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 20,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav3_500k",
+    "transform": {
+      "position": [32.5, 0, -60],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 20,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav4_500k",
+    "transform": {
+      "position": [6.5, 0, -82.5],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 50,
+      "y": 30,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav5_500k",
+    "transform": {
+      "position": [-4.77, 0, -60],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 20,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav6_500k",
+    "transform": {
+      "position": [-15, 0, -43.5],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 20,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav7_500k",
+    "transform": {
+      "position": [-30.5, 0, -54.5],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 10,
+      "y": 40,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav8_500k",
+    "transform": {
+      "position": [-27.5, 0, -81],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 20,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav9_500k",
+    "transform": {
+      "position": [-45.5, 0, -84],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 20,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav10_500k",
+    "transform": {
+      "position": [-58, 0, -64.5],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 20,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav11_500k",
+    "transform": {
+      "position": [-54.2, 0, -45.1],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 20,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav12_500k",
+    "transform": {
+      "position": [-54, 0, -25.5],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 20,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav13_500k",
+    "transform": {
+      "position": [-30.5, 0, -16.5],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 10,
+      "y": 40,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav14_500k",
+    "transform": {
+      "position": [-43.5, 0, -6],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 20,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav15_500k",
+    "transform": {
+      "position": [-15, 0, 4],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 20,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav16_500k",
+    "transform": {
+      "position": [4, 0, -4],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 20,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav17_500k",
+    "transform": {
+      "position": [4, 0, -21],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 20,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav18_500k",
+    "transform": {
+      "position": [25, 0, -21],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 24,
+      "y": 20,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav19_500k",
+    "transform": {
+      "position": [25, 0, -4],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 24,
+      "y": 20,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav20_500k",
+    "transform": {
+      "position": [12.5, 0, 15.5],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 25,
+      "y": 20,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav21_500k",
+    "transform": {
+      "position": [12.5, 0, 39],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 25,
+      "y": 30,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav22_500k",
+    "transform": {
+      "position": [-60, 0, 4.3],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 30,
+      "y": 20,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav23_500k",
+    "transform": {
+      "position": [-91.56, 0, 3.5],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 35,
+      "y": 15,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav24_500k",
+    "transform": {
+      "position": [-102.61, 0, -8.63],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 15,
+      "y": 15,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav25_500k",
+    "transform": {
+      "position": [-129.47, 0, -5.98],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 15,
+      "y": 15,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav26_500k",
+    "transform": {
+      "position": [-125, 0, 8],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 35,
+      "y": 15,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav27_500k",
+    "transform": {
+      "position": [-152, 0, 8.35],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 20,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav28_500k",
+    "transform": {
+      "position": [-171, 0, 11.13],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 25,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav29_500k",
+    "transform": {
+      "position": [-141.2, 0, 23.5],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 25,
+      "y": 15,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav30_500k",
+    "transform": {
+      "position": [-58.01, 0, 24.36],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 30,
+      "y": 20,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav31_500k",
+    "transform": {
+      "position": [-31.5, 0, 29.5],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 25,
+      "y": 14,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav32_500k",
+    "transform": {
+      "position": [-41.5, 0, 50],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 14,
+      "y": 30,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav33_500k",
+    "transform": {
+      "position": [-10.8, 0, 31.08],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 16,
+      "y": 38,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav34_500k",
+    "transform": {
+      "position": [29.2, 0, 26.86],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 10,
+      "y": 42,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav35_500k",
+    "transform": {
+      "position": [34.79, 0, 56.38],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 20,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav36_500k",
+    "transform": {
+      "position": [11.5, 0, 61.5],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 27.5,
+      "y": 15,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav37_500k",
+    "transform": {
+      "position": [-7.4, 0, 59.4],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 10,
+      "y": 20,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav38_500k",
+    "transform": {
+      "position": [-15, 0, 72.5],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 10,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav39_500k",
+    "transform": {
+      "position": [-36.74, 0, 70.1],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 25,
+      "y": 14.5,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav40_500k",
+    "transform": {
+      "position": [-20.2, 0, 84.4],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 27,
+      "y": 14.5,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav41_500k",
+    "transform": {
+      "position": [-32.71, 0, 103],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 27,
+      "y": 27,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav42_500k",
+    "transform": {
+      "position": [-49.9, 0, 82.3],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 15,
+      "y": 25,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav43_500k",
+    "transform": {
+      "position": [-60.37, 0, 94.7],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 17.5,
+      "y": 32.5,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav44_500k",
+    "transform": {
+      "position": [49.93, 0, -54],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 20,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav45_500k",
+    "transform": {
+      "position": [47.56, 0, -35.3],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 22,
+      "y": 16,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav46_500k",
+    "transform": {
+      "position": [65.54, 0, -19.72],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 20,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav47_500k",
+    "transform": {
+      "position": [60.4, 0, -2],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 16,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav48_500k",
+    "transform": {
+      "position": [80.2, 0, -19.7],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 10,
+      "y": 20,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav49_500k",
+    "transform": {
+      "position": [75.2, 0, -41.92],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 10,
+      "y": 26,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav50_500k",
+    "transform": {
+      "position": [65, 0, -42],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 16,
+      "y": 15,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav51_500k",
+    "transform": {
+      "position": [89.69, 0, -52.3],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 15,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav52_500k",
+    "transform": {
+      "position": [108.6, 0, -60.59],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 22,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav53_500k",
+    "transform": {
+      "position": [125.28, 0, -60.51],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 22,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav54_500k",
+    "transform": {
+      "position": [125.28, 0, -40.82],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 22,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav55_500k",
+    "transform": {
+      "position": [138.6, 0, -56.3],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 12,
+      "y": 31,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav56_500k",
+    "transform": {
+      "position": [62.28, 0, -68.98],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 12,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav57_500k",
+    "transform": {
+      "position": [62.28, 0, -80],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 12,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav58_500k",
+    "transform": {
+      "position": [85, 0, -80],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 26,
+      "y": 20,
+      "z": 20
+    }
+  },
+  {
+    "name": "rome_Nav59_500k",
+    "transform": {
+      "position": [89.13, 0, -95.7],
+      "rotation": [1, 0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "bounds": {
+      "x": 20,
+      "y": 20,
+      "z": 20
+    }
+  }
+],
+  "switchConfig": {
+    "unloadDistance": 50,
+    "switchDelay": 500
+  }
+}

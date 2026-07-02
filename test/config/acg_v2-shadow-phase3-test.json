@@ -1,0 +1,133 @@
+{
+  "name": "二次元街区 Phase3 阴影测试",
+  "rendererScale": 1,
+  "debugger": false,
+  "meterScale": 1,
+  "gaussianSplatting": {
+    "renderOrder": 0,
+    "sphericalHarmonicsDegree": 0,
+    "showLoadingUI": true,
+    "gaussianComponentType": "gaussian-splats-3d",
+    "singleSceneConfigPath1": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/acg_street/700k/acg_street_700k_999radius_no_compress.ksplat",
+    "singleSceneConfigPath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/acg_street/700k/acg_street_700k.splat",
+    "options": {
+      "sharedMemoryForWorkers": false,
+      "sphericalHarmonicsDegree": 0,
+      "ignoreDevicePixelRatio": true,
+      "enableSIMDInSort": true,
+      "integerBasedSort": true,
+      "splatSortDistanceMapPrecision": 32,
+      "halfPrecisionCovariancesOnGPU": true,
+      "dynamicScene": false,
+      "renderMode": 0,
+      "antialiased": false
+    },
+    "transform": {
+      "position": [0, -0.5, 0],
+      "rotation": [0, 0, 180],
+      "scale": [1, 1, 1]
+    }
+  },
+  "collision": {
+    "url": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/acg_street/700k/acg_street_700k.glb",
+    "transform": {
+      "position": [0, 0, 0],
+      "rotation": [0, 180, 0],
+      "scale": [1, 1, 1]
+    },
+    "cloneAsLightMesh": true
+  },
+  "interactive": {
+    "url": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/acg_street/700k/acg_street_700k.glb",
+    "transform": {
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [1, 1, 1]
+    }
+  },
+  "initial": {
+    "player": {
+      "position": {
+        "x": 3,
+        "y": 1,
+        "z": 1.62974
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "camera": {}
+  },
+  "interactionZones": [
+    {
+      "geometry": [5, 2, 5],
+      "geometryPos": [0.5, 0, 16.6],
+      "modelPos": [0, 0.4, 0],
+      "model": "green_head_baby.glb",
+      "scale": [0.13, 0.13, 0.13],
+      "rotation": [0, 180, 0],
+      "dialog": "先生~麦当劳大特惠，了解一下",
+      "buttonText": "去看看",
+      "query": "GreenHeadBaby",
+      "setPath": "./models/aigc/"
+    },
+    {
+      "geometry": [5, 2, 5],
+      "geometryPos": [-1.5, 0, -10.3],
+      "modelPos": [0, 0.7, 0],
+      "model": "big_head_baby.glb",
+      "dialog": "听说秋天的第一杯奶茶要别人送才甜！你猜我收到没有呀？",
+      "buttonText": "我来买一杯",
+      "query": "BigHeadBaby",
+      "setPath": "./models/aigc/"
+    }
+  ],
+  "third-party": [
+    "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/config/gs-thirdparty/qq-music/third-party.meta.json"
+  ],
+  "lighting": {
+    "shadow": {
+      "color": "#ff0000",
+      "opacity": 1,
+      "lightMesh": {
+        "enabled": true,
+        "visible": false,
+        "followWorldOffset": true
+      },
+      "followDirectional": {
+        "enabled": true,
+        "name": "__player_follow_shadow_test",
+        "color": 16777215,
+        "intensity": 1.2,
+        "offset": [-6, 10, 6],
+        "targetOffset": [0, 0.8, 0],
+        "shadow": {
+          "enabled": true,
+          "mapSize": 2048,
+          "camera": {
+            "left": -12,
+            "right": 12,
+            "top": 12,
+            "bottom": -12,
+            "near": 0.5,
+            "far": 60
+          },
+          "bias": -0.0005,
+          "normalBias": 0
+        }
+      }
+    }
+  },
+  "renderer": {
+    "postProcessing": {
+      "enabled": true,
+      "multisampling": 0,
+      "antialiasing": { "enabled": true, "preset": "high" },
+      "bloom": { "enabled": true, "intensity": 1.0, "luminanceThreshold": 0.9, "luminanceSmoothing": 0.025, "radius": 0.85, "mipmapBlur": true },
+      "ssao": { "enabled": true, "samples": 9, "rings": 7, "radius": 0.1825, "intensity": 1.0, "bias": 0.025, "fade": 0.01, "resolutionScale": 1.0 },
+      "pmndrsToneMapping": { "enabled": true, "mode": "ACESFilmic" }
+    }
+  }
+}

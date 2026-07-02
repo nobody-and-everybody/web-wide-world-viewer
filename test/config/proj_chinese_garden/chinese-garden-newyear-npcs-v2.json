@@ -1,0 +1,179 @@
+{
+  "models": [
+    {
+      "id": "qiaoqiao",
+      "name": "归宁仙子·巧巧（守护：年初二）",
+      "describe": "守护年初二，温柔细心的归宁仙子",
+      "modelFilePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/npc_mesh/归宁仙子·巧巧.glb",
+      "imagePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/f6d3e00882322ca4b14bb6a3402950d1.png",
+      "targetHeight": 1.3,
+      "anim": {
+        "isBuiltIn": true,
+        "speedScale": 0.7,
+        "animations": {
+          "Idle": "Idle",
+          "Walking": "Walk",
+          "Running": "Run",
+          "Falling": "Fall",
+          "Jumping": "Jump"
+        }
+      }
+    }
+  ],
+  "list": [
+    {
+      "id": "npc_qiaoqiao",
+      "modelId": "qiaoqiao",
+      "position": {
+        "x": -4,
+        "y": 1.3,
+        "z": 0.2
+      },
+      "rotation": {
+        "x": 0,
+        "y": -93,
+        "z": 0
+      },
+      "movementPattern": "idle",
+      "interaction": {
+        "type": "guide",
+        "distance": 2.5,
+        "autoTrigger": true,
+        "hintText": "🎁 年初二",
+        "dialogues": [
+          {
+            "id": "greeting",
+            "text": "新年安康！祝你今年像蜜糖糕一样，日子甜，心里暖！",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/0-N.wav",
+            "responses": [
+              {
+                "id": "resp_a",
+                "text": "祝你全家团圆美满！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/0-U-A.wav"
+              },
+              {
+                "id": "resp_b",
+                "text": "祝你笑容永远甜甜！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/0-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "resp_a",
+            "text": "团圆最美了！你知道年初二为什么又叫'迎婿日'吗？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/1-N-A.wav",
+            "responses": [
+              {
+                "id": "round2_a",
+                "text": "因为女婿这天要陪女儿回娘家！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/1-U-A.wav"
+              },
+              {
+                "id": "round2_b",
+                "text": "因为这天要迎接财神进门。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/1-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "resp_b",
+            "text": "我的笑呀，是因为想到要见家人啦！你知道年初二为什么又叫'迎婿日'吗？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/1-N-B.wav",
+            "responses": [
+              {
+                "id": "round2_a",
+                "text": "因为女婿这天要陪女儿回娘家！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/1-U-A.wav"
+              },
+              {
+                "id": "round2_b",
+                "text": "因为这天要迎接财神进门。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/1-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "round2_a",
+            "text": "对啦，女儿女婿回门的日子。那我问问，回娘家带的礼物为什么要成双成对呢？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/2-N-A.wav",
+            "responses": [
+              {
+                "id": "round3_a",
+                "text": "因为双数代表好事成双！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/2-U-A.wav"
+              },
+              {
+                "id": "round3_b",
+                "text": "因为单数不够分。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/2-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "round2_b",
+            "text": "不对哦，迎财神是初五～其实是女儿女婿回门的日子。那我问问，回娘家带的礼物为什么要成双成对呢？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/2-N-B.wav",
+            "responses": [
+              {
+                "id": "round3_a",
+                "text": "因为双数代表好事成双！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/2-U-A.wav"
+              },
+              {
+                "id": "round3_b",
+                "text": "因为单数不够分。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/2-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "round3_a",
+            "text": "是呀，成双成对才吉祥。再考考你：年初二还有什么特别的活动？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/3-N-A.wav",
+            "responses": [
+              {
+                "id": "final_a",
+                "text": "祭财神，希望新年财源广进！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/3-U-A.wav"
+              },
+              {
+                "id": "final_b",
+                "text": "整天不扫地，怕扫走财运。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/3-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "round3_b",
+            "text": "不对哦，和分不分没关系，是'好事成双'的寓意。再考考你：年初二还有什么特别的活动？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/3-N-B.wav",
+            "responses": [
+              {
+                "id": "final_a",
+                "text": "祭财神，希望新年财源广进！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/3-U-A.wav"
+              },
+              {
+                "id": "final_b",
+                "text": "整天不扫地，怕扫走财运。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/3-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "final_a",
+            "text": "聪明！祭财神是希望新的一年勤劳致富～年初二呀，就是团圆、富足、美满的一天！",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/4-N-A.wav",
+            "responses": []
+          },
+          {
+            "id": "final_b",
+            "text": "不对哦，那是年初一的习俗～年初二是要祭财神，希望新年财源广进！年初二呀，就是团圆、富足、美满的一天！",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/4-N-B.wav",
+            "responses": []
+          }
+        ]
+      }
+    }
+  ]
+}

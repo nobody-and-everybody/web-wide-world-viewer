@@ -1,0 +1,45 @@
+{
+  "name": "上海三件套",
+  "rendererScale": 1,
+  "debugger": false,
+  "meterScale": 1,
+  "gaussianSplatting": {
+    "renderOrder": 0,
+    "sphericalHarmonicsDegree": 0,
+    "showLoadingUI": true,
+    "gaussianComponentType": "playcanvas",
+    "singleSceneConfigPath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/thirdparty/shanghai_street/splats/shanghai_three_0220.sog",
+    "options": {
+      "sharedMemoryForWorkers": false,
+      "sphericalHarmonicsDegree": 0,
+      "ignoreDevicePixelRatio": true,
+      "enableSIMDInSort": true,
+      "integerBasedSort": true,
+      "splatSortDistanceMapPrecision": 64,
+      "halfPrecisionCovariancesOnGPU": false,
+      "dynamicScene": false,
+      "renderMode": 0,
+      "antialiased": true
+    },
+    "transform": {
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 180],
+      "scale": [15, 15, 15]
+    }
+  },
+  "initial": {
+    "player": {
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "camera": {}
+  }
+}

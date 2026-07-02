@@ -1,0 +1,871 @@
+{
+  "models": [
+    {
+      "id": "honghong",
+      "name": "爆竹小仙·红红（守护：年初一）",
+      "describe": "守护年初一，活泼热情的爆竹小仙",
+      "modelFilePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/npc_mesh/爆竹小仙·红红.glb",
+      "imagePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-1/f3a440a85af9e16d0eb2f67c4fa93b7c.png",
+      "targetHeight": 1.2,
+      "anim": {
+        "isBuiltIn": true,
+        "speedScale": 0.8,
+        "animations": {
+          "Idle": "Idle",
+          "Walking": "Walk",
+          "Running": "Run",
+          "Falling": "Fall",
+          "Jumping": "Jump"
+        }
+      }
+    },
+    {
+      "id": "qiaoqiao",
+      "name": "归宁仙子·巧巧（守护：年初二）",
+      "describe": "守护年初二，温柔细心的归宁仙子",
+      "modelFilePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/npc_mesh/归宁仙子·巧巧.glb",
+      "imagePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/f6d3e00882322ca4b14bb6a3402950d1.png",
+      "targetHeight": 1.3,
+      "anim": {
+        "isBuiltIn": true,
+        "speedScale": 0.7,
+        "animations": {
+          "Idle": "Idle",
+          "Walking": "Walk",
+          "Running": "Run",
+          "Falling": "Fall",
+          "Jumping": "Jump"
+        }
+      }
+    },
+    {
+      "id": "rongrong",
+      "name": "和气仙童·融融（守护：年初三·赤口日）",
+      "describe": "守护年初三赤口日，沉稳平和的和气仙童",
+      "modelFilePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/npc_mesh/和气仙童·融融.glb",
+      "imagePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-3/2c291bee957af8cfe8b1f4e046812a40.png",
+      "targetHeight": 1.25,
+      "anim": {
+        "isBuiltIn": true,
+        "speedScale": 0.6,
+        "animations": {
+          "Idle": "Idle",
+          "Walking": "Walk",
+          "Running": "Run",
+          "Falling": "Fall",
+          "Jumping": "Jump"
+        }
+      }
+    },
+    {
+      "id": "tiantianye",
+      "name": "灶王爷·甜甜爷（守护：年初四）",
+      "describe": "守护年初四，慈祥幽默的灶王爷",
+      "modelFilePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/npc_mesh/灶王爷·甜甜爷.glb",
+      "imagePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-4/3d07980c25653114220ae7c82a90be92.png",
+      "targetHeight": 1.4,
+      "anim": {
+        "isBuiltIn": true,
+        "speedScale": 0.5,
+        "animations": {
+          "Idle": "Idle",
+          "Walking": "Walk",
+          "Running": "Run",
+          "Falling": "Fall",
+          "Jumping": "Jump"
+        }
+      }
+    },
+    {
+      "id": "jinbao",
+      "name": "财神娃娃·金宝（守护：年初五）",
+      "describe": "守护年初五，活力十足的财神娃娃",
+      "modelFilePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/npc_mesh/财神娃娃·金宝.glb",
+      "imagePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-5/浼佷笟寰俊鎴浘_ee80fda0-0538-4568-a462-185e43163bda.png",
+      "targetHeight": 1.2,
+      "anim": {
+        "isBuiltIn": true,
+        "speedScale": 0.8,
+        "animations": {
+          "Idle": "Idle",
+          "Walking": "Walk",
+          "Running": "Run",
+          "Falling": "Fall",
+          "Jumping": "Jump"
+        }
+      }
+    }
+  ],
+  "list": [
+    {
+      "id": "npc_honghong",
+      "modelId": "honghong",
+      "position": {
+        "x": 3.6,
+        "y":2.7,
+        "z": 26.1
+      },
+      "rotation": {
+        "x": 0,
+        "y": -130,
+        "z": 0
+      },
+      "movementPattern": "idle",
+      "interaction": {
+        "type": "guide",
+        "distance": 2.5,
+        "autoTrigger": true,
+        "hintText": "🧨 年初一",
+        "dialogues": [
+          {
+            "id": "greeting",
+            "text": "新年到，福气到！祝你新年像爆竹一样——响亮亮，亮堂堂！",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-1/0-N.wav",
+            "responses": [
+              {
+                "id": "resp_a",
+                "text": "祝你新年红红火火！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-1/0-U-A.wav"
+              },
+              {
+                "id": "resp_b",
+                "text": "祝你岁岁平安喜乐！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-1/0-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "resp_a",
+            "text": "红红火火好！就像我身上的颜色一样～你说，为什么大家要争着放新年的第一串爆竹呀？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-1/1-N-A.wav",
+            "responses": [
+              {
+                "id": "round2_a",
+                "text": "因为声音越响，福气来得越快！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-1/1-U-A.wav"
+              },
+              {
+                "id": "round2_b",
+                "text": "因为谁家放得早谁就能最早吃饭。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-1/1-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "resp_b",
+            "text": "平安喜乐里可有我的功劳呢！老话说，爆竹能驱邪保平安。你说，为什么大家要争着放新年的第一串爆竹呀？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-1/1-N-B.wav",
+            "responses": [
+              {
+                "id": "round2_a",
+                "text": "因为声音越响，福气来得越快！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-1/1-U-A.wav"
+              },
+              {
+                "id": "round2_b",
+                "text": "因为谁家放得早谁就能最早吃饭。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-1/1-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "round2_a",
+            "text": "对对对！这叫'开门迎福'。那我再问问，现在很多人用电子鞭炮，这是为什么呢？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-1/2-N-A.wav",
+            "responses": [
+              {
+                "id": "round3_a",
+                "text": "因为更安全，不会伤到人。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-1/2-U-A.wav"
+              },
+              {
+                "id": "round3_b",
+                "text": "因为电子鞭炮的声音更响亮。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-1/2-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "round2_b",
+            "text": "不对哦，和吃饭没关系～其实是因为声音越响，福气来得越快！那我再问问，现在很多人用电子鞭炮，这是为什么呢？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-1/2-N-B.wav",
+            "responses": [
+              {
+                "id": "round3_a",
+                "text": "因为更安全，不会伤到人。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-1/2-U-A.wav"
+              },
+              {
+                "id": "round3_b",
+                "text": "因为电子鞭炮的声音更响亮。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-1/2-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "round3_a",
+            "text": "安全最重要！电子鞭炮又漂亮又不怕火星。最后一个问题：年初一除了放爆竹，还有一件特别重要的事是什么？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-1/3-N-A.wav",
+            "responses": [
+              {
+                "id": "final_a",
+                "text": "要给长辈拜年，说吉祥话！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-1/3-U-A.wav"
+              },
+              {
+                "id": "final_b",
+                "text": "要整天睡觉，不能出门。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-1/3-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "round3_b",
+            "text": "不对哦，电子鞭炮的声音其实没那么响，主要是安全环保。最后一个问题：年初一除了放爆竹，还有一件特别重要的事是什么？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-1/3-N-B.wav",
+            "responses": [
+              {
+                "id": "final_a",
+                "text": "要给长辈拜年，说吉祥话！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-1/3-U-A.wav"
+              },
+              {
+                "id": "final_b",
+                "text": "要整天睡觉，不能出门。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-1/3-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "final_a",
+            "text": "真懂事！拜年是表达对长辈的尊敬和爱，吉祥话能给全家带来好心情～记住啦，开个好头，一年都有精神！",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-1/4-N-A.wav",
+            "responses": []
+          },
+          {
+            "id": "final_b",
+            "text": "不对哦，年初一要出门拜年，整天睡觉可不好～记住啦，开个好头，一年都有精神！",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-1/4-N-B.wav",
+            "responses": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_qiaoqiao",
+      "modelId": "qiaoqiao",
+      "position": {
+        "x": -4,
+        "y": 1.3,
+        "z": 0.2
+      },
+      "rotation": {
+        "x": 0,
+        "y": -93,
+        "z": 0
+      },
+      "movementPattern": "idle",
+      "interaction": {
+        "type": "guide",
+        "distance": 2.5,
+        "autoTrigger": true,
+        "hintText": "🎁 年初二",
+        "dialogues": [
+          {
+            "id": "greeting",
+            "text": "新年安康！祝你今年像蜜糖糕一样，日子甜，心里暖！",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/0-N.wav",
+            "responses": [
+              {
+                "id": "resp_a",
+                "text": "祝你全家团圆美满！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/0-U-A.wav"
+              },
+              {
+                "id": "resp_b",
+                "text": "祝你笑容永远甜甜！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/0-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "resp_a",
+            "text": "团圆最美了！你知道年初二为什么又叫'迎婿日'吗？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/1-N-A.wav",
+            "responses": [
+              {
+                "id": "round2_a",
+                "text": "因为女婿这天要陪女儿回娘家！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/1-U-A.wav"
+              },
+              {
+                "id": "round2_b",
+                "text": "因为这天要迎接财神进门。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/1-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "resp_b",
+            "text": "我的笑呀，是因为想到要见家人啦！你知道年初二为什么又叫'迎婿日'吗？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/1-N-B.wav",
+            "responses": [
+              {
+                "id": "round2_a",
+                "text": "因为女婿这天要陪女儿回娘家！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/1-U-A.wav"
+              },
+              {
+                "id": "round2_b",
+                "text": "因为这天要迎接财神进门。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/1-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "round2_a",
+            "text": "对啦，女儿女婿回门的日子。那我问问，回娘家带的礼物为什么要成双成对呢？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/2-N-A.wav",
+            "responses": [
+              {
+                "id": "round3_a",
+                "text": "因为双数代表好事成双！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/2-U-A.wav"
+              },
+              {
+                "id": "round3_b",
+                "text": "因为单数不够分。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/2-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "round2_b",
+            "text": "不对哦，迎财神是初五～其实是女儿女婿回门的日子。那我问问，回娘家带的礼物为什么要成双成对呢？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/2-N-B.wav",
+            "responses": [
+              {
+                "id": "round3_a",
+                "text": "因为双数代表好事成双！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/2-U-A.wav"
+              },
+              {
+                "id": "round3_b",
+                "text": "因为单数不够分。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/2-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "round3_a",
+            "text": "是呀，成双成对才吉祥。再考考你：年初二还有什么特别的活动？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/3-N-A.wav",
+            "responses": [
+              {
+                "id": "final_a",
+                "text": "祭财神，希望新年财源广进！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/3-U-A.wav"
+              },
+              {
+                "id": "final_b",
+                "text": "整天不扫地，怕扫走财运。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/3-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "round3_b",
+            "text": "不对哦，和分不分没关系，是'好事成双'的寓意。再考考你：年初二还有什么特别的活动？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/3-N-B.wav",
+            "responses": [
+              {
+                "id": "final_a",
+                "text": "祭财神，希望新年财源广进！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/3-U-A.wav"
+              },
+              {
+                "id": "final_b",
+                "text": "整天不扫地，怕扫走财运。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/3-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "final_a",
+            "text": "聪明！祭财神是希望新的一年勤劳致富～年初二呀，就是团圆、富足、美满的一天！",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/4-N-A.wav",
+            "responses": []
+          },
+          {
+            "id": "final_b",
+            "text": "不对哦，那是年初一的习俗～年初二是要祭财神，希望新年财源广进！年初二呀，就是团圆、富足、美满的一天！",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-2/4-N-B.wav",
+            "responses": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_rongrong",
+      "modelId": "rongrong",
+      "position": {
+        "x": -22,
+        "y": 0.9,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 85,
+        "z": 0
+      },
+      "movementPattern": "idle",
+      "interaction": {
+        "type": "guide",
+        "distance": 2.5,
+        "autoTrigger": true,
+        "hintText": "🌸 年初三",
+        "dialogues": [
+          {
+            "id": "greeting",
+            "text": "新年好。祝你新的一年，口吐芬芳，家和万事兴。",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-3/0-N.wav",
+            "responses": [
+              {
+                "id": "resp_a",
+                "text": "祝你说话暖心，大家都喜欢！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-3/0-U-A.wav"
+              },
+              {
+                "id": "resp_b",
+                "text": "祝你每天都有平静的好心情！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-3/0-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "resp_a",
+            "text": "说话暖心，就不会伤人。你知道为什么年初三的传统，是大家不出去拜年，而是留在家中吗？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-3/1-N-A.wav",
+            "responses": [
+              {
+                "id": "round2_a",
+                "text": "因为这天叫'赤口'，怕出门说话不小心会吵架。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-3/1-U-A.wav"
+              },
+              {
+                "id": "round2_b",
+                "text": "因为外面的神仙初三都放假了，拜年也没用。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-3/1-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "resp_b",
+            "text": "心情平静，才能看到美好。你知道为什么年初三的传统，是大家不出去拜年，而是留在家中吗？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-3/1-N-B.wav",
+            "responses": [
+              {
+                "id": "round2_a",
+                "text": "因为这天叫'赤口'，怕出门说话不小心会吵架。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-3/1-U-A.wav"
+              },
+              {
+                "id": "round2_b",
+                "text": "因为外面的神仙初三都放假了，拜年也没用。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-3/1-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "round2_a",
+            "text": "没错，古人认为这天易生口舌之争，所以减少交际，防患于未然。那待在家里时，做什么事最能体现'赤口'日的智慧呢？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-3/2-N-A.wav",
+            "responses": [
+              {
+                "id": "round3_a",
+                "text": "一家人聊聊天，检查一下有没有说过或想做的不好的事，然后和解。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-3/2-U-A.wav"
+              },
+              {
+                "id": "round3_b",
+                "text": "一整天都不说话，只用手比划。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-3/2-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "round2_b",
+            "text": "不对哦，神仙可不放假。是因为这天古称'赤口'，人们担心外出言语不当引发争执。那待在家里时，做什么事最能体现'赤口'日的智慧呢？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-3/2-N-B.wav",
+            "responses": [
+              {
+                "id": "round3_a",
+                "text": "一家人聊聊天，检查一下有没有说过或想做的不好的事，然后和解。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-3/2-U-A.wav"
+              },
+              {
+                "id": "round3_b",
+                "text": "一整天都不说话，只用手比划。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-3/2-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "round3_a",
+            "text": "是的，这叫'自省'与'和解'，是避免纷争的大智慧。那么，初三除了叫'赤口'，还有一个名字叫'小年朝'，这主要是提醒我们要做什么？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-3/3-N-A.wav",
+            "responses": [
+              {
+                "id": "final_a",
+                "text": "要祭拜祖先和天地，感谢保佑，也祈求新一年平安。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-3/3-U-A.wav"
+              },
+              {
+                "id": "final_b",
+                "text": "要像过小年一样，再吃一顿饺子大餐。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-3/3-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "round3_b",
+            "text": "那也太辛苦啦！真正的智慧是好好说话、真诚沟通，而不是沉默。那么，初三除了叫'赤口'，还有一个名字叫'小年朝'，这主要是提醒我们要做什么？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-3/3-N-B.wav",
+            "responses": [
+              {
+                "id": "final_a",
+                "text": "要祭拜祖先和天地，感谢保佑，也祈求新一年平安。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-3/3-U-A.wav"
+              },
+              {
+                "id": "final_b",
+                "text": "要像过小年一样，再吃一顿饺子大餐。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-3/3-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "final_a",
+            "text": "你全都明白了。初三的智慧就是：对外'慎言'避赤口，对内'反省'求和气，对上'感恩'敬祖先。团圆安宁，就是福气。",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-3/4-N-A.wav",
+            "responses": []
+          },
+          {
+            "id": "final_b",
+            "text": "吃饺子是冬至的习俗哦。'小年朝'的核心是祭拜感恩。记住，初三的智慧是：对外'慎言'避赤口，对内'反省'求和气。团圆安宁，就是福气。",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-3/4-N-B.wav",
+            "responses": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_tiantianye",
+      "modelId": "tiantianye",
+      "position": {
+        "x": -32.6,
+        "y": 1,
+        "z": -9.4
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 0
+      },
+      "movementPattern": "idle",
+      "interaction": {
+        "type": "guide",
+        "distance": 2.5,
+        "autoTrigger": true,
+        "hintText": "🍯 年初四",
+        "dialogues": [
+          {
+            "id": "greeting",
+            "text": "咳咳，新年如意！祝你今年胃口常开，吃嘛嘛香！",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-4/0-N.wav",
+            "responses": [
+              {
+                "id": "resp_a",
+                "text": "祝您糖瓜粘粘，好事连连！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-4/0-U-A.wav"
+              },
+              {
+                "id": "resp_b",
+                "text": "祝您每天都尝到新美味！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-4/0-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "resp_a",
+            "text": "哟，你记得我的糖瓜！你说，大家为什么在年初四用甜糕点接我呀？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-4/1-N-A.wav",
+            "responses": [
+              {
+                "id": "round2_a",
+                "text": "为了让您嘴甜，多说好话！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-4/1-U-A.wav"
+              },
+              {
+                "id": "round2_b",
+                "text": "因为您年纪大了，只爱吃软的甜食。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-4/1-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "resp_b",
+            "text": "新美味就在这天等着我！你说，大家为什么在年初四用甜糕点接我呀？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-4/1-N-B.wav",
+            "responses": [
+              {
+                "id": "round2_a",
+                "text": "为了让您嘴甜，多说好话！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-4/1-U-A.wav"
+              },
+              {
+                "id": "round2_b",
+                "text": "因为您年纪大了，只爱吃软的甜食。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-4/1-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "round2_a",
+            "text": "对啦，'上天言好事，下界保平安'。那我问问，接灶神一般要在什么时间？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-4/2-N-A.wav",
+            "responses": [
+              {
+                "id": "round3_a",
+                "text": "要在下午，给您留足时间！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-4/2-U-A.wav"
+              },
+              {
+                "id": "round3_b",
+                "text": "要在半夜，越晚越好。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-4/2-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "round2_b",
+            "text": "不对哦，我牙口好着呢～其实是希望我嘴甜多说好话。那我问问，接灶神一般要在什么时间？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-4/2-N-B.wav",
+            "responses": [
+              {
+                "id": "round3_a",
+                "text": "要在下午，给您留足时间！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-4/2-U-A.wav"
+              },
+              {
+                "id": "round3_b",
+                "text": "要在半夜，越晚越好。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-4/2-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "round3_a",
+            "text": "没错，要给我留足回来的时间。最后一个问题：年初四还有什么特别的习俗？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-4/3-N-A.wav",
+            "responses": [
+              {
+                "id": "final_a",
+                "text": "要大扫除，叫'扔穷'！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-4/3-U-A.wav"
+              },
+              {
+                "id": "final_b",
+                "text": "要熬夜守岁，等着接您。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-4/3-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "round3_b",
+            "text": "不对哦，半夜我都睡着啦～下午接我才合适。最后一个问题：年初四还有什么特别的习俗？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-4/3-N-B.wav",
+            "responses": [
+              {
+                "id": "final_a",
+                "text": "要大扫除，叫'扔穷'！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-4/3-U-A.wav"
+              },
+              {
+                "id": "final_b",
+                "text": "要熬夜守岁，等着接您。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-4/3-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "final_a",
+            "text": "真能干！'扔穷'就是把没用的东西扔掉，迎接富足～等我回来，看到干干净净的家，会更高兴哦！",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-4/4-N-A.wav",
+            "responses": []
+          },
+          {
+            "id": "final_b",
+            "text": "不对哦，守岁是除夕夜～年初四是要大扫除'扔穷'。等我回来，看到干干净净的家，会更高兴哦！",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-4/4-N-B.wav",
+            "responses": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_jinbao",
+      "modelId": "jinbao",
+      "position": {
+        "x": -49.5,
+        "y": 3,
+        "z": -11
+      },
+      "rotation": {
+        "x": 0,
+        "y": -45,
+        "z": 0
+      },
+      "movementPattern": "idle",
+      "interaction": {
+        "type": "guide",
+        "distance": 2.5,
+        "autoTrigger": true,
+        "hintText": "💰 年初五",
+        "dialogues": [
+          {
+            "id": "greeting",
+            "text": "新年大吉！祝你今年像小树苗一样，茁壮成长，收获满满！",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-5/0-N.wav",
+            "responses": [
+              {
+                "id": "resp_a",
+                "text": "祝你财源广进，好运不断！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-5/0-U-A.wav"
+              },
+              {
+                "id": "resp_b",
+                "text": "祝你心想事成，梦想成真！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-5/0-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "resp_a",
+            "text": "财源要像活水，流动起来才好！你说，为什么年初五叫'破五'？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-5/1-N-A.wav",
+            "responses": [
+              {
+                "id": "round2_a",
+                "text": "因为过了这天，过年禁忌可以破了！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-5/1-U-A.wav"
+              },
+              {
+                "id": "round2_b",
+                "text": "因为这天要打破所有碗碟。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-5/1-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "resp_b",
+            "text": "心想事成需要行动！你说，为什么年初五叫'破五'？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-5/1-N-B.wav",
+            "responses": [
+              {
+                "id": "round2_a",
+                "text": "因为过了这天，过年禁忌可以破了！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-5/1-U-A.wav"
+              },
+              {
+                "id": "round2_b",
+                "text": "因为这天要打破所有碗碟。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-5/1-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "round2_a",
+            "text": "对啦，破除旧年的约束。那我问问，'送穷'是怎么送的？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-5/2-N-A.wav",
+            "responses": [
+              {
+                "id": "round3_a",
+                "text": "把垃圾扫出门，表示送走穷困！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-5/2-U-A.wav"
+              },
+              {
+                "id": "round3_b",
+                "text": "把钱包扔出去，表示不要穷。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-5/2-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "round2_b",
+            "text": "不对哦，碗碟多可惜～其实是破除过年期间的禁忌。那我问问，'送穷'是怎么送的？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-5/2-N-B.wav",
+            "responses": [
+              {
+                "id": "round3_a",
+                "text": "把垃圾扫出门，表示送走穷困！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-5/2-U-A.wav"
+              },
+              {
+                "id": "round3_b",
+                "text": "把钱包扔出去，表示不要穷。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-5/2-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "round3_a",
+            "text": "是呀，把穷气扫出去。再考考你：年初五商家开市，为什么要舞龙舞狮？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-5/3-N-A.wav",
+            "responses": [
+              {
+                "id": "final_a",
+                "text": "为了驱邪避煞，带来好运！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-5/3-U-A.wav"
+              },
+              {
+                "id": "final_b",
+                "text": "为了吓走客人，让他们快点买东西。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-5/3-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "round3_b",
+            "text": "不对哦，钱包可不能扔～是把垃圾扫出门，送走穷困。再考考你：年初五商家开市，为什么要舞龙舞狮？",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-5/3-N-B.wav",
+            "responses": [
+              {
+                "id": "final_a",
+                "text": "为了驱邪避煞，带来好运！",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-5/3-U-A.wav"
+              },
+              {
+                "id": "final_b",
+                "text": "为了吓走客人，让他们快点买东西。",
+                "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-5/3-U-B.wav"
+              }
+            ]
+          },
+          {
+            "id": "final_a",
+            "text": "对！龙狮能驱邪纳吉，保佑生意兴隆。记住哦，真正的财富是勤劳、智慧和分享～",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-5/4-N-A.wav",
+            "responses": []
+          },
+          {
+            "id": "final_b",
+            "text": "不对哦，那样会把客人吓跑～舞龙舞狮是为了驱邪纳吉，带来好运。记住哦，真正的财富是勤劳、智慧和分享～",
+            "audio": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/assets/NPC-5/4-N-B.wav",
+            "responses": []
+          }
+        ]
+      }
+    }
+  ]
+}

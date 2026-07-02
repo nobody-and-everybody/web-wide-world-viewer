@@ -1,0 +1,67 @@
+{
+  "name": "Slums",
+  "rendererScale": 1,
+  "debugger": false,
+  "meterScale": 1,
+  "gaussianSplatting": {
+    "gaussianComponentType": "playcanvas",
+    "regionReplaceConfigPath": "http://localhost:8080/config/slums/region-replace-config.json",
+    "gaussianSplats3DOption": {
+      "sharedMemoryForWorkers": false,
+      "sphericalHarmonicsDegree": 0,
+      "ignoreDevicePixelRatio": true,
+      "enableSIMDInSort": true,
+      "integerBasedSort": true,
+      "splatSortDistanceMapPrecision": 32,
+      "halfPrecisionCovariancesOnGPU": true,
+      "dynamicScene": false,
+      "renderMode": 0,
+      "antialiased": false
+    },
+    "transform": {
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 180],
+      "scale": [1, 1, 1]
+    }
+  },
+  "collision": {
+    "url": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_rome/collision/rome_navmesh_3.glb",
+    "transform": {
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [1, 1, 1]
+    }
+  },
+  "terrain1": {
+    "url": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_Slums/v3_collision/heightmaps/heightmap.r16",
+    "transform": {
+      "locationCM": [-11615.0, -12670.0, 100],
+      "rotation": [0, 0, 0],
+      "scale": [30, 30, 100]
+    },
+    "resolution": {
+      "totalVertices": [714, 807],
+      "componentVertices": [32, 32],
+      "componentSections": [1, 1]
+    }
+  },
+  "initial": {
+    "player": {
+      "position": {
+        "x": 4,
+        "y": 0,
+        "z": -38
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "camera": {
+      "position": [0, 0, 0],
+      "lookUp": [0, -1, 0],
+      "lookAt": [0, 0, -1]
+    }
+  }
+}

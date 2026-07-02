@@ -1,0 +1,443 @@
+{
+  "name": "ChineseGarden-ChunkedCollision",
+  "rendererScale": 1,
+  "debugger": true,
+  "meterScale": 1,
+  "gaussianSplatting": {
+    "gaussianComponentType": "spark",
+    "regionReplaceConfigPath": "/config/region-replace-mixed/region-replace-config.chunked_collision_chinese.local.json",
+    "gaussianSplats3DOption": {
+      "sharedMemoryForWorkers": false,
+      "sphericalHarmonicsDegree": 0,
+      "ignoreDevicePixelRatio": true,
+      "enableSIMDInSort": true,
+      "integerBasedSort": true,
+      "splatSortDistanceMapPrecision": 32,
+      "halfPrecisionCovariancesOnGPU": true,
+      "dynamicScene": true,
+      "renderMode": 0,
+      "antialiased": false
+    },
+    "transform": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        180
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "collision": {
+    "baseUrl": "/collision-chunks-chinese/",
+    "modules": [
+      {
+        "id": "-1_0_0_morton",
+        "file": "-1_0_0_morton.glb",
+        "center": [
+          0,
+          10,
+          9
+        ],
+        "size": [
+          24,
+          20,
+          22
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "-1_-1_0",
+        "file": "-1_-1_0.glb",
+        "center": [
+          -24,
+          10,
+          9
+        ],
+        "size": [
+          24,
+          20,
+          22
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "-1_-2_0",
+        "file": "-1_-2_0.glb",
+        "center": [
+          -48,
+          10,
+          9
+        ],
+        "size": [
+          24,
+          20,
+          22
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "-2_0_0",
+        "file": "-2_0_0.glb",
+        "center": [
+          0,
+          10,
+          31
+        ],
+        "size": [
+          24,
+          20,
+          22
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "0_0_0",
+        "file": "0_0_0.glb",
+        "center": [
+          0,
+          10,
+          -13
+        ],
+        "size": [
+          24,
+          20,
+          22
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "0_-1_0",
+        "file": "0_-1_0.glb",
+        "center": [
+          -24,
+          10,
+          -13
+        ],
+        "size": [
+          24,
+          20,
+          22
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "0_-2_0",
+        "file": "0_-2_0.glb",
+        "center": [
+          -48,
+          10,
+          -13
+        ],
+        "size": [
+          24,
+          20,
+          22
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "modulesRaw": [
+      {
+        "name": "-1_0_0_morton",
+        "transform": {
+          "position": [
+            0,
+            10,
+            9
+          ],
+          "rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "x": 24,
+          "y": 20,
+          "z": 22
+        },
+        "collision_name": [
+          "-1_0_0_morton.glb"
+        ],
+        "ply_name": [
+          "-1_0_0_morton"
+        ]
+      },
+      {
+        "name": "-1_-1_0",
+        "transform": {
+          "position": [
+            -24,
+            10,
+            9
+          ],
+          "rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "x": 24,
+          "y": 20,
+          "z": 22
+        },
+        "collision_name": [
+          "-1_-1_0.glb"
+        ],
+        "ply_name": [
+          "-1_-1_0"
+        ]
+      },
+      {
+        "name": "-1_-2_0",
+        "transform": {
+          "position": [
+            -48,
+            10,
+            9
+          ],
+          "rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "x": 24,
+          "y": 20,
+          "z": 22
+        },
+        "collision_name": [
+          "-1_-2_0.glb"
+        ],
+        "ply_name": [
+          "-1_-2_0"
+        ]
+      },
+      {
+        "name": "-2_0_0",
+        "transform": {
+          "position": [
+            0,
+            10,
+            31
+          ],
+          "rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "x": 24,
+          "y": 20,
+          "z": 22
+        },
+        "collision_name": [
+          "-2_0_0.glb"
+        ],
+        "ply_name": [
+          "-2_0_0"
+        ]
+      },
+      {
+        "name": "0_0_0",
+        "transform": {
+          "position": [
+            0,
+            10,
+            -13
+          ],
+          "rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "x": 24,
+          "y": 20,
+          "z": 22
+        },
+        "collision_name": [
+          "0_0_0.glb"
+        ],
+        "ply_name": [
+          "0_0_0"
+        ]
+      },
+      {
+        "name": "0_-1_0",
+        "transform": {
+          "position": [
+            -24,
+            10,
+            -13
+          ],
+          "rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "x": 24,
+          "y": 20,
+          "z": 22
+        },
+        "collision_name": [
+          "0_-1_0.glb"
+        ],
+        "ply_name": [
+          "0_-1_0"
+        ]
+      },
+      {
+        "name": "0_-2_0",
+        "transform": {
+          "position": [
+            -48,
+            10,
+            -13
+          ],
+          "rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "x": 24,
+          "y": 20,
+          "z": 22
+        },
+        "collision_name": [
+          "0_-2_0.glb"
+        ],
+        "ply_name": [
+          "0_-2_0"
+        ]
+      }
+    ],
+    "loadConfig": {
+      "neighborDistance": 30,
+      "keepFootChunk": true,
+      "unloadDelay": 500
+    }
+  },
+  "initial": {
+    "player": {
+      "position": {
+        "x": -8.06,
+        "y": 1.14,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 20,
+        "z": 0
+      }
+    },
+    "camera": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "lookUp": [
+        0,
+        -1,
+        0
+      ],
+      "lookAt": [
+        0,
+        0,
+        -1
+      ]
+    }
+  },
+  "npcs": {
+    "enabled": true,
+    "configFile": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_chinese_garden/chinese-garden-newyear-npcs.json"
+  }
+}

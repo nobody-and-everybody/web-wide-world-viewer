@@ -1,0 +1,35 @@
+{
+  "models": [
+    {
+      "id": "gracia_fashion",
+      "name": "4DGS 时装模特",
+      "describe": "使用 Gracia 4DGS 技术的动态人物",
+      "type": "gracia-4dgs",
+      "gracia4dgs": {
+        "useDemoApi": true,
+        "demoSourceId": null,
+        "splatScale": 1.0,
+        "enableMesh": true,
+        "autoPlay": true,
+        "loop": true,
+        "envLighting": {
+          "sh": [1.87031,1.918464,2.000223,0.962367,1.050086,1.184771,1.543599,1.419717,1.262293,2.100156,1.935595,1.729669,1.584412,1.473231,1.336372,1.148921,1.068716,0.966966,-0.07552,-0.038685,-0.013138,2.609779,2.423938,2.198205,1.474358,1.355914,1.198138],
+          "lightDir": { "x": 0.3, "y": 1, "z": 0.2 },
+          "scale": 1.0,
+          "ambientBoost": 0.5
+        }
+      },
+      "targetHeight": 1.8
+    }
+  ],
+  "list": [
+    {
+      "id": "npc_4dgs_fashion",
+      "modelId": "gracia_fashion",
+      "position": { "x": 0, "y": 1.14, "z": 10 },
+      "position2": { "x": -8.5, "y": 1.2, "z": 1.2 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
+      "scale": 1.1
+    }
+  ]
+}
