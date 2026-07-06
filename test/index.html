@@ -1,51 +1,233 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" >
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" >
+    <meta       name="viewport"
+      content="width=device-width,user-scalable=no,initial-scale=1,viewport-fit=cover"
+    >
+    <meta name="theme-color" content="transparent" >
+
+    <!-- SEO Meta Tags for / -->
+    <title>Web Wide World - 3D场景列表 | 高斯泼溅场景查看器</title>
+    <meta name="description" content="Web Wide World 场景列表。提供多种高质量 3D Gaussian Splatting 重建场景，支持虚拟角色在场景中自由探索。By Nobody, For Everyone - 平凡人共创普惠世界。" >
+    <meta name="keywords" content="3D Gaussian Splatting, 3DGS, 高斯泼溅, 3D场景列表, 虚拟角色, 场景探索, 元宇宙, Three.js, WebGL" >
+    <meta name="author" content="Web Wide World Team" >
+    <meta name="robots" content="index, follow" >
+
+    <!-- Open Graph / Facebook（静态部分） -->
+    <meta property="og:type" content="website" >
+    <meta property="og:title" content="Web Wide World - 3D场景列表" >
+    <meta property="og:description" content="探索多种高质量 3D Gaussian Splatting 重建场景，控制虚拟角色自由探索虚拟世界。" >
+    <meta property="og:locale" content="zh_CN" >
+
+    <!-- Twitter（静态部分） -->
+    <meta name="twitter:card" content="summary_large_image" >
+    <meta name="twitter:title" content="Web Wide World - 3D场景列表" >
+    <meta name="twitter:description" content="探索多种高质量 3D Gaussian Splatting 重建场景。" >
+
+    <!-- 动态 SEO：构建时通过 VITE_SITE_URL 注入生产域名，未设置则 fallback 到 window.location.origin -->
     <script>
-      /*!
-       * base-href fixup for /xxx.html/<route> SPA path form
-       * @changelog
-       * | 版本   | 变更说明                                                             | 关联                                   |
-       * | v1.0.0 | 检测 /xxx.html/ 伪目录段，动态注入 <base href> 修正相对资源解析基准 | REQ: router-hash-path-normalization    |
-       * /@changelog
-       * @author fancylin
-       *
-       * 背景：当 vite 构建产物使用 base: './' 输出相对路径（./assets/*.js）时，
-       *      访问 http://host/xxx.html/route 形式的 SPA URL，浏览器会把
-       *      ./assets/*.js 解析为 http://host/xxx.html/assets/*.js 导致 404。
-       * 修复：在 head 首位以同步 <script>（非 module）阻塞式检测 pathname，
-       *      命中 /xxx.html/ 段则计算正确目录 URL 并注入 <base href>，
-       *      使后续所有静态引用与运行时动态 import 按正确基准解析。
-       * 未命中时零副作用（直接 return，不注入 <base>）。
-       */
-      (function () {
-        try {
-          var seg = /\/[^/]+\.html\//.exec(location.pathname);
-          if (!seg) return;
-          var baseDir = location.pathname.substring(0, seg.index + 1);
-          var baseHref = location.origin + baseDir;
-          var baseEl = document.createElement('base');
-          baseEl.setAttribute('href', baseHref);
-          document.head.insertBefore(baseEl, document.head.firstChild);
-        } catch (e) {
-          /* 兜底：任何异常都不阻塞页面加载 */
-        }
+      (function() {
+        var origin = '' || window.location.origin;
+        var homeUrl = origin + '/';
+
+        // canonical
+        var link = document.createElement('link');
+        link.rel = 'canonical';
+        link.href = homeUrl;
+        document.head.appendChild(link);
+
+        // OG url + image
+        var ogUrl = document.createElement('meta');
+        ogUrl.setAttribute('property', 'og:url');
+        ogUrl.setAttribute('content', homeUrl);
+        document.head.appendChild(ogUrl);
+
+        var ogImg = document.createElement('meta');
+        ogImg.setAttribute('property', 'og:image');
+        ogImg.setAttribute('content', origin + '/og-image.png');
+        document.head.appendChild(ogImg);
+
+        // Twitter url + image
+        var twUrl = document.createElement('meta');
+        twUrl.setAttribute('name', 'twitter:url');
+        twUrl.setAttribute('content', homeUrl);
+        document.head.appendChild(twUrl);
+
+        var twImg = document.createElement('meta');
+        twImg.setAttribute('name', 'twitter:image');
+        twImg.setAttribute('content', origin + '/og-image.png');
+        document.head.appendChild(twImg);
+
+        // JSON-LD 结构化数据
+        var ld = document.createElement('script');
+        ld.type = 'application/ld+json';
+        ld.textContent = JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          'name': 'Web Wide World - 3D场景列表',
+          'description': 'Web Wide World 的3D场景集合，提供多种高质量 3D Gaussian Splatting 重建场景供探索。',
+          'url': homeUrl,
+          'isPartOf': {
+            '@type': 'WebApplication',
+            'name': 'Web Wide World',
+            'url': homeUrl
+          },
+          'mainEntity': {
+            '@type': 'ItemList',
+            'name': '3D场景列表',
+            'description': '可探索的3D Gaussian Splatting场景',
+            'itemListElement': [
+              { '@type': 'ListItem', 'position': 1, 'name': '3D重建场景', 'description': '使用高斯泼溅技术重建的高质量3D场景' }
+            ]
+          },
+          'potentialAction': {
+            '@type': 'ViewAction',
+            'name': '浏览3D场景',
+            'target': origin + '/viewer2'
+          }
+        });
+        document.head.appendChild(ld);
       })();
     </script>
-    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
-    <meta
-      name="viewport"
-      content="width=device-width,user-scalable=no,initial-scale=1,viewport-fit=cover"
-    />
-    <title></title>
-    <script type="module" crossorigin src="./assets/index-BU0f0F1n.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/vue-vendor-Ca6ZD4Rb.js">
-    <link rel="modulepreload" crossorigin href="./assets/three-vendor-q-98cG9_.js">
+    <script type="module" crossorigin src="./assets/index-8uVgfYw-.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/vue-vendor-BfMkD776.js">
+    <link rel="modulepreload" crossorigin href="./assets/vue-router-vendor-LPpYpnG8.js">
+    <link rel="modulepreload" crossorigin href="./assets/three-vendor-fTG7eqhr.js">
     <link rel="modulepreload" crossorigin href="./assets/rapier-vendor-CKC5f6tm.js">
-    <link rel="stylesheet" crossorigin href="./assets/index-peJQM9Nu.css">
-  </head>
+    <link rel="stylesheet" crossorigin href="./assets/index-Bc-0q6zk.css">
+  <meta name="description" content="Web Wide World 场景列表。提供多种高质量 3D Gaussian Splatting 重建场景，支持虚拟角色在场景中自由探索。By Nobody, For Everyone - 平凡人共创普惠世界。"></head>
   <body>
     <div id="app"></div>
+    <div id="prerender" style="display: none;">
+<div class="model-list">
+  <header class="header">
+    <h1>Web Wide World</h1>
+    <p>By Nobody, For Everyone：平凡人共创普惠世界</p>
+  </header>
+  <div class="baidu-search-box">
+    <input type="text" class="baidu-input" placeholder="请填入场景 URL" >
+    <button class="baidu-btn">
+      Go
+      <svg class="btn-icon" width="18" height="18" viewBox="0 0 20 20">
+        <polyline points="7 5 13 10 7 15" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ></polyline>
+      </svg>
+    </button>
+  </div>
+  <div class="models-grid">
+    
+    <div class="model-card">
+      <div class="model-preview">
+        <div class="model-icon">🎯</div>
+        <h3>二次元街区</h3>
+      </div>
+      <div class="model-info">
+        <button class="view-button">查看详情</button>
+      </div>
+    </div>
+    <div class="model-card">
+      <div class="model-preview">
+        <div class="model-icon">🎯</div>
+        <h3>欧洲古堡</h3>
+      </div>
+      <div class="model-info">
+        <button class="view-button">查看详情</button>
+      </div>
+    </div>
+    <div class="model-card">
+      <div class="model-preview">
+        <div class="model-icon">🎯</div>
+        <h3>奥利奥</h3>
+      </div>
+      <div class="model-info">
+        <button class="view-button">查看详情</button>
+      </div>
+    </div>
+    <div class="model-card">
+      <div class="model-preview">
+        <div class="model-icon">🎯</div>
+        <h3>乡村土路</h3>
+      </div>
+      <div class="model-info">
+        <button class="view-button">查看详情</button>
+      </div>
+    </div>
+    <div class="model-card">
+      <div class="model-preview">
+        <div class="model-icon">🎯</div>
+        <h3>罗马</h3>
+      </div>
+      <div class="model-info">
+        <button class="view-button">查看详情</button>
+      </div>
+    </div>
+    <div class="model-card">
+      <div class="model-preview">
+        <div class="model-icon">🎯</div>
+        <h3>欧洲古堡2</h3>
+      </div>
+      <div class="model-info">
+        <button class="view-button">查看详情</button>
+      </div>
+    </div>
+    <div class="model-card">
+      <div class="model-preview">
+        <div class="model-icon">🎯</div>
+        <h3>中式庭院</h3>
+      </div>
+      <div class="model-info">
+        <button class="view-button">查看详情</button>
+      </div>
+    </div>
+    <div class="model-card">
+      <div class="model-preview">
+        <div class="model-icon">🎯</div>
+        <h3>三丫坡</h3>
+      </div>
+      <div class="model-info">
+        <button class="view-button">查看详情</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEO 内容（爬虫可读） -->
+  <div class="seo-content" style="position:absolute;left:-86.2rem;top:-86.2rem;">
+    <h1>Web Wide World - 3D场景列表 | 高斯泼溅场景查看器</h1>
+    <p>Web Wide World 场景列表。提供多种高质量 3D Gaussian Splatting 重建场景，支持虚拟角色在场景中自由探索。By Nobody, For Everyone - 平凡人共创普惠世界。</p>
+    <h2>主要功能</h2>
+    <ul>
+      <li>3D场景浏览 - 使用先进的高斯泼溅技术渲染逼真的3D场景</li>
+      <li>虚拟角色 - 控制虚拟角色在场景中自由行走探索</li>
+      <li>多场景支持 - 提供多个精美的3D重建场景供选择</li>
+      <li>自定义场景 - 支持输入自定义场景URL进行查看</li>
+    </ul>
+    <h2>页面导航</h2>
+    <ul>
+      <li><a href="/">首页 - 场景列表</a></li>
+      <li><a href="/viewer2">场景查看器</a></li>
+      <li><a href="/debug-viewer">Debug查看器</a></li>
+      <li><a href="/creative">创意模式</a></li>
+    </ul>
+  </div>
+</div>
+<style>
+  .model-list{overflow-y:scroll;height:100vh;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);padding:2rem}
+  .header{text-align:center;color:#fff;margin-bottom:3rem}
+  .header h1{font-size:2.5rem;margin-bottom:0.5rem;font-weight:300}
+  .header p{font-size:1.1rem;opacity:.9}
+  .baidu-search-box{display:flex;justify-content:center;align-items:center;border-radius:14px;overflow:hidden;box-shadow:0 2px 12px rgba(75,144,214,.08);border:1.5px solid #e0e3ea;background:#fff;max-width:800px;margin:0 auto 1.5rem}
+  .baidu-input{flex:1;padding:0 18px;height:46px;border:none;outline:none;font-size:1.07em;background:transparent;color:#222f3a}
+  .baidu-btn{display:flex;align-items:center;gap:0.25em;height:46px;padding:0 21px 0 16px;background:#3385ff;color:#fff;border:none;cursor:pointer;font-size:1.08em;font-weight:600;border-radius:0 14px 14px 0}
+  .models-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;max-width:800px;margin:0 auto;padding-bottom:10rem}
+  .model-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.1);opacity:.75}
+  .model-card.skeleton{animation:pulse 1.5s infinite}
+  @keyframes pulse{0%,100%{opacity:.75}50%{opacity:.5}}
+  .model-preview{padding:2rem;text-align:center;background:linear-gradient(135deg,#f5f7fa 0%,#c3cfe2 100%)}
+  .model-icon{font-size:3rem;margin-bottom:1rem}
+  .model-preview h3{margin:0;font-size:1.5rem;color:#333;font-weight:500}
+  .model-info{padding:1.5rem}
+  .view-button{width:100%;padding:0.75rem;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;border:none;border-radius:6px;font-size:1rem;cursor:pointer}
+</style></div>
   </body>
 </html>
