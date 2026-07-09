@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" >
+    <link rel="icon" type="image/svg+xml" href="/guyuan-museum/vite.svg" >
+    <meta       name="viewport"
+      content="width=device-width,user-scalable=no,initial-scale=1,viewport-fit=cover"
+    >
+    <meta name="theme-color" content="transparent" >
+    
+    <!-- SEO Meta Tags for /v2 -->
+    <title>场景查看器 - Web Wide World</title>
+    <meta name="description" content="Web Wide World 版本场景列表。提供多种高质量 3D Gaussian Splatting 重建场景，支持虚拟角色在场景中自由探索。By Nobody, For Everyone - 平凡人共创普惠世界。" >
+    <meta name="keywords" content="3D Gaussian Splatting, 3DGS, 高斯泼溅, 3D场景列表, 虚拟角色, 场景探索, 元宇宙, Three.js, WebGL" >
+    <meta name="author" content="Web Wide World Team" >
+    <meta name="robots" content="index, follow" >
+    <link rel="canonical" href="https://web-wide-world.space/" >
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" >
+    <meta property="og:url" content="https://web-wide-world.space/" >
+    <meta property="og:title" content="Web Wide World - 3D场景列表" >
+    <meta property="og:description" content="探索多种高质量 3D Gaussian Splatting 重建场景，控制虚拟角色自由探索虚拟世界。" >
+    <meta property="og:image" content="https://web-wide-world.space/og-image.png" >
+    <meta property="og:locale" content="zh_CN" >
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" >
+    <meta name="twitter:url" content="https://web-wide-world.space/" >
+    <meta name="twitter:title" content="Web Wide World - 3D场景列表" >
+    <meta name="twitter:description" content="探索多种高质量 3D Gaussian Splatting 重建场景。" >
+    <meta name="twitter:image" content="https://web-wide-world.space/og-image.png" >
+    
+    <!-- JSON-LD 结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Web Wide World - 3D场景列表",
+      "description": "Web Wide World 版本的3D场景集合，提供多种高质量 3D Gaussian Splatting 重建场景供探索。",
+      "url": "https://web-wide-world.space/",
+      "isPartOf": {
+        "@type": "WebApplication",
+        "name": "Web Wide World",
+        "url": "https://web-wide-world.space/"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "3D场景列表",
+        "description": "可探索的3D Gaussian Splatting场景",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "3D重建场景",
+            "description": "使用高斯泼溅技术重建的高质量3D场景"
+          }
+        ]
+      },
+      "potentialAction": {
+        "@type": "ViewAction",
+        "name": "浏览3D场景",
+        "target": "https://web-wide-world.space/viewer2"
+      }
+    }
+    </script>
+    <script type="module" crossorigin src="/guyuan-museum/assets/index-BRGJnW9r.js"></script>
+    <link rel="modulepreload" crossorigin href="/guyuan-museum/assets/vue-vendor-BToyv_hf.js">
+    <link rel="modulepreload" crossorigin href="/guyuan-museum/assets/three-vendor-DEpZawDU.js">
+    <link rel="modulepreload" crossorigin href="/guyuan-museum/assets/rapier-vendor-CKC5f6tm.js">
+    <link rel="modulepreload" crossorigin href="/guyuan-museum/assets/vendor-Dga8RJWx.js">
+    <link rel="stylesheet" crossorigin href="/guyuan-museum/assets/index-w6cfWhlm.css">
+  <meta name="description" content="新一代3D场景查看器，支持高质量Gaussian Splatting渲染和物理交互。"></head>
+  <body>   
+    <div id="app"></div>
+    <div id="prerender" style="display: none;">
+<div class="three-container" style="width:100%;height:100%;position:relative;background:#000;">
+  <!-- 加载提示 -->
+  <div class="scene-loading-overlay" style="position:fixed;inset:0;background:#000;display:flex;align-items:center;justify-content:center;z-index:9999;">
+    <div style="text-align:center;color:#fff;">
+      <div class="loading-spinner" style="width:.34rem;height:.34rem;border:.03rem solid rgba(255,255,255,0.2);border-top-color:#fff;border-radius:50%;margin:0 auto 116px;animation:spin 1s linear infinite;"></div>
+    </div>
+  </div>
+
+  <!-- 跳跃按钮骨架 -->
+  <div class="jump-button-container" style="position:fixed;right:.6rem;bottom:.6rem;width:.69rem;height:.69rem;z-index:1002;">
+    <div class="center-button" style="width:.69rem;height:.69rem;background:rgba(255,100,50,0.5);border:.03rem solid rgba(255,150,100,0.4);border-radius:50%;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(.04rem);color:white;box-shadow:0 .03rem .1rem rgba(255,100,50,0.2);">
+      <svg viewBox="0 0 48 48" fill="currentColor" style="width:.28rem;height:.28rem;opacity:0.6;">
+        <circle cx="24" cy="10" r="5" ></circle>
+        <ellipse cx="24" cy="20" rx="3" ry="8" ></ellipse>
+        <ellipse cx="21" cy="30" rx="2" ry="8" ></ellipse>
+        <ellipse cx="27" cy="32" rx="2" ry="8" ></ellipse>
+      </svg>
+    </div>
+  </div>
+
+  <!-- 右侧按钮组骨架 -->
+  <div class="vertical-button-group" style="position:fixed;right:.17rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:.13rem;z-index:1000;">
+    <!-- 选择模型按钮 -->
+    <div class="vertical-button" style="width:.34rem;height:.34rem;background:rgba(50,50,50,0.5);border:.02rem solid rgba(200,200,200,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(.04rem);color:white;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:.16rem;height:.16rem;opacity:0.6;">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+        <circle cx="12" cy="7" r="4"></circle>
+      </svg>
+    </div>
+    <!-- 环绕按钮 -->
+    <div class="vertical-button" style="width:.34rem;height:.34rem;background:rgba(50,50,50,0.5);border:.02rem solid rgba(200,200,200,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(.04rem);color:white;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:.16rem;height:.16rem;opacity:0.6;">
+        <circle cx="12" cy="12" r="8" ></circle>
+        <circle cx="12" cy="12" r="3" fill="currentColor" ></circle>
+      </svg>
+    </div>
+    <!-- 全屏按钮 -->
+    <div class="vertical-button" style="width:.34rem;height:.34rem;background:rgba(50,50,50,0.5);border:.02rem solid rgba(200,200,200,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(.04rem);color:white;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:.16rem;height:.16rem;opacity:0.6;">
+        <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<style>
+  @keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+  html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;background:transparent}
+  /* 移动端适配 */
+  @media(max-width:6.62rem){
+    .jump-button-container{right:.56rem!important;bottom:.56rem!important;width:.6rem!important;height:.6rem!important}
+    .center-button{width:.6rem!important;height:.6rem!important}
+    .center-button svg{width:.24rem!important;height:.24rem!important}
+    .vertical-button-group{right:.13rem!important;gap:.1rem!important}
+    .vertical-button{width:.3rem!important;height:.3rem!important}
+    .vertical-button svg{width:.14rem!important;height:.14rem!important}
+  }
+</style>
+
+<!-- SEO 内容（爬虫可读） -->
+<div class="seo-content" style="position:absolute;left:-86.2rem;top:-86.2rem;">
+  <h1>场景查看器 - Web Wide World</h1>
+  <p>新一代3D场景查看器，支持高质量Gaussian Splatting渲染和物理交互。</p>
+  <h2>功能特点</h2>
+  <ul>
+    <li>高质量 3D Gaussian Splatting 场景渲染</li>
+    <li>虚拟角色控制 - 使用摇杆在场景中自由行走</li>
+    <li>跳跃功能 - 探索场景的每一个角落</li>
+    <li>环绕视角 - 360度观察场景细节</li>
+    <li>角色切换 - 选择你喜欢的虚拟形象</li>
+    <li>全屏模式 - 沉浸式体验</li>
+    <li>移动端友好 - 支持触控操作</li>
+  </ul>
+  <nav>
+    <a href="/">返回首页</a>
+    <a href="/v2">场景列表</a>
+  </nav>
+</div><script type="application/json" id="prerender-data">{}</script></div>
+  </body>
+</html>

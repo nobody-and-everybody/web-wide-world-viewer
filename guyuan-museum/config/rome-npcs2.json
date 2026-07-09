@@ -1,0 +1,747 @@
+{
+  "models": [
+    {
+      "id": "soldier",
+      "name": "百夫长马库斯",
+      "describe": "罗马军团的百夫长，守护广场的秩序",
+      "modelFilePath": "./models/character/model/Soldier.glb",
+      "imagePath": "./models/character/img/soldier.png",
+      "targetHeight": 1.85,
+      "transform": {
+        "position": { "x": 0, "y": 0, "z": 0 },
+        "rotation": { "x": 0, "y": 180, "z": 0 },
+        "scale": 1
+      },
+      "anim": {
+        "isBuiltIn": true,
+        "animations": {
+          "Idle": "Idle",
+          "Walking": "Walk",
+          "Running": "Run",
+          "Falling": "Fall",
+          "Jumping": "Jump"
+        }
+      }
+    },
+    {
+      "id": "ch03",
+      "name": "女祭司朱莉娅",
+      "describe": "维斯塔神殿的女祭司，守护圣火",
+      "modelFilePath": "./models/character/model/Ch03_nonPBR.fbx",
+      "imagePath": "./models/character/img/character_03.png",
+      "targetHeight": 1.65,
+      "anim": {
+        "isBuiltIn": false,
+        "animations": {
+          "Idle": "./models/character/anim/Idle.fbx",
+          "Walking": "./models/character/anim/Walking.fbx",
+          "Running": "./models/character/anim/Running.fbx",
+          "Falling": "./models/character/anim/Falling.fbx",
+          "Jumping": "./models/character/anim/Jumping.fbx"
+        }
+      }
+    },
+    {
+      "id": "erika_archer",
+      "name": "弓箭手戴安娜",
+      "describe": "来自高卢的女弓箭手，现为罗马效力",
+      "modelFilePath": "./models/character/model/Erika Archer.fbx",
+      "targetHeight": 1.7,
+      "anim": {
+        "isBuiltIn": false,
+        "animations": {
+          "Idle": "./models/character/anim/Idle.fbx",
+          "Walking": "./models/character/anim/Walking.fbx",
+          "Running": "./models/character/anim/Running.fbx",
+          "Falling": "./models/character/anim/Falling.fbx",
+          "Jumping": "./models/character/anim/Jumping.fbx"
+        }
+      }
+    },
+    {
+      "id": "kachujin",
+      "name": "角斗士斯巴达克斯",
+      "describe": "传奇角斗士，曾在斗兽场赢得自由",
+      "modelFilePath": "./models/character/model/Kachujin G Rosales.fbx",
+      "targetHeight": 1.8,
+      "anim": {
+        "isBuiltIn": false,
+        "animations": {
+          "Idle": "./models/character/anim/Idle.fbx",
+          "Walking": "./models/character/anim/Walking.fbx",
+          "Running": "./models/character/anim/Running.fbx",
+          "Falling": "./models/character/anim/Falling.fbx",
+          "Jumping": "./models/character/anim/Jumping.fbx"
+        }
+      }
+    },
+    {
+      "id": "nightshade",
+      "name": "密探卢克蕾西亚",
+      "describe": "元老院的密探，掌握罗马的秘密",
+      "modelFilePath": "./models/character/model/Nightshade J Friedrich.fbx",
+      "targetHeight": 1.68,
+      "anim": {
+        "isBuiltIn": false,
+        "animations": {
+          "Idle": "./models/character/anim/Idle.fbx",
+          "Walking": "./models/character/anim/Walking.fbx",
+          "Running": "./models/character/anim/Running.fbx",
+          "Falling": "./models/character/anim/Falling.fbx",
+          "Jumping": "./models/character/anim/Jumping.fbx"
+        }
+      }
+    },
+    {
+      "id": "peasant_girl",
+      "name": "平民少女奥莉维亚",
+      "describe": "在市场卖花的少女，熟悉罗马的大街小巷",
+      "modelFilePath": "./models/character/model/Peasant Girl.fbx",
+      "targetHeight": 1.6,
+      "anim": {
+        "isBuiltIn": false,
+        "animations": {
+          "Idle": "./models/character/anim/Idle.fbx",
+          "Walking": "./models/character/anim/Walking.fbx",
+          "Running": "./models/character/anim/Running.fbx",
+          "Falling": "./models/character/anim/Falling.fbx",
+          "Jumping": "./models/character/anim/Jumping.fbx"
+        }
+      }
+    }
+  ],
+  "list": [
+    {
+      "id": "npc_centurion_marcus",
+      "modelId": "soldier",
+      "position": { "x": 3, "y": 0, "z": -29 },
+      "movementPattern": "patrol",
+      "patrolPoints": [
+        { "x": 15, "y": 0, "z": -40 },
+        { "x": 20, "y": 0, "z": -40 },
+        { "x": 20, "y": 0, "z": -45 },
+        { "x": 15, "y": 0, "z": -45 }
+      ],
+      "wanderSpeed": 0.5,
+      "interaction": {
+        "type": "guard",
+        "distance": 2.5,
+        "autoTrigger": true,
+        "hintText": "🏛️ 对话",
+        "dialogues": [
+          {
+            "id": "greeting",
+            "text": "罗马公民，向你致敬！我是百夫长马库斯，负责守护这片广场。有什么需要帮助的吗？",
+            "responses": [
+              {
+                "id": "ask_about_rome",
+                "text": "能介绍一下罗马吗？"
+              },
+              {
+                "id": "ask_about_colosseum",
+                "text": "斗兽场在哪个方向？"
+              },
+              {
+                "id": "ask_about_danger",
+                "text": "这里安全吗？"
+              },
+              {
+                "id": "goodbye",
+                "text": "谢谢，罗马万岁！"
+              }
+            ]
+          },
+          {
+            "id": "ask_about_rome",
+            "text": "罗马是世界的中心！我们的帝国从不列颠延伸到埃及。这座城市有七座山丘，每一座都有它的故事。元老院在西边，斗兽场在东边。",
+            "responses": [
+              {
+                "id": "ask_about_colosseum",
+                "text": "斗兽场有什么精彩的吗？"
+              },
+              {
+                "id": "ask_about_danger",
+                "text": "有什么需要注意的地方？"
+              },
+              {
+                "id": "goodbye",
+                "text": "受教了，告辞！"
+              }
+            ]
+          },
+          {
+            "id": "ask_about_colosseum",
+            "text": "斗兽场是罗马的骄傲！今天有角斗士比赛，传奇角斗士斯巴达克斯可能会出场。如果你想看比赛，往东走就是了。",
+            "responses": [
+              {
+                "id": "ask_about_spartacus",
+                "text": "斯巴达克斯是谁？"
+              },
+              {
+                "id": "goodbye",
+                "text": "我这就去看看！"
+              }
+            ]
+          },
+          {
+            "id": "ask_about_spartacus",
+            "text": "斯巴达克斯？他是最强的角斗士！据说他曾带领奴隶起义，后来被赦免并获得自由。现在他是自由人，但偶尔仍会在斗兽场表演。",
+            "responses": [
+              {
+                "id": "greeting",
+                "text": "还有其他问题"
+              },
+              {
+                "id": "goodbye",
+                "text": "有趣，谢谢你！"
+              }
+            ]
+          },
+          {
+            "id": "ask_about_danger",
+            "text": "哼，在我马库斯的眼皮底下，没有人敢作乱！不过...你要小心那些在阴影里游荡的人，尤其是一个叫卢克蕾西亚的女人，她为元老院工作。",
+            "responses": [
+              {
+                "id": "greeting",
+                "text": "还有其他问题"
+              },
+              {
+                "id": "goodbye",
+                "text": "我会小心的，感谢提醒！"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_priestess_julia",
+      "modelId": "ch03",
+      "position": { "x": 10, "y": 0, "z": -38 },
+      "movementPattern": "idle",
+      "interaction": {
+        "type": "priest",
+        "distance": 2,
+        "autoTrigger": true,
+        "hintText": "🔥 祈祷",
+        "dialogues": [
+          {
+            "id": "greeting",
+            "text": "愿维斯塔女神的圣火照亮你的道路，旅行者。我是女祭司朱莉娅，守护着这座神殿的永恒之火。",
+            "responses": [
+              {
+                "id": "ask_blessing",
+                "text": "能为我祈福吗？"
+              },
+              {
+                "id": "ask_about_vesta",
+                "text": "维斯塔女神是谁？"
+              },
+              {
+                "id": "ask_about_fire",
+                "text": "为什么要守护圣火？"
+              },
+              {
+                "id": "goodbye",
+                "text": "愿女神保佑您"
+              }
+            ]
+          },
+          {
+            "id": "ask_blessing",
+            "text": "愿维斯塔的圣火温暖你的心灵，愿朱庇特的智慧指引你的道路，愿玛尔斯的勇气充满你的灵魂。去吧，勇敢的旅行者。",
+            "responses": [
+              {
+                "id": "ask_about_vesta",
+                "text": "感谢您，能告诉我更多关于女神的事吗？"
+              },
+              {
+                "id": "goodbye",
+                "text": "感谢您的祝福！"
+              }
+            ]
+          },
+          {
+            "id": "ask_about_vesta",
+            "text": "维斯塔是家庭与炉火的女神，是罗马最古老的神明之一。只要她的圣火不灭，罗马就会永远繁荣。我们维斯塔祭司终生侍奉女神，守护这神圣的火焰。",
+            "responses": [
+              {
+                "id": "ask_about_fire",
+                "text": "这火焰燃烧了多久？"
+              },
+              {
+                "id": "goodbye",
+                "text": "真是神圣的职责"
+              }
+            ]
+          },
+          {
+            "id": "ask_about_fire",
+            "text": "这圣火已经燃烧了七百年，从罗马建城之日起就未曾熄灭。如果圣火熄灭...那将是罗马的末日。所以我们日夜守护，片刻不敢懈怠。",
+            "responses": [
+              {
+                "id": "ask_blessing",
+                "text": "请为罗马祈福"
+              },
+              {
+                "id": "goodbye",
+                "text": "愿圣火永远燃烧"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_gladiator_spartacus",
+      "modelId": "kachujin",
+      "position": { "x": 5, "y": 0, "z": -9 },
+      "movementPattern": "wander",
+      "wanderRadius": 4,
+      "wanderSpeed": 0.4,
+      "interaction": {
+        "type": "trainer",
+        "distance": 2.5,
+        "autoTrigger": true,
+        "hintText": "⚔️ 训练",
+        "dialogues": [
+          {
+            "id": "greeting",
+            "text": "哈！又一个想学习战斗的年轻人？我是斯巴达克斯，曾经的奴隶，现在的自由人。想在斗兽场活下来，你需要真正的技巧。",
+            "responses": [
+              {
+                "id": "ask_training",
+                "text": "请教我战斗技巧！"
+              },
+              {
+                "id": "ask_story",
+                "text": "听说您曾领导起义？"
+              },
+              {
+                "id": "ask_colosseum",
+                "text": "斗兽场里是什么样的？"
+              },
+              {
+                "id": "goodbye",
+                "text": "改日再来请教"
+              }
+            ]
+          },
+          {
+            "id": "ask_training",
+            "text": "很好，有勇气！战斗的第一课：观察你的对手。在斗兽场里，盲目冲锋只会让你成为野兽的食物。记住，活着才能战斗。",
+            "responses": [
+              {
+                "id": "ask_more_training",
+                "text": "还有什么技巧？"
+              },
+              {
+                "id": "goodbye",
+                "text": "我会牢记的！"
+              }
+            ]
+          },
+          {
+            "id": "ask_more_training",
+            "text": "第二课：利用环境。沙子可以迷惑对手的眼睛，阳光可以致盲敌人。真正的战士不只用武器战斗，整个斗兽场都是你的武器。",
+            "responses": [
+              {
+                "id": "greeting",
+                "text": "还想学更多"
+              },
+              {
+                "id": "goodbye",
+                "text": "受教了，大师！"
+              }
+            ]
+          },
+          {
+            "id": "ask_story",
+            "text": "（沉默片刻）那是很久以前的事了...我曾带领七万奴隶反抗罗马。我们几乎成功了。但最终...克拉苏的军团太强大了。我很幸运，得到了赦免。现在我只想平静地生活。",
+            "responses": [
+              {
+                "id": "ask_freedom",
+                "text": "自由是什么感觉？"
+              },
+              {
+                "id": "goodbye",
+                "text": "您是真正的英雄"
+              }
+            ]
+          },
+          {
+            "id": "ask_freedom",
+            "text": "自由？（苦笑）自由是能够选择自己的道路。但真正的自由不在于身体，而在于心灵。即使在锁链中，我的心也是自由的。这是我在斗兽场学到的。",
+            "responses": [
+              {
+                "id": "ask_training",
+                "text": "请教我您的智慧"
+              },
+              {
+                "id": "goodbye",
+                "text": "您的话我会铭记于心"
+              }
+            ]
+          },
+          {
+            "id": "ask_colosseum",
+            "text": "斗兽场？那是死亡与荣耀的舞台。五万人的欢呼，野兽的咆哮，剑与剑的碰撞...当你站在那片血染的沙地上，你会明白什么是真正的恐惧，也会明白什么是真正的勇气。",
+            "responses": [
+              {
+                "id": "ask_training",
+                "text": "我想学习战斗"
+              },
+              {
+                "id": "goodbye",
+                "text": "听起来很可怕..."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_spy_lucretia",
+      "modelId": "nightshade",
+      "position": { "x": 27, "y": 0, "z": -9 },
+      "movementPattern": "wander",
+      "wanderRadius": 6,
+      "wanderSpeed": 0.6,
+      "interaction": {
+        "type": "quest",
+        "distance": 2,
+        "autoTrigger": true,
+        "hintText": "🗡️ 密语",
+        "dialogues": [
+          {
+            "id": "greeting",
+            "text": "（压低声音）你不该和我说话...除非你有什么有价值的消息。我为元老院工作，明白吗？",
+            "responses": [
+              {
+                "id": "ask_job",
+                "text": "您是做什么的？"
+              },
+              {
+                "id": "ask_secret",
+                "text": "罗马有什么秘密？"
+              },
+              {
+                "id": "offer_help",
+                "text": "我能帮上什么忙？"
+              },
+              {
+                "id": "goodbye",
+                "text": "抱歉打扰了"
+              }
+            ]
+          },
+          {
+            "id": "ask_job",
+            "text": "（冷笑）我的工作？我收集信息，解决...问题。元老院的贵族们需要有人替他们做那些不能见光的事。你懂的。",
+            "responses": [
+              {
+                "id": "ask_secret",
+                "text": "你知道什么秘密？"
+              },
+              {
+                "id": "offer_help",
+                "text": "我想接一些任务"
+              },
+              {
+                "id": "goodbye",
+                "text": "我什么都没听到"
+              }
+            ]
+          },
+          {
+            "id": "ask_secret",
+            "text": "秘密？（环顾四周）整个罗马都是秘密。元老们互相算计，凯撒野心勃勃，而那个叫克娄巴特拉的埃及女人...她可比蛇还危险。但这些不是你该知道的。",
+            "responses": [
+              {
+                "id": "ask_cleopatra",
+                "text": "克娄巴特拉是谁？"
+              },
+              {
+                "id": "goodbye",
+                "text": "我会守口如瓶的"
+              }
+            ]
+          },
+          {
+            "id": "ask_cleopatra",
+            "text": "埃及女王。据说她用美貌迷惑了凯撒，现在正在罗马...做客。哼，如果你问我，她是来布置一张巨大的网。但这些都是传言，你什么都没听到。",
+            "responses": [
+              {
+                "id": "offer_help",
+                "text": "我能帮你调查吗？"
+              },
+              {
+                "id": "goodbye",
+                "text": "我懂了，告辞"
+              }
+            ]
+          },
+          {
+            "id": "offer_help",
+            "text": "（审视你）有趣...你看起来不像是会多嘴的人。好吧，我有一个任务：帮我盯着那个在市场卖花的女孩——奥莉维亚。她似乎知道一些不该知道的事。别打草惊蛇。",
+            "responses": [
+              {
+                "id": "accept_mission",
+                "text": "我接受",
+                "action": "acceptQuest"
+              },
+              {
+                "id": "refuse_mission",
+                "text": "我不想卷入这种事"
+              }
+            ]
+          },
+          {
+            "id": "refuse_mission",
+            "text": "（耸肩）随你。但记住，在罗马，不选择立场也是一种选择。而且通常是最危险的那种。再见。",
+            "responses": [
+              {
+                "id": "greeting",
+                "text": "等等，我再考虑一下"
+              },
+              {
+                "id": "goodbye",
+                "text": "再见"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_archer_diana",
+      "modelId": "erika_archer",
+      "position": { "x": 29, "y": 0, "z": -19 },
+      "movementPattern": "wander",
+      "wanderRadius": 4,
+      "wanderSpeed": 0.45,
+      "interaction": {
+        "type": "trainer",
+        "distance": 2,
+        "autoTrigger": true,
+        "hintText": "🏹 射箭",
+        "dialogues": [
+          {
+            "id": "greeting",
+            "text": "嗨！我是戴安娜，来自高卢的弓箭手。别被我的名字骗了，我可不是什么女神——不过我的箭术倒是不输给她。",
+            "responses": [
+              {
+                "id": "ask_archery",
+                "text": "能教我射箭吗？"
+              },
+              {
+                "id": "ask_gaul",
+                "text": "高卢是什么样的地方？"
+              },
+              {
+                "id": "ask_rome_service",
+                "text": "为什么为罗马效力？"
+              },
+              {
+                "id": "goodbye",
+                "text": "再见，戴安娜"
+              }
+            ]
+          },
+          {
+            "id": "ask_archery",
+            "text": "想学射箭？好！首先，忘掉你知道的一切。射箭不是用眼睛瞄准，而是用心。感受风向，感受呼吸，然后...在心跳之间松开弓弦。",
+            "responses": [
+              {
+                "id": "learn_more",
+                "text": "请继续教我"
+              },
+              {
+                "id": "goodbye",
+                "text": "我会练习的！"
+              }
+            ]
+          },
+          {
+            "id": "learn_more",
+            "text": "进阶技巧：移动中射击。罗马人喜欢站成一排，但我们高卢人不同。我们在马背上，在奔跑中射箭。自由是我们最大的武器。有一天，也许我能教你骑射。",
+            "responses": [
+              {
+                "id": "greeting",
+                "text": "太厉害了！还有其他问题"
+              },
+              {
+                "id": "goodbye",
+                "text": "谢谢你的指导！"
+              }
+            ]
+          },
+          {
+            "id": "ask_gaul",
+            "text": "高卢？（眼神变得柔和）那是一片被森林覆盖的土地，有奔腾的河流和巍峨的山脉。我的族人与自然共生，与神灵共舞...直到罗马人来了。",
+            "responses": [
+              {
+                "id": "ask_rome_service",
+                "text": "那你为什么为罗马效力？"
+              },
+              {
+                "id": "goodbye",
+                "text": "听起来很美"
+              }
+            ]
+          },
+          {
+            "id": "ask_rome_service",
+            "text": "（苦笑）选择？我没有选择。我的部落被征服，我成为俘虏。但罗马人发现我会射箭，就给了我一个机会：为他们效力，换取自由。总有一天，我会回到高卢的森林里。",
+            "responses": [
+              {
+                "id": "ask_archery",
+                "text": "教我射箭吧，也许我能帮你"
+              },
+              {
+                "id": "goodbye",
+                "text": "愿你早日实现愿望"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_flower_girl_olivia",
+      "modelId": "peasant_girl",
+      "position": { "x": 22, "y": 0, "z": -12 },
+      "movementPattern": "wander",
+      "wanderRadius": 5,
+      "wanderSpeed": 0.35,
+      "interaction": {
+        "type": "guide",
+        "distance": 2,
+        "autoTrigger": true,
+        "hintText": "🌹 买花",
+        "dialogues": [
+          {
+            "id": "greeting",
+            "text": "卖花啦~新鲜的玫瑰和百合！先生/女士，要不要买一束？只要几个铜币~",
+            "responses": [
+              {
+                "id": "buy_flowers",
+                "text": "给我来一束玫瑰"
+              },
+              {
+                "id": "ask_about_rome",
+                "text": "你对罗马很熟悉吗？"
+              },
+              {
+                "id": "ask_secret",
+                "text": "（悄悄地）有人让我问你一些事..."
+              },
+              {
+                "id": "goodbye",
+                "text": "不用了，谢谢"
+              }
+            ]
+          },
+          {
+            "id": "buy_flowers",
+            "text": "谢谢惠顾！这是最新鲜的玫瑰，来自城外的花园。送给心上人一定会让她开心的~（递过花束）",
+            "responses": [
+              {
+                "id": "ask_about_rome",
+                "text": "你在这里卖花多久了？"
+              },
+              {
+                "id": "goodbye",
+                "text": "谢谢，再见~"
+              }
+            ]
+          },
+          {
+            "id": "ask_about_rome",
+            "text": "我从小就在这个广场卖花了！每条街道，每个角落我都熟悉。东边是斗兽场，每天都有比赛；西边是神殿区，那里的女祭司很善良；南边是港口，能看到来自各地的商船~",
+            "responses": [
+              {
+                "id": "ask_interesting",
+                "text": "有什么有趣的人或事吗？"
+              },
+              {
+                "id": "goodbye",
+                "text": "谢谢你的介绍！"
+              }
+            ]
+          },
+          {
+            "id": "ask_interesting",
+            "text": "（压低声音）你想知道有趣的事？好吧...我卖花的时候看到过很多事。比如那个穿黑衣服的女人，她总是在阴影里走动；还有凯撒大人，上周他在广场上走过，身边还有一个埃及美人...",
+            "responses": [
+              {
+                "id": "ask_more",
+                "text": "还有呢？"
+              },
+              {
+                "id": "goodbye",
+                "text": "好吧，谢谢你"
+              }
+            ]
+          },
+          {
+            "id": "ask_more",
+            "text": "（左右看了看）还有...元老院最近很不安宁。我听到几个元老在花园里密谈，好像在策划什么大事。其中一个提到了'三月十五日'...不过这些都是我瞎听到的，你可别告诉别人哦！",
+            "responses": [
+              {
+                "id": "greeting",
+                "text": "我不会说出去的，还有其他的吗？"
+              },
+              {
+                "id": "goodbye",
+                "text": "我会保密的，谢谢"
+              }
+            ]
+          },
+          {
+            "id": "ask_secret",
+            "text": "（脸色变了）什、什么？谁让你来问的？...是那个黑衣女人吗？我...我什么都不知道！我只是个卖花的小姑娘！",
+            "responses": [
+              {
+                "id": "calm_down",
+                "text": "别怕，我不会伤害你"
+              },
+              {
+                "id": "goodbye",
+                "text": "抱歉吓到你了，再见"
+              }
+            ]
+          },
+          {
+            "id": "calm_down",
+            "text": "（深呼吸）好吧...我确实听到了一些不该听的事。但我发誓，我没有告诉任何人！求求你，不要把我交给他们...我只是想好好卖花，养活自己而已...",
+            "responses": [
+              {
+                "id": "promise_protect",
+                "text": "我会保护你的"
+              },
+              {
+                "id": "goodbye",
+                "text": "放心，我不会告诉任何人"
+              }
+            ]
+          },
+          {
+            "id": "promise_protect",
+            "text": "（眼眶红了）真的吗？谢谢你...你是个好人。如果你需要什么帮助，可以来找我。我虽然只是个卖花的，但我认识很多人...包括一些愿意帮忙的朋友。",
+            "responses": [
+              {
+                "id": "greeting",
+                "text": "以后有事我会找你"
+              },
+              {
+                "id": "goodbye",
+                "text": "保重，奥莉维亚"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

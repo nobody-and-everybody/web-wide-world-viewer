@@ -1,0 +1,14 @@
+# Web Wide World - Robots.txt
+# https://web-wide-world.space
+
+User-agent: *
+Allow: /
+
+# 允许所有主要页面
+Allow: /v2
+Allow: /viewer
+Allow: /viewer2
+Allow: /model
+
+# Sitemap
+Sitemap: https://web-wide-world.space/sitemap.xml

@@ -1,0 +1,913 @@
+{
+    "models": [
+        {
+            "id": "scholar",
+            "name": "文人墨客",
+            "describe": "饱读诗书的文人，正在欣赏园林美景",
+            "modelFilePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/npc_mesh/20260127202035_521fbb58.fbx",
+            "targetHeight": 1.7,
+            "anim": {
+                "isBuiltIn": true,
+                "speedScale": 0.7,
+                "animations": {
+                    "Idle": "Idle",
+                    "Walking": "Walk",
+                    "Running": "Run",
+                    "Falling": "Fall",
+                    "Jumping": "Jump"
+                }
+            }
+        },
+        {
+            "id": "elder",
+            "name": "园林老者",
+            "describe": "德高望重的老者，守护这座园林多年",
+            "modelFilePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/npc_mesh/20260126192410_7afee25f.fbx",
+            "targetHeight": 1.65,
+            "anim": {
+                "isBuiltIn": true,
+                "speedScale": 0.7,
+                "animations": {
+                    "Idle": "Idle",
+                    "Walking": "Walk",
+                    "Running": "Run",
+                    "Falling": "Fall",
+                    "Jumping": "Jump"
+                }
+            }
+        },
+        {
+            "id": "maiden",
+            "name": "闺阁少女",
+            "describe": "大家闺秀，温婉可人，正在赏花",
+            "modelFilePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/npc_mesh/20260126192406_1a2dc1ea.fbx",
+            "targetHeight": 1.6,
+            "anim": {
+                "isBuiltIn": true,
+                "speedScale": 0.7,
+                "animations": {
+                    "Idle": "Idle",
+                    "Walking": "Walk",
+                    "Running": "Run",
+                    "Falling": "Fall",
+                    "Jumping": "Jump"
+                }
+            }
+        }
+    ],
+    "list": [
+        {
+            "id": "npc_scholar_chen",
+            "modelId": "scholar",
+            "position": {
+                "x": -9.74,
+                "y": 1.89,
+                "z": -0.25
+            },
+            "rotation": {
+                "x": 0,
+                "y": 59,
+                "z": 0
+            },
+            "movementPattern": "idle",
+            "interaction": {
+                "type": "guide",
+                "distance": 2.5,
+                "autoTrigger": true,
+                "hintText": "📜 新春贺岁",
+                "dialogues": [
+                    {
+                        "id": "greeting",
+                        "text": "（作揖）新春大吉！在下陈文远，一介书生。今日除夕，特来此园赏景，准备写几句诗词迎接新年。阁下也是来此过年的吗？",
+                        "responses": [
+                            {
+                                "id": "ask_poem",
+                                "text": "先生可否赋诗一首？"
+                            },
+                            {
+                                "id": "ask_newyear_custom",
+                                "text": "文人如何过新年？"
+                            },
+                            {
+                                "id": "ask_garden",
+                                "text": "这园林有何典故？"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "新年快乐，陈先生"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_poem",
+                        "text": "（捋须沉吟）好！且听我即兴赋诗一首——'爆竹声中辞旧岁，梅花香里迎新春。园林亭台皆换彩，人间处处是温存。'如何？虽比不得古人，聊表新年之意。",
+                        "responses": [
+                            {
+                                "id": "praise_poem",
+                                "text": "好诗！意境深远！"
+                            },
+                            {
+                                "id": "ask_meaning",
+                                "text": "这诗有何深意？"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "先生果然才高八斗！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "praise_poem",
+                        "text": "（欣慰）哈哈，承蒙夸奖。诗词乃心之所寄，新年作诗，是为记录此刻心情。来年再读，便能重温今日的喜悦。阁下不妨也试着写一首？",
+                        "responses": [
+                            {
+                                "id": "try_poem",
+                                "text": "我试试...新年到，人欢笑？"
+                            },
+                            {
+                                "id": "decline_poem",
+                                "text": "我不擅长作诗"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "改日再向先生请教"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "try_poem",
+                        "text": "（点头）'新年到，人欢笑'——好！朴实真切！诗词不在辞藻华丽，而在真情实感。阁下这句虽简，却道出了新年的真谛。来，再添两句？",
+                        "responses": [
+                            {
+                                "id": "continue_poem",
+                                "text": "红灯高挂门前照，爆竹声声除旧恼"
+                            },
+                            {
+                                "id": "ask_help",
+                                "text": "请先生帮我补全"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "先生过奖了"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "continue_poem",
+                        "text": "（击掌叫好）妙哉！'红灯高挂门前照，爆竹声声除旧恼'——对仗工整，意境喜庆！阁下有诗才！这首诗，我要记下来，作为今年新春的佳作！",
+                        "responses": [
+                            {
+                                "id": "thank_scholar",
+                                "text": "多谢先生指点！"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "先生过奖了，新年快乐！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "thank_scholar",
+                        "text": "（从袖中取出一卷宣纸）这是我手书的'福'字，送与阁下。贴在门上，可保新年福运亨通。愿阁下新的一年，学业有成，事事如意！",
+                        "responses": [
+                            {
+                                "id": "greeting",
+                                "text": "太感谢了！还想再聊聊"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "珍贵的礼物，多谢先生！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_help",
+                        "text": "（思索）既然是新年，不如这样——'红灯映雪添瑞气，爆竹辞岁报新朝。'如此一来，便是一首完整的新春小诗了。阁下觉得如何？",
+                        "responses": [
+                            {
+                                "id": "learn_poem",
+                                "text": "先生教得好！"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "受教了，新年快乐！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "learn_poem",
+                        "text": "（含笑）诗词之道，贵在多练。新年是最好的题材——喜庆、团圆、希望，皆可入诗。来年若有佳作，记得来与我分享。新年快乐！",
+                        "responses": [
+                            {
+                                "id": "greeting",
+                                "text": "一定！还想请教"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "先生新年快乐！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "decline_poem",
+                        "text": "（摆手）无妨无妨。诗词是雅事，却不是必需。能感受新年的喜悦，便已足够。不过，若有机会，不妨试试。诗词能让快乐变得更长久。",
+                        "responses": [
+                            {
+                                "id": "ask_newyear_custom",
+                                "text": "那先生是如何过年的？"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "说得有理，新年快乐！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_meaning",
+                        "text": "这诗分四层：'爆竹声中辞旧岁'是告别过去；'梅花香里迎新春'是迎接未来；'园林亭台皆换彩'是景物焕新；'人间处处是温存'是人情温暖。诗以景传情，以情动人。",
+                        "responses": [
+                            {
+                                "id": "praise_poem",
+                                "text": "先生讲解得太好了！"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "受教了！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_newyear_custom",
+                        "text": "（捻须）文人过年，讲究'四雅'——写春联、作诗词、品香茗、赏梅花。除夕夜守岁时，与三五知己围炉畅谈，吟诗作对，直到天明。这是一年中最雅致的时刻。",
+                        "responses": [
+                            {
+                                "id": "ask_couplet",
+                                "text": "春联有何讲究？"
+                            },
+                            {
+                                "id": "ask_shouxu",
+                                "text": "守岁是什么？"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "真是风雅！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_couplet",
+                        "text": "春联是新年之魂！上联述旧岁，下联迎新春，横批点睛。要对仗工整，寓意吉祥。今年我写的是：'天增岁月人增寿，春满乾坤福满门'，横批'万象更新'。",
+                        "responses": [
+                            {
+                                "id": "praise_couplet",
+                                "text": "好联！"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "先生墨宝，定是佳作！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "praise_couplet",
+                        "text": "（高兴）知音难觅！来，我现在就写一副送你——（挥毫泼墨）'龙腾四海迎新岁，福满人间庆有余'。挂在门上，保你新年龙马精神！",
+                        "responses": [
+                            {
+                                "id": "greeting",
+                                "text": "太珍贵了！还想多聊聊"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "多谢先生墨宝！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_shouxu",
+                        "text": "守岁是除夕夜不睡觉，等待新年到来。古人说'一夜连双岁，五更分二年'，守的是辞旧迎新的那一刻。点上红烛，全家团聚，是最温馨的时光。",
+                        "responses": [
+                            {
+                                "id": "ask_wish",
+                                "text": "先生今年有什么愿望？"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "真是美好的传统！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_wish",
+                        "text": "（眼神悠远）我的愿望？愿天下太平，百姓安乐。愿我的文章能开启民智，教化一方。也愿...来年金榜题名，不负寒窗苦读。哈哈，说起来倒有些私心了。",
+                        "responses": [
+                            {
+                                "id": "bless_scholar",
+                                "text": "先生定能高中！"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "愿先生心想事成！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "bless_scholar",
+                        "text": "（作揖）承蒙吉言！来年若能金榜题名，定不忘今日知遇。阁下也是有福之人，新的一年，愿你所求皆如愿，所行皆坦途！",
+                        "responses": [
+                            {
+                                "id": "greeting",
+                                "text": "谢谢先生！还想再聊"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "先生新年大吉！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_garden",
+                        "text": "这座园林，名唤'怡然园'，已有三百年历史。亭台楼阁，皆仿江南园林而建。新年时节，园中会挂满红灯笼，梅花盛开，是赏景的绝佳之地。",
+                        "responses": [
+                            {
+                                "id": "ask_spot",
+                                "text": "有什么必看的景点？"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "真是雅致！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_spot",
+                        "text": "园中最美处，当属'望月亭'和'梅香径'。亭中可观池中锦鲤，径上梅花正盛。新年第一天，在梅花下许愿，据说特别灵验。阁下不妨一试。",
+                        "responses": [
+                            {
+                                "id": "greeting",
+                                "text": "谢谢指点！还想聊聊"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "这就去看看！"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "npc_elder_wang",
+            "modelId": "elder",
+            "position": {
+                "x": -8.6,
+                "y": 1.79,
+                "z": 8.84
+            },
+            "rotation": {
+                "x": 0,
+                "y": 100,
+                "z": 0
+            },
+            "movementPattern": "idle",
+            "interaction": {
+                "type": "guide",
+                "distance": 2.5,
+                "autoTrigger": true,
+                "hintText": "🏮 新春祝福",
+                "dialogues": [
+                    {
+                        "id": "greeting",
+                        "text": "（和蔼地）新年好啊，年轻人！老夫姓王，守护这座园林已有四十年了。今日除夕，你能来这里，便是有缘。来，让老夫给你讲讲新年的规矩。",
+                        "responses": [
+                            {
+                                "id": "ask_rules",
+                                "text": "新年有什么规矩？"
+                            },
+                            {
+                                "id": "ask_tradition",
+                                "text": "新年有哪些传统？"
+                            },
+                            {
+                                "id": "ask_blessing",
+                                "text": "请老伯赐福"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "新年快乐，王老伯"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_rules",
+                        "text": "新年规矩多着呢！初一不扫地，怕扫走财气；不说不吉利的话，要多说'恭喜发财'、'万事如意'；见长辈要拜年磕头；小辈要给压岁钱...这些规矩，都是祖祖辈辈传下来的。",
+                        "responses": [
+                            {
+                                "id": "ask_hongbao",
+                                "text": "压岁钱有什么讲究？"
+                            },
+                            {
+                                "id": "ask_taboo",
+                                "text": "还有什么禁忌？"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "原来如此，受教了"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_hongbao",
+                        "text": "压岁钱，是长辈给晚辈的祝福。'压岁'就是'压住邪祟'的意思，保佑孩子平安长大。红包要用红纸封好，数字要吉利，比如66、88、168，都是好意头。",
+                        "responses": [
+                            {
+                                "id": "receive_hongbao",
+                                "text": "老伯要给我压岁钱吗？"
+                            },
+                            {
+                                "id": "ask_tradition",
+                                "text": "还有什么新年传统？"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "学到了，谢谢老伯！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "receive_hongbao",
+                        "text": "（哈哈大笑）你这孩子，倒是机灵！好，既然有缘，老夫就给你一个'福'字红包。（递过红包）拿着，新的一年，福气满满！",
+                        "responses": [
+                            {
+                                "id": "thank_elder",
+                                "text": "多谢老伯！恭祝老伯福如东海！"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "谢谢老伯，新年快乐！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "thank_elder",
+                        "text": "（欣慰）好孩子，懂礼貌！老夫活了七十多岁，最看重的就是'礼'字。你有这份心，来年定有福报。去吧，好好过年，多陪陪家人。",
+                        "responses": [
+                            {
+                                "id": "greeting",
+                                "text": "好的，还想再聊聊"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "老伯也要保重身体！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_taboo",
+                        "text": "禁忌嘛...初一不动刀剪，怕有血光之灾；不打破碗碟，若打破了要说'岁岁平安'；不哭闹，不吵架，要和和气气。新年讨个好彩头，一年都顺遂。",
+                        "responses": [
+                            {
+                                "id": "ask_suisui",
+                                "text": "'岁岁平安'怎么讲？"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "我记住了！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_suisui",
+                        "text": "'岁'和'碎'同音，打碎东西说'岁岁平安'，就把坏事变成了好话。中国人讲究谐音，比如'鱼'代表'年年有余'，'苹果'代表'平平安安'。说话做事，都要往好处想。",
+                        "responses": [
+                            {
+                                "id": "ask_tradition",
+                                "text": "还有什么有趣的传统？"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "中国文化真有意思！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_tradition",
+                        "text": "新年传统可多了！除夕要吃团圆饭，一家人围坐在一起；要贴春联、挂灯笼；放鞭炮驱邪；看舞龙舞狮；还有最重要的——守岁！一家人聊天到天亮，迎接新年第一缕阳光。",
+                        "responses": [
+                            {
+                                "id": "ask_reunion",
+                                "text": "团圆饭有什么讲究？"
+                            },
+                            {
+                                "id": "ask_dragon",
+                                "text": "舞龙舞狮是什么？"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "听起来好热闹！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_reunion",
+                        "text": "团圆饭是一年中最重要的一顿饭！要有鱼——年年有余；要有饺子——形如元宝，招财进宝；要有年糕——年年高升；还要有汤圆——团团圆圆。每道菜都有寓意。",
+                        "responses": [
+                            {
+                                "id": "ask_dumpling",
+                                "text": "饺子为什么是元宝？"
+                            },
+                            {
+                                "id": "ask_blessing",
+                                "text": "老伯能给我一些祝福吗？"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "真有讲究！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_dumpling",
+                        "text": "饺子形状像古时候的金元宝，吃饺子就是'招财进宝'。而且饺子里可以包硬币，谁吃到谁就有财运。老夫年轻时，年年都能吃到，哈哈！",
+                        "responses": [
+                            {
+                                "id": "ask_elder_wish",
+                                "text": "老伯今年有什么愿望？"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "老伯真是有福之人！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_dragon",
+                        "text": "舞龙舞狮是新年最热闹的活动！龙是中国人的图腾，舞龙能带来好运。狮子能驱邪避凶，舞狮时锣鼓喧天，好不热闘。今晚城里就有舞龙表演，你要去看看！",
+                        "responses": [
+                            {
+                                "id": "ask_time",
+                                "text": "什么时候开始？"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "我一定去看！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_time",
+                        "text": "子时一过，也就是半夜十二点，舞龙队就从城门出发，一路舞到天亮。你跟着龙走，福气就跟着你走。记得带些糖果，撒给舞龙的人，讨个好彩头！",
+                        "responses": [
+                            {
+                                "id": "greeting",
+                                "text": "好的，还想问问"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "谢谢老伯！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_blessing",
+                        "text": "（双手合十）好，老夫就给你几句祝福——恭喜发财，红包拿来！（笑）开个玩笑。愿你新年身体健康、万事如意、心想事成、阖家幸福！",
+                        "responses": [
+                            {
+                                "id": "return_blessing",
+                                "text": "也祝老伯福寿安康！"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "谢谢老伯祝福！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "return_blessing",
+                        "text": "（开心）好好好！年轻人懂得感恩，将来必有大出息！老夫在这园子里等你，来年再来，给老夫带些家乡的年货，咱们一起过年！",
+                        "responses": [
+                            {
+                                "id": "greeting",
+                                "text": "一定！还想再聊聊"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "一言为定！新年快乐！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_elder_wish",
+                        "text": "（叹气又笑）老夫的愿望简单——身体健康，能再守这园子几年。最希望的是...儿孙能常回来看看。新年嘛，一家人团聚，比什么都强。",
+                        "responses": [
+                            {
+                                "id": "comfort_elder",
+                                "text": "他们一定会回来的！"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "愿老伯心想事成！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "comfort_elder",
+                        "text": "（眼眶微红）谢谢你，孩子。有你这句话，老夫心里暖和。来，这是我亲手做的'福'袋，里面有平安符，送给你。愿你新的一年，平安顺遂！",
+                        "responses": [
+                            {
+                                "id": "greeting",
+                                "text": "太珍贵了！还想聊聊"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "多谢老伯！新年快乐！"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "npc_maiden_lin",
+            "modelId": "maiden",
+            "position": {
+                "x": -4.78,
+                "y": 1.93,
+                "z": 3.52
+            },
+            "rotation": {
+                "x": 0,
+                "y": 51,
+                "z": 0
+            },
+            "movementPattern": "idle",
+            "interaction": {
+                "type": "guide",
+                "distance": 2,
+                "autoTrigger": true,
+                "hintText": "🌸 新春祈愿",
+                "dialogues": [
+                    {
+                        "id": "greeting",
+                        "text": "（盈盈一福）新年好！小女子姓林，闺名婉儿。今日陪母亲来园中赏梅，顺便在梅树下许个新年愿望。公子也是来许愿的吗？",
+                        "responses": [
+                            {
+                                "id": "ask_wish",
+                                "text": "如何许愿？"
+                            },
+                            {
+                                "id": "ask_plum",
+                                "text": "为何在梅树下许愿？"
+                            },
+                            {
+                                "id": "ask_maiden_wish",
+                                "text": "姑娘许了什么愿？"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "新年快乐，林姑娘"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_wish",
+                        "text": "（眨眼）很简单！先在心里默念愿望三遍，然后对着梅花深深一拜，最后在红丝带上写下愿望，系在梅树枝头。听说这样许愿特别灵验呢！",
+                        "responses": [
+                            {
+                                "id": "try_wish",
+                                "text": "我也想试试"
+                            },
+                            {
+                                "id": "ask_ribbon",
+                                "text": "红丝带在哪里？"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "原来如此！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "try_wish",
+                        "text": "（高兴）好啊！这里有红丝带和笔，公子请便。（递过丝带）许愿时要诚心诚意，梅花仙子会听到的。许好后系在那棵最大的梅树上。",
+                        "responses": [
+                            {
+                                "id": "write_wish",
+                                "text": "（写下愿望）好了！"
+                            },
+                            {
+                                "id": "ask_maiden_wish",
+                                "text": "姑娘许了什么愿？"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "谢谢姑娘！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "write_wish",
+                        "text": "（看着飘动的红丝带）真美！公子的愿望一定会实现的。新年许下的愿望，带着一整年的希望呢。来年此时，记得来还愿哦！",
+                        "responses": [
+                            {
+                                "id": "promise_return",
+                                "text": "我一定来！"
+                            },
+                            {
+                                "id": "ask_maiden_wish",
+                                "text": "姑娘的愿望是什么？"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "谢谢姑娘！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "promise_return",
+                        "text": "（微笑）那小女子等着公子。对了，送你一枝梅花，是我今早亲手折的。梅花傲雪凌霜，象征坚韧不拔。愿公子新的一年，也能如梅花般坚强！",
+                        "responses": [
+                            {
+                                "id": "thank_maiden",
+                                "text": "多谢姑娘！"
+                            },
+                            {
+                                "id": "give_gift",
+                                "text": "我也想送姑娘礼物"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "真是美丽的花！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "thank_maiden",
+                        "text": "（脸微红）不用客气。新年互赠礼物，是好兆头。这枝梅花虽小，却是我的心意。愿它为公子带来好运。新年快乐！",
+                        "responses": [
+                            {
+                                "id": "greeting",
+                                "text": "姑娘也新年快乐！还想聊聊"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "姑娘新年快乐！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "give_gift",
+                        "text": "（惊喜）给我？...（接过礼物，脸更红了）多谢公子！这是我收到的第一份新年礼物...小女子会好好珍藏的。祝公子新年大吉大利！",
+                        "responses": [
+                            {
+                                "id": "greeting",
+                                "text": "姑娘客气了！还想聊聊"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "姑娘也新年快乐！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_ribbon",
+                        "text": "（指向梅树）就在那棵梅树下的竹篮里，红丝带和笔墨都有。这些都是园丁王伯伯准备的，免费提供给来许愿的人。他说，帮人许愿也是积福。",
+                        "responses": [
+                            {
+                                "id": "try_wish",
+                                "text": "那我去许愿"
+                            },
+                            {
+                                "id": "ask_wang",
+                                "text": "王伯伯人真好"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "谢谢指点！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_wang",
+                        "text": "是啊！王伯伯守护这园子几十年了，对每个来的人都很热情。新年时他还会发红包给小孩子呢。公子有空可以去找他聊聊，他知道很多新年的故事。",
+                        "responses": [
+                            {
+                                "id": "greeting",
+                                "text": "好的！还想问姑娘"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "我去找他！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_plum",
+                        "text": "（歪头思索）传说梅花仙子会在新年时降临人间，听取人们的心愿。梅花是新年第一朵盛开的花，象征希望与坚韧。在梅树下许愿，是我们这里的传统。",
+                        "responses": [
+                            {
+                                "id": "ask_fairy",
+                                "text": "梅花仙子是什么样的？"
+                            },
+                            {
+                                "id": "try_wish",
+                                "text": "那我也许个愿"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "真是美丽的传说"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_fairy",
+                        "text": "（眼睛发亮）据说梅花仙子身穿白衣，头戴梅花冠，美丽非凡。她会化身为一阵香风，掠过许愿之人。若你闻到特别浓郁的梅香，说明仙子听到你的愿望了！",
+                        "responses": [
+                            {
+                                "id": "smell_plum",
+                                "text": "（深吸一口气）真的有香味！"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "希望仙子能听到我的愿望"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "smell_plum",
+                        "text": "（开心地拍手）看！梅花仙子一定在附近！公子运气真好，新年第一天就得到仙子眷顾。快许愿，这个时候许的愿望一定会实现！",
+                        "responses": [
+                            {
+                                "id": "try_wish",
+                                "text": "好！我这就许愿"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "太神奇了！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_maiden_wish",
+                        "text": "（脸红）这个...许愿是秘密，说出来就不灵了。不过...（小声）我希望今年能学会绣花，给母亲绣一幅'福寿图'。还有...（声音更小）...不说了不说了！",
+                        "responses": [
+                            {
+                                "id": "encourage_maiden",
+                                "text": "姑娘的愿望一定会实现的！"
+                            },
+                            {
+                                "id": "ask_embroidery",
+                                "text": "绣花很难吗？"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "祝姑娘心想事成！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "encourage_maiden",
+                        "text": "（害羞）谢谢公子...（鼓起勇气）公子要是不嫌弃，小女子送你一个亲手做的香囊。里面是梅花和桂花的花瓣，闻起来很香。祝公子新年顺利！",
+                        "responses": [
+                            {
+                                "id": "accept_sachet",
+                                "text": "多谢姑娘！"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "太珍贵了！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "accept_sachet",
+                        "text": "（递过香囊）这是我第一次送人香囊...公子收好。新年戴香囊能辟邪纳福。（小声）若是喜欢，来年小女子再做一个给你...新年快乐！",
+                        "responses": [
+                            {
+                                "id": "greeting",
+                                "text": "一定！还想聊聊"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "我会珍藏的！新年快乐！"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ask_embroidery",
+                        "text": "绣花要静心，一针一线都马虎不得。母亲绣的'百鸟朝凤'，绣了整整三年呢！我才刚开始学，新年立个小目标——先绣一朵梅花！",
+                        "responses": [
+                            {
+                                "id": "encourage_maiden",
+                                "text": "姑娘一定能学会的！"
+                            },
+                            {
+                                "id": "goodbye",
+                                "text": "加油！"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

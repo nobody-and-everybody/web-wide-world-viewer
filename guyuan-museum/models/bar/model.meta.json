@@ -1,0 +1,25 @@
+{
+  "meterScale": 1,
+  "splashInfo": {
+    "position": [0, 3, 0],
+    "rotation": [0, 0, -1, 0]
+  },
+  "cameraInfo": {
+    "position": [
+      7.42936,
+      -1.02644,
+      2.30911
+    ],
+    "lookUp": [
+      0.0,
+      -1,
+      0.0
+    ],
+    "lookAt": [
+      3.29802,
+      0.53857,
+      1.21538
+    ]
+  },
+  "url": "bar720.ksplat"
+}
