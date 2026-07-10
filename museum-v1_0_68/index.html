@@ -2,83 +2,109 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" >
-    <link rel="icon" type="image/svg+xml" href="/museum-v1_0_68/vite.svg" >
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" >
     <meta       name="viewport"
       content="width=device-width,user-scalable=no,initial-scale=1,viewport-fit=cover"
     >
     <meta name="theme-color" content="transparent" >
-    
-    <!-- SEO Meta Tags for /v2 -->
+
+    <!-- SEO Meta Tags for / -->
     <title>Web Wide World - 3D场景列表 | 高斯泼溅场景查看器</title>
-    <meta name="description" content="Web Wide World 版本场景列表。提供多种高质量 3D Gaussian Splatting 重建场景，支持虚拟角色在场景中自由探索。By Nobody, For Everyone - 平凡人共创普惠世界。" >
+    <meta name="description" content="Web Wide World 场景列表。提供多种高质量 3D Gaussian Splatting 重建场景，支持虚拟角色在场景中自由探索。By Nobody, For Everyone - 平凡人共创普惠世界。" >
     <meta name="keywords" content="3D Gaussian Splatting, 3DGS, 高斯泼溅, 3D场景列表, 虚拟角色, 场景探索, 元宇宙, Three.js, WebGL" >
     <meta name="author" content="Web Wide World Team" >
     <meta name="robots" content="index, follow" >
-    <link rel="canonical" href="https://web-wide-world.space/" >
-    
-    <!-- Open Graph / Facebook -->
+
+    <!-- Open Graph / Facebook（静态部分） -->
     <meta property="og:type" content="website" >
-    <meta property="og:url" content="https://web-wide-world.space/" >
     <meta property="og:title" content="Web Wide World - 3D场景列表" >
     <meta property="og:description" content="探索多种高质量 3D Gaussian Splatting 重建场景，控制虚拟角色自由探索虚拟世界。" >
-    <meta property="og:image" content="https://web-wide-world.space/og-image.png" >
     <meta property="og:locale" content="zh_CN" >
-    
-    <!-- Twitter -->
+
+    <!-- Twitter（静态部分） -->
     <meta name="twitter:card" content="summary_large_image" >
-    <meta name="twitter:url" content="https://web-wide-world.space/" >
     <meta name="twitter:title" content="Web Wide World - 3D场景列表" >
     <meta name="twitter:description" content="探索多种高质量 3D Gaussian Splatting 重建场景。" >
-    <meta name="twitter:image" content="https://web-wide-world.space/og-image.png" >
-    
-    <!-- JSON-LD 结构化数据 -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      "name": "Web Wide World - 3D场景列表",
-      "description": "Web Wide World 版本的3D场景集合，提供多种高质量 3D Gaussian Splatting 重建场景供探索。",
-      "url": "https://web-wide-world.space/",
-      "isPartOf": {
-        "@type": "WebApplication",
-        "name": "Web Wide World",
-        "url": "https://web-wide-world.space/"
-      },
-      "mainEntity": {
-        "@type": "ItemList",
-        "name": "3D场景列表",
-        "description": "可探索的3D Gaussian Splatting场景",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "3D重建场景",
-            "description": "使用高斯泼溅技术重建的高质量3D场景"
+
+    <!-- 动态 SEO：构建时通过 VITE_SITE_URL 注入生产域名，未设置则 fallback 到 window.location.origin -->
+    <script>
+      (function() {
+        var origin = '' || window.location.origin;
+        var homeUrl = origin + '/';
+
+        // canonical
+        var link = document.createElement('link');
+        link.rel = 'canonical';
+        link.href = homeUrl;
+        document.head.appendChild(link);
+
+        // OG url + image
+        var ogUrl = document.createElement('meta');
+        ogUrl.setAttribute('property', 'og:url');
+        ogUrl.setAttribute('content', homeUrl);
+        document.head.appendChild(ogUrl);
+
+        var ogImg = document.createElement('meta');
+        ogImg.setAttribute('property', 'og:image');
+        ogImg.setAttribute('content', origin + '/og-image.png');
+        document.head.appendChild(ogImg);
+
+        // Twitter url + image
+        var twUrl = document.createElement('meta');
+        twUrl.setAttribute('name', 'twitter:url');
+        twUrl.setAttribute('content', homeUrl);
+        document.head.appendChild(twUrl);
+
+        var twImg = document.createElement('meta');
+        twImg.setAttribute('name', 'twitter:image');
+        twImg.setAttribute('content', origin + '/og-image.png');
+        document.head.appendChild(twImg);
+
+        // JSON-LD 结构化数据
+        var ld = document.createElement('script');
+        ld.type = 'application/ld+json';
+        ld.textContent = JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          'name': 'Web Wide World - 3D场景列表',
+          'description': 'Web Wide World 的3D场景集合，提供多种高质量 3D Gaussian Splatting 重建场景供探索。',
+          'url': homeUrl,
+          'isPartOf': {
+            '@type': 'WebApplication',
+            'name': 'Web Wide World',
+            'url': homeUrl
+          },
+          'mainEntity': {
+            '@type': 'ItemList',
+            'name': '3D场景列表',
+            'description': '可探索的3D Gaussian Splatting场景',
+            'itemListElement': [
+              { '@type': 'ListItem', 'position': 1, 'name': '3D重建场景', 'description': '使用高斯泼溅技术重建的高质量3D场景' }
+            ]
+          },
+          'potentialAction': {
+            '@type': 'ViewAction',
+            'name': '浏览3D场景',
+            'target': origin + '/viewer2'
           }
-        ]
-      },
-      "potentialAction": {
-        "@type": "ViewAction",
-        "name": "浏览3D场景",
-        "target": "https://web-wide-world.space/viewer2"
-      }
-    }
+        });
+        document.head.appendChild(ld);
+      })();
     </script>
-    <script type="module" crossorigin src="/museum-v1_0_68/assets/index-BRGJnW9r.js"></script>
-    <link rel="modulepreload" crossorigin href="/museum-v1_0_68/assets/vue-vendor-BToyv_hf.js">
-    <link rel="modulepreload" crossorigin href="/museum-v1_0_68/assets/three-vendor-DEpZawDU.js">
-    <link rel="modulepreload" crossorigin href="/museum-v1_0_68/assets/rapier-vendor-CKC5f6tm.js">
-    <link rel="modulepreload" crossorigin href="/museum-v1_0_68/assets/vendor-Dga8RJWx.js">
-    <link rel="stylesheet" crossorigin href="/museum-v1_0_68/assets/index-w6cfWhlm.css">
-  <meta name="description" content="Web Wide World 版本场景列表。提供多种高质量 3D Gaussian Splatting 重建场景，支持虚拟角色在场景中自由探索。By Nobody, For Everyone - 平凡人共创普惠世界。"></head>
-  <body>   
+    <script type="module" crossorigin src="./assets/index-DFUGyMKR.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/vue-vendor-BfMkD776.js">
+    <link rel="modulepreload" crossorigin href="./assets/vue-router-vendor-LPpYpnG8.js">
+    <link rel="modulepreload" crossorigin href="./assets/three-vendor-fTG7eqhr.js">
+    <link rel="modulepreload" crossorigin href="./assets/rapier-vendor-CKC5f6tm.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-Bc-0q6zk.css">
+  <meta name="description" content="Web Wide World 场景列表。提供多种高质量 3D Gaussian Splatting 重建场景，支持虚拟角色在场景中自由探索。By Nobody, For Everyone - 平凡人共创普惠世界。"></head>
+  <body>
     <div id="app"></div>
     <div id="prerender" style="display: none;">
 <div class="model-list">
   <header class="header">
     <h1>Web Wide World</h1>
     <p>By Nobody, For Everyone：平凡人共创普惠世界</p>
-    <p class="contact">联系我们：web-wide-world@qq.com</p>
   </header>
   <div class="baidu-search-box">
     <input type="text" class="baidu-input" placeholder="请填入场景 URL" >
@@ -168,7 +194,7 @@
   <!-- SEO 内容（爬虫可读） -->
   <div class="seo-content" style="position:absolute;left:-86.2rem;top:-86.2rem;">
     <h1>Web Wide World - 3D场景列表 | 高斯泼溅场景查看器</h1>
-    <p>Web Wide World 版本场景列表。提供多种高质量 3D Gaussian Splatting 重建场景，支持虚拟角色在场景中自由探索。By Nobody, For Everyone - 平凡人共创普惠世界。</p>
+    <p>Web Wide World 场景列表。提供多种高质量 3D Gaussian Splatting 重建场景，支持虚拟角色在场景中自由探索。By Nobody, For Everyone - 平凡人共创普惠世界。</p>
     <h2>主要功能</h2>
     <ul>
       <li>3D场景浏览 - 使用先进的高斯泼溅技术渲染逼真的3D场景</li>
@@ -180,6 +206,8 @@
     <ul>
       <li><a href="/">首页 - 场景列表</a></li>
       <li><a href="/viewer2">场景查看器</a></li>
+      <li><a href="/debug-viewer">Debug查看器</a></li>
+      <li><a href="/creative">创意模式</a></li>
     </ul>
   </div>
 </div>
@@ -188,7 +216,6 @@
   .header{text-align:center;color:#fff;margin-bottom:3rem}
   .header h1{font-size:2.5rem;margin-bottom:0.5rem;font-weight:300}
   .header p{font-size:1.1rem;opacity:.9}
-  .header .contact{font-size:0.9rem;opacity:.7;margin-top:0.5rem}
   .baidu-search-box{display:flex;justify-content:center;align-items:center;border-radius:14px;overflow:hidden;box-shadow:0 2px 12px rgba(75,144,214,.08);border:1.5px solid #e0e3ea;background:#fff;max-width:800px;margin:0 auto 1.5rem}
   .baidu-input{flex:1;padding:0 18px;height:46px;border:none;outline:none;font-size:1.07em;background:transparent;color:#222f3a}
   .baidu-btn{display:flex;align-items:center;gap:0.25em;height:46px;padding:0 21px 0 16px;background:#3385ff;color:#fff;border:none;cursor:pointer;font-size:1.08em;font-weight:600;border-radius:0 14px 14px 0}
@@ -201,6 +228,6 @@
   .model-preview h3{margin:0;font-size:1.5rem;color:#333;font-weight:500}
   .model-info{padding:1.5rem}
   .view-button{width:100%;padding:0.75rem;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;border:none;border-radius:6px;font-size:1rem;cursor:pointer}
-</style><script type="application/json" id="prerender-data">{"modelList":[{"_id":"68b162cdb1f5eb02e785d1dd","id":"tokyolitev3","name":"二次元街区","shareName":"二次元街区","modelUrl":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/acg_street/700k/acg.json","geometry":"5|2|5","geometryPos":"-5|0|15.5","modelPos":"0|1|0","imgUrl":"https://vfiles.gtimg.cn/wupload/data/my_buddy_test/fca90579824401157edd56d4e89b1599/9a3ff7e8_mszn04tjAxlD3mAJtGOBMhwT4FUo7id3.png","modelUrlV2":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/acg_street/700k/acg_v4.json","_ctime":"2025-12-31T08:46:06.000Z","_mtime":"2026-06-16T01:54:57.000Z"},{"_id":"68b162cdb1f5eb02e785d1df","id":"castle","name":"欧洲古堡","shareName":"哥特城堡","modelUrl":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/Gothic_castle/Area3/model.meta_700k.json","geometry":"","geometryPos":"","modelPos":"","imgUrl":"https://vfiles.gtimg.cn/wupload/data/my_buddy_test/fca90579824401157edd56d4e89b1599/9a3ff7e8_9V69mOdvTtNpRCwvsYpCG9prNJvC_r5z.png","modelUrlV2":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/Gothic_castle/Area3/model.meta_700k_v2.json","_ctime":"2025-12-31T08:46:06.000Z","_mtime":"2026-04-16T06:13:11.000Z"},{"_id":"68c8be0621ffbe038520338e","id":"oreo","name":"奥利奥","shareName":"奥利奥","modelUrl":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/projectG_Oreo/oreo.json","geometry":"","geometryPos":"","modelPos":"","imgUrl":"https://vfiles.gtimg.cn/wupload/data/my_buddy_test/fca90579824401157edd56d4e89b1599/9a3ff7e8_prhqYxdpGHJ4BdKdDX6ht3LiCIoeW2lC.png","modelUrlV2":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/projectG_Oreo/oreo_v2.json","_ctime":"2025-12-31T08:46:06.000Z","_mtime":"2026-04-16T06:13:11.000Z"},{"_id":"68c8be0797e2edb0d3148cbc","id":"slums","name":"乡村土路","shareName":"乡村土路","modelUrl":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_Slums/ksplat_v2/model.meta_700k_tile.json","geometry":"","geometryPos":"","modelPos":"","imgUrl":"https://vfiles.gtimg.cn/wupload/data/my_buddy_test/fca90579824401157edd56d4e89b1599/9a3ff7e8_EfA6PaMhIVK7rpxCy6R-XMYGUiwp-gWg.jpg","modelUrlV2":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_Slums/ksplat_v2/model.meta_700k_tile_v2.json","_ctime":"2025-12-31T08:46:06.000Z","_mtime":"2026-04-16T06:13:11.000Z"},{"_id":"6943cc4b7c6e4a03789b1195","id":"rome","name":"罗马","shareName":"罗马","modelUrl":"","geometry":"","geometryPos":"","modelPos":"","imgUrl":"https://wfiles.gtimg.cn/wupload/data/my_buddy_test/fca90579824401157edd56d4e89b1599/9a3ff7e8_cqc3eQ5gU60_1ZWTCNRNG-RBcbSUiufz.png","modelUrlV2":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_rome/model.meta.region_replace_spark.json","_ctime":"2025-12-31T08:46:06.000Z","_mtime":"2026-04-16T06:13:11.000Z"},{"_id":"6943cc4ba34af002edba9f2b","id":"castle2","name":"欧洲古堡2","shareName":"欧洲古堡2","modelUrl":"","geometry":"","geometryPos":"","modelPos":"","imgUrl":"https://vfiles.gtimg.cn/wupload/data/my_buddy_test/fca90579824401157edd56d4e89b1599/9a3ff7e8_9V69mOdvTtNpRCwvsYpCG9prNJvC_r5z.png","modelUrlV2":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_gothic_castle/model.meta.region_replace_spark.json","_ctime":"2025-12-31T08:46:06.000Z","_mtime":"2026-04-16T06:13:11.000Z"},{"_id":"69a53897b94b88036811e1cb","id":"chinesegarden","name":"中式庭院","shareName":"中式庭院","modelUrl":"","geometry":"","geometryPos":"","modelPos":"","imgUrl":"https://wfiles.gtimg.cn/wupload/data/my_buddy_test/0a097d8fa14fdad571ce1eca8358cbfa/0badc482_uNBKQhL11EacHCRWTe9DQJtBrJQ5P9D2.jpg","modelUrlV2":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_chinese_garden/model.meta.region_replace_spark_npc.json","_ctime":"2026-03-02T07:13:27.000Z","_mtime":"2026-03-02T07:13:27.000Z"},{"_id":"6a3bbe151b301b036fba7678","id":"sanyapo","name":"三丫坡","shareName":"三丫坡","modelUrl":"","geometry":"","geometryPos":"","modelPos":"","imgUrl":"https://wfiles.gtimg.cn/wupload/data/my_buddy_test/0a097d8fa14fdad571ce1eca8358cbfa/0badc482_sMktXqRDLXy5Ybu9R4lac6DNWKv-ksKy.jpg","modelUrlV2":"https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_sanyapo_v3/model.meta.region_replace_spark_collision-chunk.json","_ctime":"2026-06-24T11:23:02.000Z","_mtime":"2026-06-25T09:41:01.000Z"}]}</script></div>
+</style></div>
   </body>
 </html>
