@@ -1,14 +1,14 @@
 {
   "latest": "v1.0.87",
-  "updatedAt": "2026-08-03T03:47:24.600Z",
+  "updatedAt": "2026-08-03T06:35:06.476Z",
   "versions": [
     {
       "tag": "v1.0.87",
       "sdkVersion": "1.0.113",
-      "publishedAt": "2026-08-03T03:47:24.600Z",
+      "publishedAt": "2026-08-03T06:35:06.476Z",
       "commitHash": "15b1012d",
       "commitMessage": "feat: 兼容 GitHub 仓库部署",
-      "pipelineId": "b-de7053d29b22473e8394ee7efbccb3f8",
+      "pipelineId": "b-3339b69685b24684b8a0a80893026752",
       "publisher": "v_djlzhou",
       "changelog": [
         "🚀 兼容 GitHub 仓库部署",
