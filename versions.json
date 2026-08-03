@@ -1,0 +1,36 @@
+{
+  "latest": "v1.0.87",
+  "updatedAt": "2026-08-03T03:47:24.600Z",
+  "versions": [
+    {
+      "tag": "v1.0.87",
+      "sdkVersion": "1.0.113",
+      "publishedAt": "2026-08-03T03:47:24.600Z",
+      "commitHash": "15b1012d",
+      "commitMessage": "feat: 兼容 GitHub 仓库部署",
+      "pipelineId": "b-de7053d29b22473e8394ee7efbccb3f8",
+      "publisher": "v_djlzhou",
+      "changelog": [
+        "🚀 兼容 GitHub 仓库部署",
+        "🐛 避免cos缓存",
+        "🐛 切版本不自动跳转",
+        "🚀 优化url展示",
+        "🚀 资源路径改用相对路径",
+        "🚀 优化版本列表展示逻辑",
+        "🐛 boot script",
+        "🚀 versions.json 中记录完整资源路径",
+        "🚀 更新script",
+        "🚀 新增 dev 环境从 cos 回读 tag",
+        "🚀 新增版本记录功能"
+      ],
+      "releasePath": "releases/v1.0.87",
+      "resources": {
+        "index": "index-DpGYUtkv.js",
+        "vue-vendor": "vue-vendor-D-IKeSW7.js",
+        "scene-api": "scene-api-4W_P4CRQ.js",
+        "three-vendor": "three-vendor-BvpmoDok.js",
+        "index-css": "index-Bc-0q6zk.css"
+      }
+    }
+  ]
+}
