@@ -91,62 +91,11 @@
         document.head.appendChild(ld);
       })();
     </script>
-    <script>
-          (function(){
-            var TAG_KEYS = ["index","vue-vendor","scene-api","three-vendor","index-css"];
-
-            // 1. 判定版本（优先级：hash 查询 > search 查询（旧 URL 兼容）> localStorage）
-            var hashQuery = (location.hash || '').split('?')[1] || '';
-            var v = new URLSearchParams(hashQuery).get('version') ||
-              new URLSearchParams(location.search).get('version') ||
-              (function(){ try { return localStorage.getItem('viewer_version'); } catch(e) { return null; } })();
-
-            // 无版本 → 原始标签正常加载（boot script 什么都不做）
-            if (!v) return;
-
-            // 2. 同步拉取 versions.json（阻塞 HTML 解析直到返回）
-            var manifest;
-            try {
-              var xhr = new XMLHttpRequest();
-              xhr.open('GET', './versions.json?_t=' + Date.now(), false);
-              xhr.send();
-              if (xhr.status !== 200) return; // 拉取失败 → 降级到原始标签
-              manifest = JSON.parse(xhr.responseText);
-            } catch(e) { return; }
-
-            // 3. 找到目标版本
-            var target = manifest.versions.find(function(item) { return item.tag === v; });
-            if (!target || !target.resources) return;
-
-            // 4. 从 manifest 构造版本化标签
-            //    TAG_KEYS 是构建时从 HTML 标签提取的逻辑名，与 manifest resources 的 key 对应
-            //    resource value 可能是完整 URL（新格式）或纯文件名（旧格式兼容）
-            var tags = [];
-            for (var i = 0; i < TAG_KEYS.length; i++) {
-              var val = target.resources[TAG_KEYS[i]];
-              if (!val) continue;
-              var url = val.indexOf('http') === 0 ? val : './releases/' + v + '/assets/' + val;
-              if (/\.css$/.test(val)) {
-                tags.push('<link rel="stylesheet" crossorigin href="' + url + '">');
-              } else {
-                tags.push('<script type="module" crossorigin src="' + url + '"><\/script>');
-              }
-            }
-
-            if (tags.length === 0) return; // 安全兜底：无版本化标签时不吞掉原始标签
-
-            // 5. 写入版本化标签，然后用 HTML 注释吞掉 HTML 中的原始标签
-            //    <!-- 开始注释，解析器将后续原始标签视为注释内容
-            //    HTML 中的 <!--/version-skip--> 标记提供 --> 结束注释
-            document.write(tags.join('\n'));
-            document.write('\n<!--');
-          })();</script>
-<script type="module" crossorigin src="./assets/index-DpGYUtkv.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/vue-vendor-D-IKeSW7.js">
-    <link rel="modulepreload" crossorigin href="./assets/scene-api-4W_P4CRQ.js">
+    <script type="module" crossorigin src="./assets/index-C7Bt_QlN.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/vue-vendor-D-p_ACFr.js">
+    <link rel="modulepreload" crossorigin href="./assets/scene-api-DtW4IxD0.js">
     <link rel="modulepreload" crossorigin href="./assets/three-vendor-BvpmoDok.js">
     <link rel="stylesheet" crossorigin href="./assets/index-Bc-0q6zk.css">
-<!--/version-skip-->
   <meta name="description" content="Web Wide World 场景列表。提供多种高质量 3D Gaussian Splatting 重建场景，支持虚拟角色在场景中自由探索。By Nobody, For Everyone - 平凡人共创普惠世界。"></head>
   <body>
     <div id="app"></div>
