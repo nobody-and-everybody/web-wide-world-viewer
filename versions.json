@@ -1,7 +1,25 @@
 {
-  "latest": "519",
-  "updatedAt": "2026-08-17T08:00:51.629Z",
+  "latest": "7",
+  "updatedAt": "2026-08-17T09:34:03.395Z",
   "versions": [
+    {
+      "buildNum": "7",
+      "tag": "v1.0.89",
+      "sdkVersion": "1.0.127",
+      "publishedAt": "2026-08-17T09:34:03.395Z",
+      "commitHash": "82d1ae52",
+      "commitMessage": "fix: 配置字段locationCM没解析",
+      "pipelineId": "b-fc0dec3cec3d4de19d2f495fe92d8be6",
+      "publisher": "v_djlzhou",
+      "releasePath": "releases/7",
+      "resources": {
+        "index": "index-DRa3ylX-.js",
+        "vue-vendor": "vue-vendor-e4U5v0aI.js",
+        "scene-api": "scene-api-DtW4IxD0.js",
+        "three-vendor": "three-vendor-BvpmoDok.js",
+        "index-css": "index-Bc-0q6zk.css"
+      }
+    },
     {
       "buildNum": "519",
       "tag": "v1.0.89",
