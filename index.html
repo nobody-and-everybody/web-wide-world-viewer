@@ -9,21 +9,21 @@
     <meta name="theme-color" content="transparent" >
 
     <!-- SEO Meta Tags for / -->
-    <title>Web Wide World - 3D场景列表 | 高斯泼溅场景查看器</title>
+    <title>Web Wide World - 3D场景目录 | 高斯泼溅场景查看器</title>
     <meta name="description" content="Web Wide World 场景列表。提供多种高质量 3D Gaussian Splatting 重建场景，支持虚拟角色在场景中自由探索。By Nobody, For Everyone - 平凡人共创普惠世界。" >
-    <meta name="keywords" content="3D Gaussian Splatting, 3DGS, 高斯泼溅, 3D场景列表, 虚拟角色, 场景探索, 元宇宙, Three.js, WebGL" >
+    <meta name="keywords" content="3D Gaussian Splatting, 3DGS, 高斯泼溅, 3D场景目录, 虚拟角色, 场景探索, 元宇宙, Three.js, WebGL" >
     <meta name="author" content="Web Wide World Team" >
     <meta name="robots" content="index, follow" >
 
     <!-- Open Graph / Facebook（静态部分） -->
     <meta property="og:type" content="website" >
-    <meta property="og:title" content="Web Wide World - 3D场景列表" >
+    <meta property="og:title" content="Web Wide World - 3D场景目录" >
     <meta property="og:description" content="探索多种高质量 3D Gaussian Splatting 重建场景，控制虚拟角色自由探索虚拟世界。" >
     <meta property="og:locale" content="zh_CN" >
 
     <!-- Twitter（静态部分） -->
     <meta name="twitter:card" content="summary_large_image" >
-    <meta name="twitter:title" content="Web Wide World - 3D场景列表" >
+    <meta name="twitter:title" content="Web Wide World - 3D场景目录" >
     <meta name="twitter:description" content="探索多种高质量 3D Gaussian Splatting 重建场景。" >
 
     <!-- 动态 SEO：构建时通过 VITE_SITE_URL 注入生产域名，未设置则 fallback 到 window.location.origin -->
@@ -66,7 +66,7 @@
         ld.textContent = JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'CollectionPage',
-          'name': 'Web Wide World - 3D场景列表',
+          'name': 'Web Wide World - 3D场景目录',
           'description': 'Web Wide World 的3D场景集合，提供多种高质量 3D Gaussian Splatting 重建场景供探索。',
           'url': homeUrl,
           'isPartOf': {
@@ -76,7 +76,7 @@
           },
           'mainEntity': {
             '@type': 'ItemList',
-            'name': '3D场景列表',
+            'name': '3D场景目录',
             'description': '可探索的3D Gaussian Splatting场景',
             'itemListElement': [
               { '@type': 'ListItem', 'position': 1, 'name': '3D重建场景', 'description': '使用高斯泼溅技术重建的高质量3D场景' }
@@ -95,13 +95,38 @@
           (function(){
             var TAG_KEYS = ["index","vue-vendor","scene-api","three-vendor","index-css"];
 
-            // 1. 判定版本（优先级：hash 查询 > search 查询（旧 URL 兼容）> localStorage）
+            // 1. 判定版本（优先级：hash 查询 > search 查询（旧 URL 兼容）> localStorage > 默认版本）
             var hashQuery = (location.hash || '').split('?')[1] || '';
             var v = new URLSearchParams(hashQuery).get('version') ||
               new URLSearchParams(location.search).get('version') ||
               (function(){ try { return localStorage.getItem('viewer_version'); } catch(e) { return null; } })();
 
-            // 无版本 → 原始标签正常加载（boot script 什么都不做）
+            // 无显式版本 → 尝试从固定 COS URL 读取默认版本
+            // 返回的是数组 [{env:'dev',defaultVersion:510}, {env:'prod',defaultVersion:519}]
+            // 按 hostname/pathname 判断环境：localhost 或 /dev/ → dev，否则 prod
+            if (!v) {
+              try {
+                var xhrDv = new XMLHttpRequest();
+                xhrDv.open('GET', 'https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/config/scene_default_version.json', false);
+                xhrDv.send();
+                if (xhrDv.status === 200) {
+                  var dvList = JSON.parse(xhrDv.responseText);
+                  if (dvList && Array.isArray(dvList)) {
+                    var isDev = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.pathname.indexOf('/dev/') >= 0;
+                    var env = isDev ? 'dev' : 'prod';
+                    for (var i = 0; i < dvList.length; i++) {
+                      if (dvList[i].env === env && dvList[i].defaultVersion) {
+                        v = String(dvList[i].defaultVersion);
+                        window.__defaultVersion = v;
+                        break;
+                      }
+                    }
+                  }
+                }
+              } catch(e) { /* 静默降级到 latest */ }
+            }
+
+            // 仍无版本 → 原始标签正常加载（boot script 什么都不做）
             if (!v) return;
 
             // 2. 同步拉取 versions.json（阻塞 HTML 解析直到返回）
@@ -141,7 +166,7 @@
             document.write(tags.join('\n'));
             document.write('\n<!--');
           })();</script>
-<script type="module" crossorigin src="./assets/index-DRa3ylX-.js"></script>
+<script type="module" crossorigin src="./assets/index-CwEj34x5.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/vue-vendor-e4U5v0aI.js">
     <link rel="modulepreload" crossorigin href="./assets/scene-api-DtW4IxD0.js">
     <link rel="modulepreload" crossorigin href="./assets/three-vendor-BvpmoDok.js">
@@ -234,7 +259,7 @@
 
   <!-- SEO 内容（爬虫可读） -->
   <div class="seo-content" style="position:absolute;left:-86.2rem;top:-86.2rem;">
-    <h1>Web Wide World - 3D场景列表 | 高斯泼溅场景查看器</h1>
+    <h1>Web Wide World - 3D场景目录 | 高斯泼溅场景查看器</h1>
     <p>Web Wide World 场景列表。提供多种高质量 3D Gaussian Splatting 重建场景，支持虚拟角色在场景中自由探索。By Nobody, For Everyone - 平凡人共创普惠世界。</p>
     <h2>主要功能</h2>
     <ul>
