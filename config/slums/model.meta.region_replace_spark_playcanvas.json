@@ -5,7 +5,9 @@
   "meterScale": 1,
   "gaussianSplatting": {
     "gaussianComponentType": "playcanvas",
-    "regionReplaceConfigPath": "http://localhost:8080/config/slums/region-replace-config.json",
+    "chunks": {
+      "chunkedUrl": "http://localhost:8080/config/slums/region-replace-config.json"
+    },
     "gaussianSplats3DOption": {
       "sharedMemoryForWorkers": false,
       "sphericalHarmonicsDegree": 0,

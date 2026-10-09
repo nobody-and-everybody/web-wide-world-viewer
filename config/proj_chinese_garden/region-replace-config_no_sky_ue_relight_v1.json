@@ -5,18 +5,47 @@
   "modules": [
     {
       "name": "-1_0_0_morton",
-      "transform": {
-        "position": [0.0, 10.0, 9.0],
-        "rotation": [1, 0, 0, 0],
-        "scale": [1, 1, 1]
+      "shape": {
+        "type": "box",
+        "width": 24,
+        "height": 22,
+        "depth": 20,
+        "transform": {
+          "position": [
+            0,
+            10,
+            9
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
       },
-      "bounds": {
-        "x": 24.0,
-        "y": 20.0,
-        "z": 22.0
+      "splatTransform": {
+        "rotation": [
+          180,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
       },
-      "collision_name": ["chunk_0_0_0.glb"],
-      "ply_name": ["-1_0_0_morton"]
+      "collision_name": [
+        "chunk_0_0_0.glb"
+      ],
+      "ply_name": [
+        "-1_0_0_morton"
+      ]
     }
   ],
   "switchConfig": {

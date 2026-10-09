@@ -1,0 +1,186 @@
+{
+  "name": "三丫坡-NPC区域分块Demo",
+  "rendererScale": 1,
+  "debugger": true,
+  "meterScale": 1,
+  "gaussianSplatting": {
+    "gaussianComponentType": "spark2.0",
+    "chunks": {
+      "chunkedUrl": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_sanyapo_v3/resource/region-replace-config_collision-chunks_nosky.json"
+    },
+    "gaussianSplats3DOption": {
+      "sharedMemoryForWorkers": false,
+      "sphericalHarmonicsDegree": 0,
+      "ignoreDevicePixelRatio": true,
+      "enableSIMDInSort": true,
+      "integerBasedSort": true,
+      "splatSortDistanceMapPrecision": 32,
+      "halfPrecisionCovariancesOnGPU": false,
+      "dynamicScene": false,
+      "renderMode": 0,
+      "antialiased": false
+    },
+    "sparkOption": {
+      "paged": true,
+      "lod": 0,
+      "enableLod": true,
+      "maxSh": 3,
+      "maxPagedSplats": 2000000,
+      "lodSplatCount": 700000,
+      "lodScale": 1,
+      "coneFov0": 120.0,
+      "coneFov": 180.0,
+      "coneFoveate": 0.7,
+      "behindFoveate": 0.5
+    },
+    "transform": {
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 180],
+      "scale": [1, 1, 1]
+    }
+  },
+  "collision": {
+    "url": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_sanyapo_v3/resource/sanyapo_model_outdoor.glb",
+    "transform": {
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "cloneAsLightMesh": true
+  },
+  "initial": {
+    "player": {
+      "position": {
+        "x": -2138.2667026233,
+        "y": 36.00,
+        "z": -965.5560800559
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "camera": {
+      "position": [0, 0, 0],
+      "lookUp": [0, -1, 0],
+      "lookAt": [0, 0, -1]
+    }
+  },
+  "npcs": {
+    "enabled": true,
+    "chunks": {
+      "chunkedUrl": "./npc-manifest-sanyapo.json"
+    }
+  },
+  "lighting1": {
+    "ambient": {
+      "color": "#ffffff",
+      "intensity": 0.8
+    },
+    "sky": {
+      "turbidity": 0,
+      "rayleigh": 2.13,
+      "mieCoefficient": 0.005,
+      "mieDirectionalG": 0.076,
+      "elevation": 6.5,
+      "azimuth": -138.0
+    },
+    "directional": [
+      {
+        "name": "主光源",
+        "color": "#6527F5",
+        "intensity": 1.2,
+        "direction": {
+          "x": -1,
+          "y": 1.75,
+          "z": 1
+        },
+        "distance": 30,
+        "shadow": {
+          "enabled": true,
+          "mapSize": 2048,
+          "camera": {
+            "left": -30,
+            "right": 30,
+            "top": 30,
+            "bottom": -30,
+            "far": 100
+          }
+        }
+      },
+      {
+        "name": "补充光",
+        "color": "#F5CC27",
+        "intensity": 0.6,
+        "direction": {
+          "x": 1,
+          "y": 1,
+          "z": -1
+        },
+        "distance": 20
+      },
+      {
+        "name": "背光",
+        "color": "#27F5CC",
+        "intensity": 0.4,
+        "direction": {
+          "x": 0,
+          "y": 2,
+          "z": -1
+        },
+        "distance": 15
+      }
+    ]
+  },
+  "lighting": {
+    "timeOfDay": {
+      "initialTime": "10:00",
+      "autoPlay": false,
+      "speed": 3600,
+      "applyThrottleHour": 0,
+      "maxCachedPhases": 2,
+      "hdriEnable": false,
+      "envMapMode": "renderEnvMap",
+      "hdriTransitionMode": "intensity",
+      "hdriUrls": {
+        "midnight": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/satara_night_no_lamps_2k.hdr",
+        "dawn": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/spruit_sunrise_2k.hdr",
+        "day": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/kloofendal_48d_partly_cloudy_puresky_2k.hdr",
+        "dusk": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/venice_sunset_2k.hdr",
+        "night": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/dikhololo_night_2k.hdr"
+      }
+    },
+    "shadow": {
+      "color": "#000000",
+      "opacity": 0.5,
+      "lightMesh": {
+        "enabled": true,
+        "visible": true,
+        "followWorldOffset": true
+      },
+      "followDirectional": {
+        "enabled": true,
+        "name": "__player_follow_shadow_test",
+        "color": 16777215,
+        "intensity": 1.2,
+        "offset": [1, 6, 1],
+        "targetOffset": [0, 0.8, 0],
+        "shadow": {
+          "enabled": true,
+          "mapSize": 2048,
+          "camera": {
+            "left": -12,
+            "right": 12,
+            "top": 12,
+            "bottom": -12,
+            "near": 0.5,
+            "far": 60
+          },
+          "bias": -0.0005,
+          "normalBias": 0
+        }
+      }
+    }
+  }
+}

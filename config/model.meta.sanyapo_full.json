@@ -1,0 +1,83 @@
+{
+  "name": "三丫坡-多模块合并验证（collision分块 + npc分块 + light分块）",
+  "rendererScale": 1,
+  "debugger": true,
+  "meterScale": 1,
+  "gaussianSplatting": {
+    "gaussianComponentType": "spark2.0",
+    "chunks": {
+      "chunkedUrl": "/config/region-replace-mixed/region-replace-config.sanyapo.json"
+    },
+    "gaussianSplats3DOption": {
+      "sharedMemoryForWorkers": false,
+      "sphericalHarmonicsDegree": 0,
+      "ignoreDevicePixelRatio": true,
+      "enableSIMDInSort": true,
+      "integerBasedSort": true,
+      "splatSortDistanceMapPrecision": 32,
+      "halfPrecisionCovariancesOnGPU": false,
+      "dynamicScene": false,
+      "renderMode": 0,
+      "antialiased": false
+    },
+    "sparkOption": {
+      "paged": true,
+      "lod": 0,
+      "enableLod": true,
+      "maxSh": 3,
+      "maxPagedSplats": 2000000,
+      "lodSplatCount": 700000,
+      "lodScale": 1,
+      "coneFov0": 120.0,
+      "coneFov": 180.0,
+      "coneFoveate": 0.7,
+      "behindFoveate": 0.5
+    },
+    "transform": {
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 180],
+      "scale": [1, 1, 1]
+    }
+  },
+  "collision": {
+    "chunks": {
+      "chunkedUrl": "/config/chunked-collision-manifest-sanyapo.json"
+    }
+  },
+  "lighting": {
+    "_comment": "多模块合并验证（本文件 = chunked_collision_sanyapo + sanyapo_npc_regions + sanyapo_s5_light_chunk 三合一，三份的出生点/世界坐标系/GS 基座完全一致）。light 走 chunks 分块：光照由 manifest 的 global_base 块提供（ambient/sky/hdri/directional/shadow/lightCulling 全在块内），按 light-module「字段存在性 = register 信号」语义，此处不再重复声明顶层 ambient/directional，否则会与 manifest 块的光照来源重叠。timeOfDay 为全局单例时钟，autoPlay=false 固定光照便于观察；需路灯点亮时在 Debug Panel 把 TOD 调到 18 点后。",
+    "chunks": {
+      "chunkedUrl": "./chunked-light-manifest-sanyapo-s5.json"
+    },
+    "timeOfDay": {
+      "initialTime": "14:00",
+      "autoPlay": false,
+      "applyThrottleHour": 0.25
+    }
+  },
+  "npcs": {
+    "enabled": true,
+    "chunks": {
+      "chunkedUrl": "./npc-manifest-sanyapo.json"
+    }
+  },
+  "initial": {
+    "player": {
+      "position": {
+        "x": -2138.2667026233,
+        "y": 36.0,
+        "z": -965.5560800559
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "camera": {
+      "position": [0, 0, 0],
+      "lookUp": [0, -1, 0],
+      "lookAt": [0, 0, -1]
+    }
+  }
+}

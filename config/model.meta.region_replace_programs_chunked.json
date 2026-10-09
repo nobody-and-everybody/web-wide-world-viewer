@@ -1,0 +1,145 @@
+{
+  "name": "ChineseGarden",
+  "rendererScale": 1,
+  "debugger": false,
+  "meterScale": 1,
+  "gaussianSplatting": {
+    "gaussianComponentType": "spark",
+    "chunks": {
+      "chunkedUrl": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_chinese_garden/region_replace/region-replace-config_no_sky_ue_relight.json"
+    },
+    "gaussianSplats3DOption": {
+      "sharedMemoryForWorkers": false,
+      "sphericalHarmonicsDegree": 0,
+      "ignoreDevicePixelRatio": true,
+      "enableSIMDInSort": true,
+      "integerBasedSort": true,
+      "splatSortDistanceMapPrecision": 32,
+      "halfPrecisionCovariancesOnGPU": true,
+      "dynamicScene": true,
+      "renderMode": 0,
+      "antialiased": false,
+      "dynamicRenderScale": true
+    },
+    "transform": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        180
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "collision": {
+    "url": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_chinese_garden/collisions/chinese.glb",
+    "transform": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        90,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "cloneAsLightMesh": true
+  },
+  "initial": {
+    "player": {
+      "position": {
+        "x": -8.06,
+        "y": 1.14,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 20,
+        "z": 0
+      },
+      "characterId": "kachujin"
+    }
+  },
+  "lighting": {
+    "timeOfDay": {
+      "initialTime": "10:00",
+      "autoPlay": false,
+      "speed": 3600,
+      "applyThrottleHour": 0,
+      "maxCachedPhases": 2,
+      "hdriEnable": false,
+      "envMapMode": "renderEnvMap",
+      "hdriTransitionMode": "intensity",
+      "hdriUrls": {
+        "midnight": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/satara_night_no_lamps_2k.hdr",
+        "dawn": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/spruit_sunrise_2k.hdr",
+        "day": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/kloofendal_48d_partly_cloudy_puresky_2k.hdr",
+        "dusk": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/venice_sunset_2k.hdr",
+        "night": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/dikhololo_night_2k.hdr"
+      }
+    },
+    "shadow": {
+      "color": "#000000",
+      "opacity": 0.5,
+      "lightMesh": {
+        "enabled": true,
+        "visible": true,
+        "followWorldOffset": true
+      },
+      "followDirectional": {
+        "enabled": true,
+        "name": "__player_follow_shadow_test",
+        "color": 16777215,
+        "intensity": 1.2,
+        "offset": [
+          6,
+          6,
+          6
+        ],
+        "targetOffset": [
+          0,
+          0.8,
+          0
+        ],
+        "shadow": {
+          "enabled": true,
+          "mapSize": 2048,
+          "camera": {
+            "left": -12,
+            "right": 12,
+            "top": 12,
+            "bottom": -12,
+            "near": 0.5,
+            "far": 60
+          },
+          "bias": -0.0005,
+          "normalBias": 0
+        }
+      }
+    }
+  },
+  "programs": {
+    "chunks": {
+      "chunkedUrl": "./program-chunked-manifest-chinese.json"
+    }
+  },
+  "npcs": {
+    "enabled": true,
+    "configFile": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_chinese_garden/chinese-garden-newyear-npcs.json"
+  }
+}

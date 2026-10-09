@@ -1,0 +1,138 @@
+{
+  "models": [
+    {
+      "id": "honghong_spawn",
+      "name": "红红·出生区",
+      "describe": "出生点区域（region_spawn）的爆竹小仙·红红，模型文件与 globalModels 共享（阶段 1 缓存生效）",
+      "modelFilePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/npc_mesh/爆竹小仙·红红.glb",
+      "targetHeight": 1.2,
+      "anim": {
+        "isBuiltIn": true,
+        "speedScale": 0.8,
+        "animations": {
+          "Idle": "Idle",
+          "Walking": "Walk",
+          "Running": "Run",
+          "Falling": "Fall",
+          "Jumping": "Jump"
+        }
+      }
+    },
+    {
+      "id": "qiaoqiao_spawn",
+      "name": "巧巧·出生区",
+      "describe": "出生点区域（region_spawn）的归宁仙子·巧巧，模型文件与 globalModels 共享（阶段 1 缓存生效）",
+      "modelFilePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/npc_mesh/归宁仙子·巧巧.glb",
+      "targetHeight": 1.3,
+      "anim": {
+        "isBuiltIn": true,
+        "speedScale": 0.7,
+        "animations": {
+          "Idle": "Idle",
+          "Walking": "Walk",
+          "Running": "Run",
+          "Falling": "Fall",
+          "Jumping": "Jump"
+        }
+      }
+    },
+    {
+      "id": "rongrong_spawn",
+      "name": "融融·出生区",
+      "describe": "出生点区域专属模型（region_spawn 独占，卸载时清理）",
+      "modelFilePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/npc_mesh/和气仙童·融融.glb",
+      "targetHeight": 1.25,
+      "anim": {
+        "isBuiltIn": true,
+        "speedScale": 0.6,
+        "animations": {
+          "Idle": "Idle",
+          "Walking": "Walk",
+          "Running": "Run",
+          "Falling": "Fall",
+          "Jumping": "Jump"
+        }
+      }
+    },
+    {
+      "id": "tiantianye_spawn",
+      "name": "甜甜爷·出生区",
+      "describe": "出生点区域专属模型（region_spawn 独占，卸载时清理）",
+      "modelFilePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/npc_mesh/灶王爷·甜甜爷.glb",
+      "targetHeight": 1.4,
+      "anim": {
+        "isBuiltIn": true,
+        "speedScale": 0.5,
+        "animations": {
+          "Idle": "Idle",
+          "Walking": "Walk",
+          "Running": "Run",
+          "Falling": "Fall",
+          "Jumping": "Jump"
+        }
+      }
+    }
+  ],
+  "list": [
+    {
+      "id": "spawn_honghong_1",
+      "modelId": "honghong_spawn",
+      "position": {
+        "x": -2146.32,
+        "y": 37.01,
+        "z": -964.77
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "movementPattern": "idle"
+    },
+    {
+      "id": "spawn_honghong_2",
+      "modelId": "honghong_spawn",
+      "position": {
+        "x": -2150.45,
+        "y": 37.13,
+        "z": -982.58
+      },
+      "rotation": {
+        "x": 0,
+        "y": 45,
+        "z": 0
+      },
+      "movementPattern": "wander"
+    },
+    {
+      "id": "spawn_rongrong_1",
+      "modelId": "rongrong_spawn",
+      "position": {
+        "x": -2138.35,
+        "y": 37.16,
+        "z": -987.77
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 0
+      },
+      "movementPattern": "idle"
+    },
+    {
+      "id": "spawn_tiantianye_1",
+      "modelId": "tiantianye_spawn",
+      "position": {
+        "x": -2141.51,
+        "y": 36.98,
+        "z": -949.63
+      },
+      "rotation": {
+        "x": 0,
+        "y": -90,
+        "z": 0
+      },
+      "movementPattern": "idle"
+    }
+  ]
+}

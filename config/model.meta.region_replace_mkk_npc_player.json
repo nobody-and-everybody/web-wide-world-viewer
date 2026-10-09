@@ -5,7 +5,9 @@
   "meterScale": 1,
   "gaussianSplatting": {
     "gaussianComponentType": "gaussian-splats-3d",
-    "regionReplaceConfigPath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_rome/region_replace/region-replace-config.json",
+    "chunks": {
+      "chunkedUrl": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_rome/region_replace/region-replace-config.json"
+    },
     "gaussianSplats3DOption": {
       "sharedMemoryForWorkers": false,
       "sphericalHarmonicsDegree": 0,

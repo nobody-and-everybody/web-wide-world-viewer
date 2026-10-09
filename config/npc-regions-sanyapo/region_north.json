@@ -1,0 +1,87 @@
+{
+  "models": [
+    {
+      "id": "honghong_north",
+      "name": "红红·北区",
+      "describe": "北侧区域（region_north）的爆竹小仙·红红，模型文件与 globalModels 共享（阶段 1 缓存生效）",
+      "modelFilePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/npc_mesh/爆竹小仙·红红.glb",
+      "targetHeight": 1.2,
+      "anim": {
+        "isBuiltIn": true,
+        "speedScale": 0.8,
+        "animations": {
+          "Idle": "Idle",
+          "Walking": "Walk",
+          "Running": "Run",
+          "Falling": "Fall",
+          "Jumping": "Jump"
+        }
+      }
+    },
+    {
+      "id": "qiaoqiao_north",
+      "name": "巧巧·北区",
+      "describe": "北侧区域（region_north）的归宁仙子·巧巧，模型文件与 globalModels 共享（阶段 1 缓存生效）",
+      "modelFilePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/npc_mesh/归宁仙子·巧巧.glb",
+      "targetHeight": 1.3,
+      "anim": {
+        "isBuiltIn": true,
+        "speedScale": 0.7,
+        "animations": {
+          "Idle": "Idle",
+          "Walking": "Walk",
+          "Running": "Run",
+          "Falling": "Fall",
+          "Jumping": "Jump"
+        }
+      }
+    }
+  ],
+  "list": [
+    {
+      "id": "north_qiaoqiao_1",
+      "modelId": "qiaoqiao_north",
+      "position": {
+        "x": -2141.39,
+        "y": 36.91,
+        "z": -1046.61
+      },
+      "rotation": {
+        "x": 0,
+        "y": 150,
+        "z": 0
+      },
+      "movementPattern": "wander"
+    },
+    {
+      "id": "north_qiaoqiao_2",
+      "modelId": "qiaoqiao_north",
+      "position": {
+        "x": -2146.51,
+        "y": 36.89,
+        "z": -1060.07
+      },
+      "rotation": {
+        "x": 0,
+        "y": -120,
+        "z": 0
+      },
+      "movementPattern": "idle"
+    },
+    {
+      "id": "north_honghong_1",
+      "modelId": "honghong_north",
+      "position": {
+        "x": -2141.77,
+        "y": 36.83,
+        "z": -1068.47
+      },
+      "rotation": {
+        "x": 0,
+        "y": 30,
+        "z": 0
+      },
+      "movementPattern": "idle"
+    }
+  ]
+}

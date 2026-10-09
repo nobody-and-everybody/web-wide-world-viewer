@@ -1,0 +1,187 @@
+{
+  "baseUrl": "/config/",
+  "loadConfig": {
+    "keepFootChunk": true,
+    "unloadDelay": 500,
+    "maxRetries": 3,
+    "retryBaseDelayMs": 2000,
+    "retryMaxDelayMs": 30000,
+    "throttleMs": 300
+  },
+  "_comment": "S5 下沉验证 manifest（基于 chunked-light-manifest-sanyapo.json 迁移）。★shadow 通道 per-block 完整可配：每个模块（含 global）都写了完整的 9 字段 shadow（enabled/type/autoUpdate/defaultMapSize/defaultBias/defaultNormalBias/color/opacity/followDirectional），无需依赖 global 补全——设计上 shadowBlockSchema 对任意块生效，块未写字段才会继承 baseline（继承式覆盖）。各块 shadow 差异化：global 暖白 PCFSoft/1024/bias-0.0005/opacity0.5；spawn 白 1024/opacity0.4 + followDirectional 白 intensity0.9；north 关闭全局阴影（enabled=false, 512）+ followDirectional 冷月蓝 intensity1.4 offset[-10,14,10]；east 落日红 2048/bias-0.001/opacity0.45 + followDirectional 红 offset[-8,6,2] shadow 2048；west 冷月光 1024/bias-0.0002/opacity0.3 + followDirectional 蓝 offset[-8,12,4]；south 余晖 2048/bias-0.0008/opacity0.5 + followDirectional 暖橙。验证点：1) lightCulling 切块差异——spawn 槽位裁剪 maxActiveLights=1（边界灯灭）/ north maxActiveLights=12（全亮）/ east 距离裁剪 maxDistance=24（路灯距 21m 亮、边界灯距 25m 灭）/ west/south 吃 global baseline（8 槽 100m 全亮）；每块一盏「边界灯」距块心 25m 作裁剪可见性判据，Debug Panel「光源裁剪范围」开关可画范围球验证。2) followDirectional 切块差异——每块独立颜色/强度/offset/shadow，切块观察角色影子方向/软硬变化。3) 各块 sky 太阳方位均显式配置 → 非 TOD 模式跟随光方向逐块派生（east 低角度 elevation=0.8 影子拉长）。验证时建议 Debug Panel 固定 TOD 时间避免昼夜干扰。",
+  "modules": [
+    {
+      "id": "global_base",
+      "global": true,
+      "ambient": { "color": "#2a3347", "intensity": 0.4 },
+      "sky": { "elevation": 30, "azimuth": 180, "turbidity": 10, "rayleigh": 3, "cloudCoverage": 0.4, "sunColor": "#ffffff", "sunIntensity": 1.0, "showSunDisc": true, "skyVisible": true, "sunLightVisible": true },
+      "hdri": { "enabled": true, "intensity": 1.0, "background": false },
+      "shadow": {
+        "enabled": true, "type": "PCFSoft", "autoUpdate": true, "defaultMapSize": 1024, "defaultBias": -0.0005, "defaultNormalBias": 0, "color": "#000000", "opacity": 0.5,
+        "followDirectional": {
+          "enabled": true,
+          "name": "sanyapo_follow_shadow",
+          "color": "#ffffff",
+          "intensity": 0.8,
+          "offset": [-6, 10, 6],
+          "targetOffset": [0, 0, 0],
+          "shadow": {
+            "mapSize": 1024,
+            "camera": { "left": -10, "right": 10, "top": 10, "bottom": -10, "near": 0.5, "far": 80 }
+          }
+        }
+      },
+      "lightCulling": { "enabled": true, "maxActiveLights": 8, "maxDistance": 100, "updateInterval": 200, "distanceSource": "character" },
+      "directional": [{ "name": "global_月光", "color": "#7a8cc8", "intensity": 0.35, "direction": { "x": -0.4, "y": 1, "z": 0.3 } }],
+      "points": [{ "name": "global_烛火", "position": { "x": -2154.90, "y": 39, "z": -961 }, "color": "#ffffff", "intensity": 0.8, "distance": 8, "decay": 2 }],
+      "lightSchedules": [{ "name": "global_烛火调度", "targets": ["global_烛火"], "onHour": 18, "offHour": 6 }]
+    },
+    {
+      "id": "sanyapo_spawn",
+      "shape": {
+        "type": "box",
+        "width": 60,
+        "height": 200,
+        "depth": 60,
+        "transform": {
+          "position": [-2138, 0, -965],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1]
+        }
+      },
+      "ambient": { "color": "#ffffff", "intensity": 1.0 },
+      "sky": { "elevation": 18, "azimuth": -138, "sunColor": "#ffffff", "sunIntensity": 1.0 },
+      "hdri": { "enabled": true, "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/dikhololo_night_2k.hdr", "intensity": 1.0, "background": true },
+      "shadow": {
+        "enabled": true, "type": "PCFSoft", "autoUpdate": true, "defaultMapSize": 1024, "defaultBias": -0.0005, "defaultNormalBias": 0, "color": "#000000", "opacity": 0.4,
+        "followDirectional": {
+          "enabled": true, "color": "#ffffff", "intensity": 0.9, "offset": [-6, 10, 6], "targetOffset": [0, 0, 0],
+          "shadow": { "mapSize": 1024, "camera": { "left": -8, "right": 8, "top": 8, "bottom": -8, "near": 0.5, "far": 70 } }
+        }
+      },
+      "lightCulling": { "maxActiveLights": 1 },
+      "directional": [{ "name": "spawn_主光源", "color": "#ffffff", "intensity": 2.0, "direction": { "x": -1, "y": 1.75, "z": 1 } }],
+      "points": [
+        { "name": "spawn_路灯", "position": { "x": -2140.12, "y": 38, "z": -966.0 }, "color": "#2ecc71", "intensity": 2.0, "distance": 10, "decay": 2 },
+        { "name": "spawn_边界灯", "position": { "x": -2138, "y": 38, "z": -990 }, "color": "#2ecc71", "intensity": 1.2, "distance": 10, "decay": 2 }
+      ],
+      "lightSchedules": [{ "name": "spawn_路灯调度", "targets": ["spawn_路灯"], "onHour": 18, "offHour": 6 }]
+    },
+    {
+      "id": "sanyapo_north",
+      "shape": {
+        "type": "box",
+        "width": 60,
+        "height": 200,
+        "depth": 60,
+        "transform": {
+          "position": [-2138, 0, -1025],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1]
+        }
+      },
+      "ambient": { "color": "#150a05", "intensity": 0.1 },
+      "sky": { "skyVisible": false, "sunLightVisible": false },
+      "hdri": { "enabled": false, "intensity": 0.2 },
+      "lightCulling": { "maxActiveLights": 12,"maxDistance": 10 },
+      "shadow": {
+        "enabled": false, "type": "PCFSoft", "autoUpdate": true, "defaultMapSize": 512, "defaultBias": -0.0005, "defaultNormalBias": 0, "color": "#000000", "opacity": 0.2,
+        "followDirectional": {
+          "enabled": true, "color": "#aabbff", "intensity": 1.4, "offset": [-10, 14, 10], "targetOffset": [0, 0, 0],
+          "shadow": { "mapSize": 1024, "camera": { "left": -12, "right": 12, "top": 12, "bottom": -12, "near": 0.5, "far": 80 } }
+        }
+      },
+      "directional": [{ "name": "north_提灯", "color": "#ff8833", "intensity": 0.6, "direction": { "x": 0, "y": 1, "z": -1 } }],
+      "points": [
+        { "name": "north_火把", "position": { "x": -2144.87, "y": 38, "z": -1024.41 }, "color": "#ff3344", "intensity": 3.0, "distance": 10, "decay": 2 },
+        { "name": "north_边界灯", "position": { "x": -2138, "y": 38, "z": -1000 }, "color": "#ff3344", "intensity": 1.5, "distance": 10, "decay": 2 }
+      ],
+      "lightSchedules": [{ "name": "north_火把调度", "targets": ["north_火把"], "onHour": 18, "offHour": 6 }]
+    },
+    {
+      "id": "sanyapo_east",
+      "shape": {
+        "type": "box",
+        "width": 60,
+        "height": 200,
+        "depth": 60,
+        "transform": {
+          "position": [-2078, 0, -965],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1]
+        }
+      },
+      "ambient": { "color": "#ff6a3d", "intensity": 0.6 },
+      "sky": { "elevation": 0.8, "azimuth": -125, "sunColor": "#ff3300", "sunIntensity": 1.0 },
+      "hdri": { "enabled": true, "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/kloppenheim_06_puresky_2k.hdr", "intensity": 0.6, "background": true },
+      "shadow": {
+        "enabled": true, "type": "PCFSoft", "autoUpdate": true, "defaultMapSize": 2048, "defaultBias": -0.001, "defaultNormalBias": 0, "color": "#000000", "opacity": 0.45,
+        "followDirectional": {
+          "enabled": true, "color": "#ff4400", "intensity": 1.2, "offset": [-8, 6, 2], "targetOffset": [0, 0, 0],
+          "shadow": { "mapSize": 2048, "bias": -0.002, "camera": { "left": -8, "right": 8, "top": 8, "bottom": -8, "near": 0.5, "far": 60 } }
+        }
+      },
+      "lightCulling": { "maxActiveLights": 8, "maxDistance": 24 },
+      "directional": [{ "name": "east_落日", "color": "#ff4400", "intensity": 1.6, "direction": { "x": -0.9, "y": 0.4, "z": 0.2 } }],
+      "points": [
+        { "name": "east_路灯", "position": { "x": -2078, "y": 38, "z": -944.0 }, "color": "#3388ff", "intensity": 1.8, "distance": 10, "decay": 2 },
+        { "name": "east_边界灯", "position": { "x": -2078, "y": 38, "z": -940 }, "color": "#3388ff", "intensity": 1.2, "distance": 10, "decay": 2 }
+      ],
+      "lightSchedules": [{ "name": "east_路灯调度", "targets": ["east_路灯"], "onHour": 18, "offHour": 6 }]
+    },
+    {
+      "id": "sanyapo_west",
+      "shape": {
+        "type": "box",
+        "width": 60,
+        "height": 200,
+        "depth": 60,
+        "transform": {
+          "position": [-2198, 0, -965],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1]
+        }
+      },
+      "ambient": { "color": "#1b2740", "intensity": 0.3 },
+      "sky": { "sunColor": "#aabbff", "sunIntensity": 0.3, "elevation": 30, "azimuth": -60 },
+      "hdri": { "enabled": true, "intensity": 0.5 },
+      "shadow": {
+        "enabled": true, "type": "PCFSoft", "autoUpdate": true, "defaultMapSize": 1024, "defaultBias": -0.0002, "defaultNormalBias": 0, "color": "#000000", "opacity": 0.3,
+        "followDirectional": {
+          "enabled": true, "color": "#9db4ff", "intensity": 1.0, "offset": [-8, 12, 4], "targetOffset": [0, 0, 0],
+          "shadow": { "mapSize": 1024, "camera": { "left": -10, "right": 10, "top": 10, "bottom": -10, "near": 0.5, "far": 80 } }
+        }
+      },
+      "directional": [{ "name": "west_冷月光", "color": "#9db4ff", "intensity": 1.2, "direction": { "x": -0.4, "y": 1, "z": 0.3 } }],
+      "points": [{ "name": "west_路灯", "position": { "x": -2182.67, "y": 43, "z": -974.46 }, "color": "#ffcc33", "intensity": 2.0, "distance": 10, "decay": 2 }],
+      "lightSchedules": [{ "name": "west_路灯调度", "targets": ["west_路灯"], "onHour": 18, "offHour": 6 }]
+    },
+    {
+      "id": "sanyapo_south",
+      "shape": {
+        "type": "box",
+        "width": 60,
+        "height": 200,
+        "depth": 60,
+        "transform": {
+          "position": [-2138, 0, -905],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1]
+        }
+      },
+      "ambient": { "color": "#ffd9a0", "intensity": 0.35 },
+      "sky": { "sunColor": "#ffcc88", "sunIntensity": 0.4, "elevation": 25, "azimuth": -100 },
+      "hdri": { "enabled": true, "intensity": 0.7 },
+      "shadow": {
+        "enabled": true, "type": "PCFSoft", "autoUpdate": true, "defaultMapSize": 2048, "defaultBias": -0.0008, "defaultNormalBias": 0, "color": "#000000", "opacity": 0.5,
+        "followDirectional": {
+          "enabled": true, "color": "#ffcc88", "intensity": 0.9, "offset": [-6, 9, 4], "targetOffset": [0, 0, 0],
+          "shadow": { "mapSize": 1024, "camera": { "left": -10, "right": 10, "top": 10, "bottom": -10, "near": 0.5, "far": 80 } }
+        }
+      },
+      "directional": [{ "name": "south_余晖", "color": "#ffcc88", "intensity": 0.8, "direction": { "x": 0.2, "y": 1.2, "z": -0.5 } }],
+      "points": [{ "name": "south_路灯", "position": { "x": -2157.78, "y": 38, "z": -929.94 }, "color": "#ff8833", "intensity": 1.6, "distance": 10, "decay": 2 }],
+      "lightSchedules": [{ "name": "south_路灯调度", "targets": ["south_路灯"], "onHour": 18, "offHour": 6 }]
+    }
+  ]
+}

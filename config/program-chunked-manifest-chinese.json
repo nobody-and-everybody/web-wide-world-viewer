@@ -1,0 +1,67 @@
+{
+  "baseUrl": "/programs/",
+  "loadConfig": {
+    "keepFootChunk": true,
+    "unloadDelay": 500
+  },
+  "modules": [
+    {
+      "id": "program_global",
+      "global": true,
+      "shape": {
+        "type": "box",
+        "width": 1,
+        "height": 1,
+        "depth": 1,
+        "transform": {
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1]
+        }
+      },
+      "programs": {
+        "official": {
+          "trust": "official",
+          "mainJS": "builtin://official",
+          "exposedApi": ["showToast", "showConfirm", "setDebugVisible"],
+          "acl": "*"
+        },
+        "minimap": {
+          "trust": "thirdparty",
+          "mainJS": "/programs/minimap.umd.js",
+          "exposedApi": ["open"],
+          "acl": ["official"]
+        }
+      }
+    },
+    {
+      "id": "program_plaza",
+      "shape": {
+        "type": "box",
+        "width": 24,
+        "height": 20,
+        "depth": 22,
+        "transform": {
+          "position": [0, 10, 9],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1]
+        }
+      },
+      "programs": {
+        "backpack": {
+          "trust": "thirdparty",
+          "mainJS": "backpack.umd.js",
+          "exposedApi": ["open","add","list","has","markQuestItems"],
+          "acl": ["official","quest"]
+        },
+        "quest": {
+          "trust": "thirdparty",
+          "mainJS": "quest.umd.js",
+          "exposedApi": ["getQuests","completeQuest","getQuestStatus","navigate","onItemCollected"],
+          "acl": ["official","backpack"]
+        }
+      }
+    }   
+    
+  ]
+}

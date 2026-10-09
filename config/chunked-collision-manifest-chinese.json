@@ -1,0 +1,114 @@
+{
+  "baseUrl": "/collision-chunks-chinese/",
+  "modules": [
+    {
+      "id": "-1_0_0_morton",
+      "url": "-1_0_0_morton.glb",
+      "shape": {
+        "type": "box",
+        "width": 24,
+        "height": 20,
+        "depth": 22,
+        "transform": {
+          "position": [0, 10, 9],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1]
+        }
+      }
+    },
+    {
+      "id": "-1_-1_0",
+      "url": "-1_-1_0.glb",
+      "shape": {
+        "type": "box",
+        "width": 24,
+        "height": 20,
+        "depth": 22,
+        "transform": {
+          "position": [-24, 10, 9],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1]
+        }
+      }
+    },
+    {
+      "id": "-1_-2_0",
+      "url": "-1_-2_0.glb",
+      "shape": {
+        "type": "box",
+        "width": 24,
+        "height": 20,
+        "depth": 22,
+        "transform": {
+          "position": [-48, 10, 9],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1]
+        }
+      }
+    },
+    {
+      "id": "-2_0_0",
+      "url": "-2_0_0.glb",
+      "shape": {
+        "type": "box",
+        "width": 24,
+        "height": 20,
+        "depth": 22,
+        "transform": {
+          "position": [0, 10, 31],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1]
+        }
+      }
+    },
+    {
+      "id": "0_0_0",
+      "url": "0_0_0.glb",
+      "shape": {
+        "type": "box",
+        "width": 24,
+        "height": 20,
+        "depth": 22,
+        "transform": {
+          "position": [0, 10, -13],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1]
+        }
+      }
+    },
+    {
+      "id": "0_-1_0",
+      "url": "0_-1_0.glb",
+      "shape": {
+        "type": "box",
+        "width": 24,
+        "height": 20,
+        "depth": 22,
+        "transform": {
+          "position": [-24, 10, -13],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1]
+        }
+      }
+    },
+    {
+      "id": "0_-2_0",
+      "url": "0_-2_0.glb",
+      "shape": {
+        "type": "box",
+        "width": 24,
+        "height": 20,
+        "depth": 22,
+        "transform": {
+          "position": [-48, 10, -13],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1]
+        }
+      }
+    }
+  ],
+  "loadConfig": {
+    "keepFootChunk": true,
+    "unloadDelay": 500
+  }
+}

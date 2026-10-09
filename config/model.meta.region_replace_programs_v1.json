@@ -1,0 +1,279 @@
+{
+  "sceneId": "chinesegarden",
+  "name": "中式庭院",
+  "rendererScale": 1,
+  "debugger": false,
+  "meterScale": 1,
+  "gaussianSplatting": {
+    "gaussianComponentType": "spark",
+    "chunks": {
+      "chunkedUrl": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_chinese_garden/region_replace/region-replace-config_no_sky_ue_relight.json"
+    },
+    "gaussianSplats3DOption": {
+      "sharedMemoryForWorkers": false,
+      "sphericalHarmonicsDegree": 0,
+      "ignoreDevicePixelRatio": true,
+      "enableSIMDInSort": true,
+      "integerBasedSort": true,
+      "splatSortDistanceMapPrecision": 32,
+      "halfPrecisionCovariancesOnGPU": true,
+      "dynamicScene": true,
+      "renderMode": 0,
+      "antialiased": false,
+      "dynamicRenderScale": true
+    },
+    "transform": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        180
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "collision": {
+    "url": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_chinese_garden/collisions/chinese.glb",
+    "transform": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        90,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "cloneAsLightMesh": true
+  },
+  "initial": {
+    "player": {
+      "position": {
+        "x": -8.06,
+        "y": 1.14,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 20,
+        "z": 0
+      },
+      "characterId": "kachujin"
+    }
+  },
+  "lighting": {
+    "timeOfDay": {
+      "initialTime": "10:00",
+      "autoPlay": false,
+      "speed": 3600,
+      "applyThrottleHour": 0,
+      "maxCachedPhases": 2,
+      "hdriEnable": false,
+      "envMapMode": "renderEnvMap",
+      "hdriTransitionMode": "intensity",
+      "hdriUrls": {
+        "midnight": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/satara_night_no_lamps_2k.hdr",
+        "dawn": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/spruit_sunrise_2k.hdr",
+        "day": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/kloofendal_48d_partly_cloudy_puresky_2k.hdr",
+        "dusk": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/venice_sunset_2k.hdr",
+        "night": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/dikhololo_night_2k.hdr"
+      }
+    },
+    "shadow": {
+      "color": "#000000",
+      "opacity": 0.5,
+      "lightMesh": {
+        "enabled": true,
+        "visible": true,
+        "followWorldOffset": true
+      },
+      "followDirectional": {
+        "enabled": true,
+        "name": "__player_follow_shadow_test",
+        "color": 16777215,
+        "intensity": 1.2,
+        "offset": [
+          6,
+          6,
+          6
+        ],
+        "targetOffset": [
+          0,
+          0.8,
+          0
+        ],
+        "shadow": {
+          "enabled": true,
+          "mapSize": 2048,
+          "camera": {
+            "left": -12,
+            "right": 12,
+            "top": 12,
+            "bottom": -12,
+            "near": 0.5,
+            "far": 60
+          },
+          "bias": -0.0005,
+          "normalBias": 0
+        }
+      }
+    }
+  },
+  "programs": {
+    "minimap": {
+      "trust": "thirdparty",
+      "mainJS": "/programs/minimap.umd.js",
+      "exposedApi": [
+        "open"
+      ],
+      "acl": [
+        "official"
+      ]
+    },
+    "hunt-hide": {
+      "trust": "thirdparty",
+      "mainJS": "/programs/hunt-hide.umd.js",
+      "exposedApi": [
+        "getBackpack",
+        "getPlaced",
+        "pickUp",
+        "placeItem"
+      ],
+      "acl": "*",
+      "config": {
+        "startPoint": [
+          [
+            -20.769,
+            1.063,
+            3.117
+          ],
+          [
+            -31.64,
+            1.028,
+            -12.523
+          ],
+          [
+            1.989,
+            2.832,
+            24.168
+          ]
+        ],
+        "yOffset": 0.3,
+        "navMesh": "https://wfiles.gtimg.cn/wupload/data/my_buddy_test/0692772bc82ed695e236716c971dd3b2/ea602302_b14P6GFZJxP_B6QWgd8K-oYdZTg8IUIX.bin",
+        "reachableCheck": 1,
+        "range": 0.85,
+        "floatHeight": 0.7
+      }
+    },
+    "character": {
+      "trust": "thirdparty",
+      "mainJS": "/programs/character.umd.js",
+      "exposedApi": [
+        "openCharacterPanel",
+        "closeCharacterPanel",
+        "isOpen"
+      ],
+      "acl": "*"
+    },
+    "coin": {
+      "trust": "thirdparty",
+      "mainJS": "/programs/coin.umd.js",
+      "exposedApi": [
+        "getCoinCount",
+        "getCoinPositions"
+      ],
+      "acl": "*",
+      "config": {
+        "imageUrl": "https://wfiles.gtimg.cn/wupload/data/my_buddy_test/ab120e6b361b3ca4ebcb33f525df9b22/05334fca_n3TupmERNXYaDApkc4vfH5sgkLB-ryut.png",
+        "modelUrl": "https://wfiles.gtimg.cn/wupload/data/my_buddy_test/ab120e6b361b3ca4ebcb33f525df9b22/05334fca_J6UkPmy-EEjAtp3nJaP3csCOhsBYCfrJ.glb",
+        "navMesh": "https://wfiles.gtimg.cn/wupload/data/my_buddy_test/0692772bc82ed695e236716c971dd3b2/ea602302_b14P6GFZJxP_B6QWgd8K-oYdZTg8IUIX.bin",
+        "height": 20,
+        "trails": [
+          {
+            "name": "左侧桥",
+            "path": [
+              [
+                0.578,
+                6.333
+              ],
+              [
+                0.509,
+                17.328
+              ]
+            ],
+            "spacing": 0.3
+          },
+          {
+            "name": "3",
+            "path": [
+              [
+                -21.386,
+                -18.861
+              ],
+              [
+                -34.592,
+                -19.231
+              ]
+            ],
+            "spacing": 0.3
+          },
+          {
+            "name": "2",
+            "path": [
+              [
+                -20.424,
+                -5.968
+              ],
+              [
+                -20.127,
+                -18.002
+              ]
+            ],
+            "spacing": 0.3
+          },
+          {
+            "name": "中间桥",
+            "path": [
+              [
+                -11.351,
+                -0.068
+              ],
+              [
+                -19.258,
+                -0.147
+              ]
+            ],
+            "spacing": 0.3
+          }
+        ],
+        "floatHeight": 0.8,
+        "transform": {
+          "rotation": [
+            0,
+            -1.5707963267948966,
+            0
+          ]
+        }
+      }
+    }
+  },
+  "npcs": {
+    "enabled": true,
+    "configFile": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_chinese_garden/chinese-garden-newyear-npcs.json"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "baseUrl": "/config/npc-regions-sanyapo/",
+  "globalModels": [],
+  "modules": [
+    {
+      "id": "region_spawn",
+      "shape": {
+        "type": "box",
+        "width": 26,
+        "height": 200,
+        "depth": 48,
+        "transform": {
+          "position": [-2148, 0, -968],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1]
+        }
+      },
+      "configFile": "region_spawn.json"
+    },
+    {
+      "id": "region_north",
+      "shape": {
+        "type": "box",
+        "width": 14,
+        "height": 200,
+        "depth": 34,
+        "transform": {
+          "position": [-2145, 0, -1057.5],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1]
+        }
+      },
+      "configFile": "region_north.json"
+    },
+    {
+      "id": "region_east",
+      "shape": {
+        "type": "box",
+        "width": 52,
+        "height": 200,
+        "depth": 30,
+        "transform": {
+          "position": [-2094, 0, -978],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1]
+        }
+      },
+      "configFile": "region_east.json"
+    },
+    {
+      "id": "region_west",
+      "shape": {
+        "type": "box",
+        "width": 25,
+        "height": 200,
+        "depth": 36,
+        "transform": {
+          "position": [-2196.5, 0, -984],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1]
+        }
+      },
+      "configFile": "region_west.json"
+    },
+    {
+      "id": "region_south",
+      "shape": {
+        "type": "box",
+        "width": 32,
+        "height": 200,
+        "depth": 20,
+        "transform": {
+          "position": [-2166, 0, -927],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1]
+        }
+      },
+      "configFile": "region_south.json"
+    }
+  ]
+}

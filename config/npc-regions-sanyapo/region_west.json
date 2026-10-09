@@ -1,0 +1,72 @@
+{
+  "models": [
+    {
+      "id": "honghong_west",
+      "name": "红红·西区",
+      "describe": "西侧区域（region_west）的爆竹小仙·红红，模型文件与 globalModels 共享（阶段 1 缓存生效）",
+      "modelFilePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/npc_mesh/爆竹小仙·红红.glb",
+      "targetHeight": 1.2,
+      "anim": {
+        "isBuiltIn": true,
+        "speedScale": 0.8,
+        "animations": {
+          "Idle": "Idle",
+          "Walking": "Walk",
+          "Running": "Run",
+          "Falling": "Fall",
+          "Jumping": "Jump"
+        }
+      }
+    },
+    {
+      "id": "tiantianye_west",
+      "name": "甜甜爷·西区",
+      "describe": "西侧区域（region_west）专属模型（区域独占，卸载时清理）",
+      "modelFilePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/npc_mesh/灶王爷·甜甜爷.glb",
+      "targetHeight": 1.4,
+      "anim": {
+        "isBuiltIn": true,
+        "speedScale": 0.5,
+        "animations": {
+          "Idle": "Idle",
+          "Walking": "Walk",
+          "Running": "Run",
+          "Falling": "Fall",
+          "Jumping": "Jump"
+        }
+      }
+    }
+  ],
+  "list": [
+    {
+      "id": "west_tiantianye_1",
+      "modelId": "tiantianye_west",
+      "position": {
+        "x": -2187.57,
+        "y": 42.66,
+        "z": -969.63
+      },
+      "rotation": {
+        "x": 0,
+        "y": -45,
+        "z": 0
+      },
+      "movementPattern": "idle"
+    },
+    {
+      "id": "west_honghong_1",
+      "modelId": "honghong_west",
+      "position": {
+        "x": -2205.17,
+        "y": 42.69,
+        "z": -995.26
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 0
+      },
+      "movementPattern": "wander"
+    }
+  ]
+}

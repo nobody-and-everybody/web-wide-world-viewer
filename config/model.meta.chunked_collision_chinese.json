@@ -5,7 +5,9 @@
   "meterScale": 1,
   "gaussianSplatting": {
     "gaussianComponentType": "spark",
-    "regionReplaceConfigPath": "/config/region-replace-mixed/region-replace-config.chunked_collision_chinese.local.json",
+    "chunks": {
+      "chunkedUrl": "/config/region-replace-mixed/region-replace-config.chunked_collision_chinese.local.json"
+    },
     "gaussianSplats3DOption": {
       "sharedMemoryForWorkers": false,
       "sphericalHarmonicsDegree": 0,
@@ -37,372 +39,59 @@
     }
   },
   "collision": {
-    "baseUrl": "/collision-chunks-chinese/",
-    "modules": [
-      {
-        "id": "-1_0_0_morton",
-        "file": "-1_0_0_morton.glb",
-        "center": [
-          0,
-          10,
-          9
-        ],
-        "size": [
-          24,
-          20,
-          22
-        ],
-        "rotation": [
-          0,
-          0,
-          0
-        ]
-      },
-      {
-        "id": "-1_-1_0",
-        "file": "-1_-1_0.glb",
-        "center": [
-          -24,
-          10,
-          9
-        ],
-        "size": [
-          24,
-          20,
-          22
-        ],
-        "rotation": [
-          0,
-          0,
-          0
-        ]
-      },
-      {
-        "id": "-1_-2_0",
-        "file": "-1_-2_0.glb",
-        "center": [
-          -48,
-          10,
-          9
-        ],
-        "size": [
-          24,
-          20,
-          22
-        ],
-        "rotation": [
-          0,
-          0,
-          0
-        ]
-      },
-      {
-        "id": "-2_0_0",
-        "file": "-2_0_0.glb",
-        "center": [
-          0,
-          10,
-          31
-        ],
-        "size": [
-          24,
-          20,
-          22
-        ],
-        "rotation": [
-          0,
-          0,
-          0
-        ]
-      },
-      {
-        "id": "0_0_0",
-        "file": "0_0_0.glb",
-        "center": [
-          0,
-          10,
-          -13
-        ],
-        "size": [
-          24,
-          20,
-          22
-        ],
-        "rotation": [
-          0,
-          0,
-          0
-        ]
-      },
-      {
-        "id": "0_-1_0",
-        "file": "0_-1_0.glb",
-        "center": [
-          -24,
-          10,
-          -13
-        ],
-        "size": [
-          24,
-          20,
-          22
-        ],
-        "rotation": [
-          0,
-          0,
-          0
-        ]
-      },
-      {
-        "id": "0_-2_0",
-        "file": "0_-2_0.glb",
-        "center": [
-          -48,
-          10,
-          -13
-        ],
-        "size": [
-          24,
-          20,
-          22
-        ],
-        "rotation": [
-          0,
-          0,
-          0
-        ]
+    "chunks": {
+      "chunkedUrl": "/config/chunked-collision-manifest-chinese.json"
+    }
+  },
+  "lighting": {
+    "_comment": "2026-09-17 补齐：原 meta 完全无 lighting 段 → LightModule 判定 lighting?.sky=false && todEnabled=false && isChunkedLight=false → **skyModule 不注册**（无程序化天空穹顶），且 scene.background=null → 天空黑（与 model.meta.chunked_collision_sanyapo.json 同因）。★本块**整体照搬同场景的 model.meta.region_replace_programs_chunked.json（B5）**，保证 B3/B5 切换时光照/阴影观感一致，避免把「场景配置差异」误读为「迁移引入的光照回归」。",
+    "timeOfDay": {
+      "initialTime": "10:00",
+      "autoPlay": false,
+      "speed": 3600,
+      "applyThrottleHour": 0,
+      "maxCachedPhases": 2,
+      "hdriEnable": false,
+      "envMapMode": "renderEnvMap",
+      "hdriTransitionMode": "intensity",
+      "hdriUrls": {
+        "midnight": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/satara_night_no_lamps_2k.hdr",
+        "dawn": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/spruit_sunrise_2k.hdr",
+        "day": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/kloofendal_48d_partly_cloudy_puresky_2k.hdr",
+        "dusk": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/venice_sunset_2k.hdr",
+        "night": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/dikhololo_night_2k.hdr"
       }
-    ],
-    "modulesRaw": [
-      {
-        "name": "-1_0_0_morton",
-        "transform": {
-          "position": [
-            0,
-            10,
-            9
-          ],
-          "rotation": [
-            1,
-            0,
-            0,
-            0
-          ],
-          "scale": [
-            1,
-            1,
-            1
-          ]
-        },
-        "bounds": {
-          "x": 24,
-          "y": 20,
-          "z": 22
-        },
-        "collision_name": [
-          "-1_0_0_morton.glb"
-        ],
-        "ply_name": [
-          "-1_0_0_morton"
-        ]
+    },
+    "shadow": {
+      "color": "#000000",
+      "opacity": 0.5,
+      "lightMesh": {
+        "enabled": true,
+        "visible": true,
+        "followWorldOffset": true
       },
-      {
-        "name": "-1_-1_0",
-        "transform": {
-          "position": [
-            -24,
-            10,
-            9
-          ],
-          "rotation": [
-            1,
-            0,
-            0,
-            0
-          ],
-          "scale": [
-            1,
-            1,
-            1
-          ]
-        },
-        "bounds": {
-          "x": 24,
-          "y": 20,
-          "z": 22
-        },
-        "collision_name": [
-          "-1_-1_0.glb"
-        ],
-        "ply_name": [
-          "-1_-1_0"
-        ]
-      },
-      {
-        "name": "-1_-2_0",
-        "transform": {
-          "position": [
-            -48,
-            10,
-            9
-          ],
-          "rotation": [
-            1,
-            0,
-            0,
-            0
-          ],
-          "scale": [
-            1,
-            1,
-            1
-          ]
-        },
-        "bounds": {
-          "x": 24,
-          "y": 20,
-          "z": 22
-        },
-        "collision_name": [
-          "-1_-2_0.glb"
-        ],
-        "ply_name": [
-          "-1_-2_0"
-        ]
-      },
-      {
-        "name": "-2_0_0",
-        "transform": {
-          "position": [
-            0,
-            10,
-            31
-          ],
-          "rotation": [
-            1,
-            0,
-            0,
-            0
-          ],
-          "scale": [
-            1,
-            1,
-            1
-          ]
-        },
-        "bounds": {
-          "x": 24,
-          "y": 20,
-          "z": 22
-        },
-        "collision_name": [
-          "-2_0_0.glb"
-        ],
-        "ply_name": [
-          "-2_0_0"
-        ]
-      },
-      {
-        "name": "0_0_0",
-        "transform": {
-          "position": [
-            0,
-            10,
-            -13
-          ],
-          "rotation": [
-            1,
-            0,
-            0,
-            0
-          ],
-          "scale": [
-            1,
-            1,
-            1
-          ]
-        },
-        "bounds": {
-          "x": 24,
-          "y": 20,
-          "z": 22
-        },
-        "collision_name": [
-          "0_0_0.glb"
-        ],
-        "ply_name": [
-          "0_0_0"
-        ]
-      },
-      {
-        "name": "0_-1_0",
-        "transform": {
-          "position": [
-            -24,
-            10,
-            -13
-          ],
-          "rotation": [
-            1,
-            0,
-            0,
-            0
-          ],
-          "scale": [
-            1,
-            1,
-            1
-          ]
-        },
-        "bounds": {
-          "x": 24,
-          "y": 20,
-          "z": 22
-        },
-        "collision_name": [
-          "0_-1_0.glb"
-        ],
-        "ply_name": [
-          "0_-1_0"
-        ]
-      },
-      {
-        "name": "0_-2_0",
-        "transform": {
-          "position": [
-            -48,
-            10,
-            -13
-          ],
-          "rotation": [
-            1,
-            0,
-            0,
-            0
-          ],
-          "scale": [
-            1,
-            1,
-            1
-          ]
-        },
-        "bounds": {
-          "x": 24,
-          "y": 20,
-          "z": 22
-        },
-        "collision_name": [
-          "0_-2_0.glb"
-        ],
-        "ply_name": [
-          "0_-2_0"
-        ]
+      "followDirectional": {
+        "enabled": true,
+        "name": "__player_follow_shadow_test",
+        "color": 16777215,
+        "intensity": 1.2,
+        "offset": [6, 6, 6],
+        "targetOffset": [0, 0.8, 0],
+        "shadow": {
+          "enabled": true,
+          "mapSize": 2048,
+          "camera": {
+            "left": -12,
+            "right": 12,
+            "top": 12,
+            "bottom": -12,
+            "near": 0.5,
+            "far": 60
+          },
+          "bias": -0.0005,
+          "normalBias": 0
+        }
       }
-    ],
-    "loadConfig": {
-      "neighborDistance": 30,
-      "keepFootChunk": true,
-      "unloadDelay": 500
     }
   },
   "initial": {

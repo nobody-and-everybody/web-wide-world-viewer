@@ -1,0 +1,149 @@
+{
+  "baseUrl": "/config/slums/terrain-chunks-3x3/",
+  "resolution": {
+    "totalVertices": [238, 269],
+    "componentVertices": [72, 81],
+    "componentSections": [1, 1]
+  },
+  "modules": [
+    {
+      "id": "0_0",
+      "url": "tile_0_0.r16",
+      "shape": {
+        "type": "box",
+        "width": 71.4,
+        "height": 512,
+        "depth": 80.7,
+        "transform": {
+          "position": [-80.45, 1, -86.35],
+          "rotation": [0, 0, 0],
+          "scale": [30, 30, 100]
+        }
+      }
+    },
+    {
+      "id": "1_0",
+      "url": "tile_1_0.r16",
+      "shape": {
+        "type": "box",
+        "width": 71.4,
+        "height": 512,
+        "depth": 80.7,
+        "transform": {
+          "position": [-9.05, 1, -86.35],
+          "rotation": [0, 0, 0],
+          "scale": [30, 30, 100]
+        }
+      }
+    },
+    {
+      "id": "2_0",
+      "url": "tile_2_0.r16",
+      "shape": {
+        "type": "box",
+        "width": 71.4,
+        "height": 512,
+        "depth": 80.7,
+        "transform": {
+          "position": [62.35, 1, -86.35],
+          "rotation": [0, 0, 0],
+          "scale": [30, 30, 100]
+        }
+      }
+    },
+    {
+      "id": "0_1",
+      "url": "tile_0_1.r16",
+      "shape": {
+        "type": "box",
+        "width": 71.4,
+        "height": 512,
+        "depth": 80.7,
+        "transform": {
+          "position": [-80.45, 1, -5.65],
+          "rotation": [0, 0, 0],
+          "scale": [30, 30, 100]
+        }
+      }
+    },
+    {
+      "id": "1_1",
+      "url": "tile_1_1.r16",
+      "shape": {
+        "type": "box",
+        "width": 71.4,
+        "height": 512,
+        "depth": 80.7,
+        "transform": {
+          "position": [-9.05, 1, -5.65],
+          "rotation": [0, 0, 0],
+          "scale": [30, 30, 100]
+        }
+      }
+    },
+    {
+      "id": "2_1",
+      "url": "tile_2_1.r16",
+      "shape": {
+        "type": "box",
+        "width": 71.4,
+        "height": 512,
+        "depth": 80.7,
+        "transform": {
+          "position": [62.35, 1, -5.65],
+          "rotation": [0, 0, 0],
+          "scale": [30, 30, 100]
+        }
+      }
+    },
+    {
+      "id": "0_2",
+      "url": "tile_0_2.r16",
+      "shape": {
+        "type": "box",
+        "width": 71.4,
+        "height": 512,
+        "depth": 80.7,
+        "transform": {
+          "position": [-80.45, 1, 75.05],
+          "rotation": [0, 0, 0],
+          "scale": [30, 30, 100]
+        }
+      }
+    },
+    {
+      "id": "1_2",
+      "url": "tile_1_2.r16",
+      "shape": {
+        "type": "box",
+        "width": 71.4,
+        "height": 512,
+        "depth": 80.7,
+        "transform": {
+          "position": [-9.05, 1, 75.05],
+          "rotation": [0, 0, 0],
+          "scale": [30, 30, 100]
+        }
+      }
+    },
+    {
+      "id": "2_2",
+      "url": "tile_2_2.r16",
+      "shape": {
+        "type": "box",
+        "width": 71.4,
+        "height": 512,
+        "depth": 80.7,
+        "transform": {
+          "position": [62.35, 1, 75.05],
+          "rotation": [0, 0, 0],
+          "scale": [30, 30, 100]
+        }
+      }
+    }
+  ],
+  "loadConfig": {
+    "keepFootChunk": true,
+    "unloadDelay": 500
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "name": "三丫坡-Light分块S5验证（lightCulling+followDirectional 下沉）",
+  "rendererScale": 1,
+  "debugger": true,
+  "meterScale": 1,
+  "gaussianSplatting": {
+    "gaussianComponentType": "spark2.0",
+    "chunks": {
+      "chunkedUrl": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_sanyapo_v3/resource/region-replace-config_collision-chunks_nosky.json"
+    },
+    "gaussianSplats3DOption": {
+      "sharedMemoryForWorkers": false,
+      "sphericalHarmonicsDegree": 0,
+      "ignoreDevicePixelRatio": true,
+      "enableSIMDInSort": true,
+      "integerBasedSort": true,
+      "splatSortDistanceMapPrecision": 32,
+      "halfPrecisionCovariancesOnGPU": false,
+      "dynamicScene": false,
+      "renderMode": 0,
+      "antialiased": false
+    },
+    "sparkOption": {
+      "paged": true,
+      "lod": 0,
+      "enableLod": true,
+      "maxSh": 3,
+      "maxPagedSplats": 2000000,
+      "lodSplatCount": 700000,
+      "lodScale": 1,
+      "coneFov0": 120.0,
+      "coneFov": 180.0,
+      "coneFoveate": 0.7,
+      "behindFoveate": 0.5
+    },
+    "transform": {
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 180],
+      "scale": [1, 1, 1]
+    }
+  },
+  "collision": {
+    "url": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_sanyapo_v3/resource/sanyapo_model_outdoor.glb",
+    "transform": {
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "cloneAsLightMesh": true
+  },
+  "initial": {
+    "player": {
+      "position": {
+        "x": -2138.2667026233,
+        "y": 36.0,
+        "z": -965.5560800559
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "camera": {
+      "position": [0, 0, 0],
+      "lookUp": [0, -1, 0],
+      "lookAt": [0, 0, -1]
+    }
+  },
+  "lighting": {
+    "_comment": "S5 验证 meta（v1.17.0 顶层形态收编：lightBlocks → chunks 统一入口）：lightCulling 与 shadow.followDirectional 已下沉 manifest global 块；顶层仅保留 chunks 引用（统一 wrapper）+ timeOfDay（全局单例时钟）。autoPlay=false 固定光照便于验证；需路灯点亮时可在 Debug Panel 手动调 TOD 时间到 18 点后。",
+    "chunks": {
+      "chunkedUrl": "./chunked-light-manifest-sanyapo-s5.json"
+    },
+    "timeOfDay": {
+      "initialTime": "14:00",
+      "autoPlay": false,
+      "applyThrottleHour": 0.25
+    }
+  }
+}

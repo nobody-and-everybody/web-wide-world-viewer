@@ -6,7 +6,9 @@
   "gaussianSplatting": {
     "gaussianComponentType": "playcanvas",
     "regionReplaceConfigPath1": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/proj_chinese_garden/region_replace/region-replace-config_no_sky_ue_relight.json",
-    "regionReplaceConfigPath": "http://localhost:8080/config/proj_chinese_garden/region-replace-config_no_sky_ue_relight_v1.json",
+    "chunks": {
+      "chunkedUrl": "http://localhost:8080/config/proj_chinese_garden/region-replace-config_no_sky_ue_relight_v1.json"
+    },
     "gaussianSplats3DOption": {
       "sharedMemoryForWorkers": false,
       "sphericalHarmonicsDegree": 0,

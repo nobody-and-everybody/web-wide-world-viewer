@@ -1,0 +1,105 @@
+{
+  "models": [
+    {
+      "id": "honghong_east",
+      "name": "红红·东区",
+      "describe": "东侧区域（region_east）的爆竹小仙·红红，模型文件与 globalModels 共享（阶段 1 缓存生效）",
+      "modelFilePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/npc_mesh/爆竹小仙·红红.glb",
+      "targetHeight": 1.2,
+      "anim": {
+        "isBuiltIn": true,
+        "speedScale": 0.8,
+        "animations": {
+          "Idle": "Idle",
+          "Walking": "Walk",
+          "Running": "Run",
+          "Falling": "Fall",
+          "Jumping": "Jump"
+        }
+      }
+    },
+    {
+      "id": "qiaoqiao_east",
+      "name": "巧巧·东区",
+      "describe": "东侧区域（region_east）的归宁仙子·巧巧，模型文件与 globalModels 共享（阶段 1 缓存生效）",
+      "modelFilePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/npc_mesh/归宁仙子·巧巧.glb",
+      "targetHeight": 1.3,
+      "anim": {
+        "isBuiltIn": true,
+        "speedScale": 0.7,
+        "animations": {
+          "Idle": "Idle",
+          "Walking": "Walk",
+          "Running": "Run",
+          "Falling": "Fall",
+          "Jumping": "Jump"
+        }
+      }
+    },
+    {
+      "id": "jinbao_east",
+      "name": "金宝·东区",
+      "describe": "东侧区域专属模型（region_east 独占，卸载时清理）",
+      "modelFilePath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/timi-activity/gs-viewer/models/showcase/proj_chinese_garden/npc_mesh/财神娃娃·金宝.glb",
+      "targetHeight": 1.2,
+      "anim": {
+        "isBuiltIn": true,
+        "speedScale": 0.8,
+        "animations": {
+          "Idle": "Idle",
+          "Walking": "Walk",
+          "Running": "Run",
+          "Falling": "Fall",
+          "Jumping": "Jump"
+        }
+      }
+    }
+  ],
+  "list": [
+    {
+      "id": "east_qiaoqiao_1",
+      "modelId": "qiaoqiao_east",
+      "position": {
+        "x": -2112.61,
+        "y": 30.9,
+        "z": -966.81
+      },
+      "rotation": {
+        "x": 0,
+        "y": -30,
+        "z": 0
+      },
+      "movementPattern": "wander"
+    },
+    {
+      "id": "east_jinbao_1",
+      "modelId": "jinbao_east",
+      "position": {
+        "x": -2103.54,
+        "y": 30.9,
+        "z": -987.39
+      },
+      "rotation": {
+        "x": 0,
+        "y": 60,
+        "z": 0
+      },
+      "movementPattern": "idle"
+    },
+    {
+      "id": "east_honghong_1",
+      "modelId": "honghong_east",
+      "position": {
+        "x": -2070.87,
+        "y": 23.52,
+        "z": -983.79
+      },
+      "rotation": {
+        "x": 0,
+        "y": 90,
+        "z": 0
+      },
+      "movementPattern": "idle"
+    }
+  ]
+}

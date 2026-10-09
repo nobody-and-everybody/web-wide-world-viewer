@@ -1,5 +1,5 @@
 {
-  "name": "二次元街区 Phase3 阴影测试",
+  "name": "二次元街区-屏幕空间阴影Phase3",
   "rendererScale": 1,
   "debugger": false,
   "meterScale": 1,
@@ -7,20 +7,10 @@
     "renderOrder": 0,
     "sphericalHarmonicsDegree": 0,
     "showLoadingUI": true,
-    "gaussianComponentType": "gaussian-splats-3d",
-    "singleSceneConfigPath1": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/acg_street/700k/acg_street_700k_999radius_no_compress.ksplat",
-    "singleSceneConfigPath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/acg_street/700k/acg_street_700k.splat",
-    "options": {
-      "sharedMemoryForWorkers": false,
-      "sphericalHarmonicsDegree": 0,
-      "ignoreDevicePixelRatio": true,
-      "enableSIMDInSort": true,
-      "integerBasedSort": true,
-      "splatSortDistanceMapPrecision": 32,
-      "halfPrecisionCovariancesOnGPU": true,
-      "dynamicScene": false,
-      "renderMode": 0,
-      "antialiased": false
+    "gaussianComponentType": "spark2.0",
+    "singleSceneConfigPath": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/acg_street/700k/acg_street_700k_999radius_no_compress.ksplat",
+    "sparkOption": {
+      "encodeLinear": true
     },
     "transform": {
       "position": [0, -0.5, 0],
@@ -31,11 +21,10 @@
   "collision": {
     "url": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/acg_street/700k/acg_street_700k.glb",
     "transform": {
-      "position": [0, 0, 0],
+      "position": [0, -0.41, 0],
       "rotation": [0, 180, 0],
       "scale": [1, 1, 1]
-    },
-    "cloneAsLightMesh": true
+    }
   },
   "interactive": {
     "url": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/acg_street/700k/acg_street_700k.glb",
@@ -45,72 +34,87 @@
       "scale": [1, 1, 1]
     }
   },
-  "initial": {
-    "player": {
-      "position": {
-        "x": 3,
-        "y": 1,
-        "z": 1.62974
-      },
-      "rotation": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      }
+  "renderer": {
+    "postProcessing": {
+      "enabled": true,
+      "antialiasing": { "enabled": true, "preset": "ultra" },
+      "bloom": { "enabled": false },
+      "ssao": { "enabled": true, "intensity": 1 },
+      "fog": { "enabled": false, "useSplatDepth": true, "depthMaxDistance": 200 },
+      "pmndrsToneMapping": { "enabled": true, "mode": "ACESFilmic", "exposure": 1 }
     },
-    "camera": {}
-  },
-  "interactionZones": [
-    {
-      "geometry": [5, 2, 5],
-      "geometryPos": [0.5, 0, 16.6],
-      "modelPos": [0, 0.4, 0],
-      "model": "green_head_baby.glb",
-      "scale": [0.13, 0.13, 0.13],
-      "rotation": [0, 180, 0],
-      "dialog": "先生~麦当劳大特惠，了解一下",
-      "buttonText": "去看看",
-      "query": "GreenHeadBaby",
-      "setPath": "./models/aigc/"
-    },
-    {
-      "geometry": [5, 2, 5],
-      "geometryPos": [-1.5, 0, -10.3],
-      "modelPos": [0, 0.7, 0],
-      "model": "big_head_baby.glb",
-      "dialog": "听说秋天的第一杯奶茶要别人送才甜！你猜我收到没有呀？",
-      "buttonText": "我来买一杯",
-      "query": "BigHeadBaby",
-      "setPath": "./models/aigc/"
+    "preDepthPass": {
+      "enabled": true,
+      "maxDepth": 200,
+      "blendMode": "nearest",
+      "sources": [
+        {
+          "id": "lightmesh",
+          "type": "mesh",
+          "enabled": true,
+          "priority": 10,
+          "url": "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/models/showcase/acg_street/700k/acg_street_700k.glb",
+          "transform": {
+            "position": [0, -0.41, 0],
+            "rotation": [0, 180, 0],
+            "scale": [1, 1, 1]
+          }
+        },
+        {
+          "id": "gaussian",
+          "type": "gaussian",
+          "enabled": true,
+          "priority": 0
+        }
+      ]
     }
-  ],
-  "third-party": [
-    "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/config/gs-thirdparty/qq-music/third-party.meta.json"
-  ],
+  },
   "lighting": {
+    "hdri": {
+      "envMapMode": "renderEnvMap",
+      "renderEnvMapSize": 256,
+      "renderEnvMapHideCharacter": true
+    },
+    "sky": {
+      "turbidity": 10,
+      "rayleigh": 3,
+      "mieCoefficient": 0.005,
+      "mieDirectionalG": 0.8,
+      "elevation": 20,
+      "azimuth": 135,
+      "showSunDisc": true,
+      "sun": { "intensity": 0, "visible": true, "shadow": { "enabled": false } }
+    },
     "shadow": {
-      "color": "#ff0000",
-      "opacity": 1,
-      "lightMesh": {
+      "enabled": true,
+      "type": "PCFSoft",
+      "autoUpdate": true,
+      "color": "#000000",
+      "opacity": 0.45,
+      "screenSpace": {
         "enabled": true,
-        "visible": false,
-        "followWorldOffset": true
+        "quality": "high",
+        "coverageThreshold": 0.05,
+        "edgeThreshold": 0.02,
+        "filterRadius": 1,
+        "bias": -0.0005,
+        "applyToMesh": false
       },
       "followDirectional": {
         "enabled": true,
-        "name": "__player_follow_shadow_test",
+        "name": "__player_follow_shadow_phase3",
         "color": 16777215,
-        "intensity": 1.2,
-        "offset": [-6, 10, 6],
+        "intensity": 0.8,
+        "offset": [6, 8, 6],
         "targetOffset": [0, 0.8, 0],
         "shadow": {
           "enabled": true,
-          "mapSize": 2048,
+          "mapSize": 1024,
           "camera": {
-            "left": -12,
-            "right": 12,
-            "top": 12,
-            "bottom": -12,
+            "left": -8,
+            "right": 8,
+            "top": 8,
+            "bottom": -8,
             "near": 0.5,
             "far": 60
           },
@@ -120,14 +124,14 @@
       }
     }
   },
-  "renderer": {
-    "postProcessing": {
-      "enabled": true,
-      "multisampling": 0,
-      "antialiasing": { "enabled": true, "preset": "high" },
-      "bloom": { "enabled": true, "intensity": 1.0, "luminanceThreshold": 0.9, "luminanceSmoothing": 0.025, "radius": 0.85, "mipmapBlur": true },
-      "ssao": { "enabled": true, "samples": 9, "rings": 7, "radius": 0.1825, "intensity": 1.0, "bias": 0.025, "fade": 0.01, "resolutionScale": 1.0 },
-      "pmndrsToneMapping": { "enabled": true, "mode": "ACESFilmic" }
-    }
-  }
+  "initial": {
+    "player": {
+      "position": { "x": 3, "y": 0.45, "z": 1.62974 },
+      "rotation": { "x": 0, "y": 0, "z": 0 }
+    },
+    "camera": {}
+  },
+  "third-party": [
+    "https://mogs-1300354879.cos.ap-shanghai.myqcloud.com/mogs/nobody/gs-viewer/config/gs-thirdparty/www/third-party.meta.json"
+  ]
 }
