@@ -1,7 +1,25 @@
 {
-  "latest": "562",
-  "updatedAt": "2026-10-09T07:33:27.581Z",
+  "latest": "568",
+  "updatedAt": "2026-10-13T10:34:23.408Z",
   "versions": [
+    {
+      "buildNum": "568",
+      "tag": "v1.0.91",
+      "sdkVersion": "1.0.130",
+      "publishedAt": "2026-10-13T10:34:23.408Z",
+      "commitHash": "3b5600a8",
+      "commitMessage": "Merge branch 'feat/chunk-shape-trigger-migration' into 'master' (merge request !65)",
+      "pipelineId": "b-167e46f76a4b4d65a995a0ae391b43bc",
+      "publisher": "dannycheung",
+      "releasePath": "releases/568",
+      "resources": {
+        "index": "index-CNVICNFF.js",
+        "vue-vendor": "vue-vendor-Dj8BPuF0.js",
+        "scene-api": "scene-api-DtW4IxD0.js",
+        "three-vendor": "three-vendor-geBM_kUl.js",
+        "index-css": "index-Bc-0q6zk.css"
+      }
+    },
     {
       "buildNum": "562",
       "tag": "v1.0.91",
